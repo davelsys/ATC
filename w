@@ -1,0 +1,1120 @@
+removed json subsciption
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch master
+# Your branch is up to date with 'origin/master'.
+#
+# Changes to be committed:
+#	new file:   ATCIVR/AddCCCode.ashx
+#	new file:   ATCIVR/AddCCExp.ashx
+#	new file:   ATCIVR/AddCCZip.ashx
+#	new file:   ATCIVR/AddCallerId.ashx
+#	new file:   ATCIVR/AddCellNum.ashx
+#	new file:   ATCIVR/AddPlan.ashx
+#	new file:   ATCIVR/App_Code/ATC_Funcs.vb
+#	new file:   ATCIVR/App_Code/AgentCharge.vb
+#	new file:   ATCIVR/App_Code/Charge.vb
+#	new file:   ATCIVR/App_Code/Class1.vb
+#	new file:   ATCIVR/App_Code/CreditAgentAccountCharge.vb
+#	new file:   ATCIVR/App_Code/CreditCardCharge.new
+#	new file:   ATCIVR/App_Code/CreditCardCharge.sv1
+#	new file:   ATCIVR/App_Code/CreditCardCharge.vb
+#	new file:   ATCIVR/App_Code/Customer.vb
+#	new file:   ATCIVR/App_WebReferences/svc/Service.disco
+#	new file:   ATCIVR/App_WebReferences/svc/Service.discomap
+#	new file:   ATCIVR/App_WebReferences/svc/Service.wsdl
+#	new file:   ATCIVR/App_WebReferences/svclive/Service.disco
+#	new file:   ATCIVR/App_WebReferences/svclive/Service.discomap
+#	new file:   ATCIVR/App_WebReferences/svclive/Service.wsdl
+#	new file:   ATCIVR/App_WebReferences/svctest/Service.disco
+#	new file:   ATCIVR/App_WebReferences/svctest/Service.discomap
+#	new file:   ATCIVR/App_WebReferences/svctest/Service.wsdl
+#	new file:   ATCIVR/Avail.ashx
+#	new file:   ATCIVR/ChargeCardOnFile - Copy.ashx
+#	new file:   ATCIVR/ChargeCardOnFile.ashx
+#	new file:   ATCIVR/ChargeCardOnFileUpd.ashx
+#	new file:   ATCIVR/ChargeCardOnFile_Verizon.ashx
+#	new file:   ATCIVR/ChargeNewCard.ashx
+#	new file:   ATCIVR/CheckPPStatus.ashx
+#	new file:   ATCIVR/GetBalance.ashx
+#	new file:   ATCIVR/GetCardOnFile.ashx
+#	new file:   ATCIVR/ProcessCharge.ashx
+#	new file:   ATCIVR/StartNewCall.ashx
+#	new file:   ATCIVR/StartPP.ashx
+#	new file:   ATCIVR/ValidateCCNum.ashx
+#	new file:   ATCIVR/ValidateCCcode.ashx
+#	new file:   ATCIVR/ValidateExpDate.ashx
+#	new file:   ATCIVR/ivr
+#	new file:   ATCIVR/web.config
+#	new file:   Renew/.svn/entries
+#	new file:   Renew/.svn/format
+#	new file:   Renew/.svn/pristine/01/01fb10539bb5c0c12e2e3c9f5e81a531105171b1.svn-base
+#	new file:   Renew/.svn/pristine/03/036dc127bbd56c885b7014f5801c978e5e21a456.svn-base
+#	new file:   Renew/.svn/pristine/05/0561f5b8a01df1cd23f08a408e9c7477c296cd72.svn-base
+#	new file:   Renew/.svn/pristine/08/089cedd21ea438664780bfc35b87f05396f75ee7.svn-base
+#	new file:   Renew/.svn/pristine/13/137f3b92eeb92decad5ca363efd212a862303179.svn-base
+#	new file:   Renew/.svn/pristine/14/147fc0de30b728158a027585daabafe9e9862544.svn-base
+#	new file:   Renew/.svn/pristine/1c/1cb52cb5cd39f24b41ab5d94c77920eb9fd5c5bf.svn-base
+#	new file:   Renew/.svn/pristine/1d/1d459314ae53331c2b663ba2239979c96a50aa94.svn-base
+#	new file:   Renew/.svn/pristine/1f/1f02b6b68dfe8c62829437256825b939b35cd3a7.svn-base
+#	new file:   Renew/.svn/pristine/1f/1f79126e2b0551c765573847b5c6e929ce3401a1.svn-base
+#	new file:   Renew/.svn/pristine/21/21896932e39f20dc2186e49e56f26f2ace5267c5.svn-base
+#	new file:   Renew/.svn/pristine/22/22d81aaeab5e3c919f006e4e07c01f816874c96f.svn-base
+#	new file:   Renew/.svn/pristine/23/230ca7f465b630f0b115c9170bf10c1656883e56.svn-base
+#	new file:   Renew/.svn/pristine/23/237bb57e1fcc10f7e1ee1874b012b7c35678eaab.svn-base
+#	new file:   Renew/.svn/pristine/29/29f6df4152b52b0585a7f6a3ca2bc69bcf393b26.svn-base
+#	new file:   Renew/.svn/pristine/2c/2c5d5111699c3d63989da7c75c7b9260615aca76.svn-base
+#	new file:   Renew/.svn/pristine/30/30b6c8241b34866714e3f191079d9d3871ddd379.svn-base
+#	new file:   Renew/.svn/pristine/33/331062d0b7bd5a1e847b939b47d426581c6b57be.svn-base
+#	new file:   Renew/.svn/pristine/34/3404830c9f85cb16371be63beda31b8bc9c35d74.svn-base
+#	new file:   Renew/.svn/pristine/38/38953d09e3ea8fb94e4c36386f997834833b5108.svn-base
+#	new file:   Renew/.svn/pristine/3b/3b8a846f9db2094a7b349f70fcc30e280c3ce899.svn-base
+#	new file:   Renew/.svn/pristine/3c/3c99882f80ff19fb78fab6c4f9d2abbf039bad8f.svn-base
+#	new file:   Renew/.svn/pristine/3d/3d519ccd9210959a86b215dee4434bc1145327f0.svn-base
+#	new file:   Renew/.svn/pristine/3e/3e4c2609af01b927100860397eca8ed8aeec54cf.svn-base
+#	new file:   Renew/.svn/pristine/40/403fb4c051978d2609958126d504a64b5672bebf.svn-base
+#	new file:   Renew/.svn/pristine/43/4388b3073e418abf56961c6f23fcc29c94ddb721.svn-base
+#	new file:   Renew/.svn/pristine/44/440b69821e05e4d94a835662e21575c0f02cc4d8.svn-base
+#	new file:   Renew/.svn/pristine/47/47b15748ecc8e952c5935170090db7c269ce4b4f.svn-base
+#	new file:   Renew/.svn/pristine/48/48cc7eda8d81dd9069cbfcaa8c90fd7b139e1c50.svn-base
+#	new file:   Renew/.svn/pristine/4b/4b728ba83db43e89596d4a832c143d3d8f08dc92.svn-base
+#	new file:   Renew/.svn/pristine/50/50be0212f1ab1637a8374f48721558abc6bd08bf.svn-base
+#	new file:   Renew/.svn/pristine/52/526358ef03d908749eb0680f9cd2e9158b048f74.svn-base
+#	new file:   Renew/.svn/pristine/52/5289806f82a93d109b426b23ab662b86a450afb0.svn-base
+#	new file:   Renew/.svn/pristine/55/5579f5cc4cd12191ce45734af211ab69d3cd4a54.svn-base
+#	new file:   Renew/.svn/pristine/56/5669ea26d9df5c8d9fb96bfede4822cb5609b5e1.svn-base
+#	new file:   Renew/.svn/pristine/56/5678e790bf1eddcf68b984ba1048d3aeb5111415.svn-base
+#	new file:   Renew/.svn/pristine/57/573e3ded237dca35546b192222311555f3491b54.svn-base
+#	new file:   Renew/.svn/pristine/57/5756ce32fbd4073cae45f2a29784ea5607564b98.svn-base
+#	new file:   Renew/.svn/pristine/58/5875f8d998eb9fad53b1f3e7a21f570236a6e477.svn-base
+#	new file:   Renew/.svn/pristine/59/59d4581a4c74af1ab8bf8dab83c8468b9b65095b.svn-base
+#	new file:   Renew/.svn/pristine/5e/5eef45ccb2aa4d0451e37d71a2c0dcfaf7de776a.svn-base
+#	new file:   Renew/.svn/pristine/61/61d6b875786f08488d6faf9c6a4ab4bdca106699.svn-base
+#	new file:   Renew/.svn/pristine/62/622a966609b73f3f0de7cc19460f8035fe09fb88.svn-base
+#	new file:   Renew/.svn/pristine/62/6258c0c4ec7a239f7f93de3d77ad97c339df2b5c.svn-base
+#	new file:   Renew/.svn/pristine/62/62bfb27900c9b16ef926938e92e0a72a8730aa40.svn-base
+#	new file:   Renew/.svn/pristine/63/63ab94d52f72d5f334bf5643e35ebf0289d7d990.svn-base
+#	new file:   Renew/.svn/pristine/64/6492d667a774722ab9493178a41e767ee63a063c.svn-base
+#	new file:   Renew/.svn/pristine/68/683bcde73b81ccf888a68ac5885086f7cc35b63a.svn-base
+#	new file:   Renew/.svn/pristine/6e/6eea4f1bd89364d92c581355f06666a9a65a04b8.svn-base
+#	new file:   Renew/.svn/pristine/71/71e0d2a34f8846b8a2cbfe79383f7383ad5922d8.svn-base
+#	new file:   Renew/.svn/pristine/74/74b91de6c95b1898bf2d091374e44d5ad8d7e686.svn-base
+#	new file:   Renew/.svn/pristine/76/76801cd9d3d022895e3b6b75ba42e288a64bc643.svn-base
+#	new file:   Renew/.svn/pristine/77/77511836f046344c57a7a3b9d64b6984d9e803ea.svn-base
+#	new file:   Renew/.svn/pristine/7c/7cf2326b6eeab416100087bac630432288e086bd.svn-base
+#	new file:   Renew/.svn/pristine/7d/7d978e27c0ae817674dd1d9b010b0612419ea8ef.svn-base
+#	new file:   Renew/.svn/pristine/80/80e7801c1f5482e7be2eccb52fb1f84de338f33d.svn-base
+#	new file:   Renew/.svn/pristine/81/8167cba0901deaff9b6d62e6250094d77a386bba.svn-base
+#	new file:   Renew/.svn/pristine/87/8761006489ab01c5b28ef5cce86ad6267cb6108d.svn-base
+#	new file:   Renew/.svn/pristine/8d/8d0afa78893ae5f04e505db0d76d0d50cf34e7da.svn-base
+#	new file:   Renew/.svn/pristine/8d/8d4a1585470ff4c9a7c6dbcf9c09afb16e581d4e.svn-base
+#	new file:   Renew/.svn/pristine/8d/8dc221c432f9e45e81d3cb5a43016b3743dcec27.svn-base
+#	new file:   Renew/.svn/pristine/8e/8e6ce2148b2fae3b471f595e2caca0b989afe059.svn-base
+#	new file:   Renew/.svn/pristine/93/93a627c953618106a2f7cd43bfd19621cb811c86.svn-base
+#	new file:   Renew/.svn/pristine/96/96a666aa1362b21023a4464d91deed3dc353c68e.svn-base
+#	new file:   Renew/.svn/pristine/99/99ea672c276fc6556b6ef349a3aec30405f77bd5.svn-base
+#	new file:   Renew/.svn/pristine/9b/9b9c146f3a9bb1d0c198848c2570326a2ab4d4d5.svn-base
+#	new file:   Renew/.svn/pristine/a3/a34cfc04c6cb88087776c7602c03a2711dc82f3d.svn-base
+#	new file:   Renew/.svn/pristine/a7/a76bbd143b523376d0be75e7e8d91662bf7adec9.svn-base
+#	new file:   Renew/.svn/pristine/aa/aad0144430abbc7de454555adcc37bb5954d0905.svn-base
+#	new file:   Renew/.svn/pristine/ae/ae7d7763a49b6d5056d256fd172b2534b1d9db96.svn-base
+#	new file:   Renew/.svn/pristine/b1/b19ec1c373be2cfc87e82298906a2d4a93085ce8.svn-base
+#	new file:   Renew/.svn/pristine/b4/b48a509d4eee3cd37059482bc258a275931aa3a7.svn-base
+#	new file:   Renew/.svn/pristine/b4/b4f9b2838d3d9066cb539671e1ee5a49ffaa41ba.svn-base
+#	new file:   Renew/.svn/pristine/b6/b6f38d827f9023cded0144c68e40a24621b469a1.svn-base
+#	new file:   Renew/.svn/pristine/b7/b738de7d16b500d22a3b9ad524c10fb77187e390.svn-base
+#	new file:   Renew/.svn/pristine/b9/b994dfd81d6b9d8322aa1f26a3654d0c7d7bb70e.svn-base
+#	new file:   Renew/.svn/pristine/bd/bd1a15b4268db81d4ca2fe6d21ccb7c2e286ecc5.svn-base
+#	new file:   Renew/.svn/pristine/bd/bdb689273ae7d1c777cf61d53a82aeb4dab4c970.svn-base
+#	new file:   Renew/.svn/pristine/bf/bf943fb137ef1101d19d4685a39f6ecaca40d6dc.svn-base
+#	new file:   Renew/.svn/pristine/c1/c18b01a4867a9291cb31c5ed8542ce599b5961d5.svn-base
+#	new file:   Renew/.svn/pristine/c5/c5c4b278397b92be8cb8e47728baa34b460a00b1.svn-base
+#	new file:   Renew/.svn/pristine/cc/cc9d023b6241103079644d85169429e54fdf6f9a.svn-base
+#	new file:   Renew/.svn/pristine/cc/ccce483d7a552f65b060e494ab6080b5fd5ca90f.svn-base
+#	new file:   Renew/.svn/pristine/cd/cda3741628351e657926f37a6a5109e81dac62ae.svn-base
+#	new file:   Renew/.svn/pristine/cf/cf22f1bcfd50b05ce316d4863c1b3a4993132cf2.svn-base
+#	new file:   Renew/.svn/pristine/d1/d168744ba455fe111f87c260f2483dea861ceb38.svn-base
+#	new file:   Renew/.svn/pristine/d1/d1a5f532eee9535c1f082a7efaba4a604a6983ba.svn-base
+#	new file:   Renew/.svn/pristine/d4/d4ef0b6d3b49ef7aa4992817048819d52fc3356c.svn-base
+#	new file:   Renew/.svn/pristine/da/da0730556a96f1673088364280f4c6bed2bed839.svn-base
+#	new file:   Renew/.svn/pristine/db/db1fcd8cefb712e7fd6843d4160222cc8954ef2d.svn-base
+#	new file:   Renew/.svn/pristine/db/dbbbbe2694d4b9b990881f279b4313574dbeac9b.svn-base
+#	new file:   Renew/.svn/pristine/db/dbf2b28b3628edb0fcf807445812d70be937ad7e.svn-base
+#	new file:   Renew/.svn/pristine/dc/dca27503ec2e0ad0e4dbc951e0e791c3b2fff0f7.svn-base
+#	new file:   Renew/.svn/pristine/dd/dd2a30edd9c1d36367cc5fc530e165678051342c.svn-base
+#	new file:   Renew/.svn/pristine/de/de900843e284dc22a59a218ba212fb451180a2a1.svn-base
+#	new file:   Renew/.svn/pristine/e0/e029b0fa3ed34d9109854902e4485a82f91d1920.svn-base
+#	new file:   Renew/.svn/pristine/e0/e02b0aca862d63284f5384538ebddd9956c1f22c.svn-base
+#	new file:   Renew/.svn/pristine/e0/e0b1b9ebaeaca19082b7cb636419dd5ae2bd1dd6.svn-base
+#	new file:   Renew/.svn/pristine/e5/e5a5e877a141577a78ac09819c1035996074e54b.svn-base
+#	new file:   Renew/.svn/pristine/e7/e7cec9ee0f54aca6709e333d9c605bdef2de6bd3.svn-base
+#	new file:   Renew/.svn/pristine/e9/e99bea90e21515bec65ad2cae92974a434035fec.svn-base
+#	new file:   Renew/.svn/pristine/ea/eab9f1a9734b1ce5d1dd0798dc60ca3af0aa8f1d.svn-base
+#	new file:   Renew/.svn/pristine/f2/f2aff5e1bc09c6d9abee2771a5c55e430bd821e1.svn-base
+#	new file:   Renew/.svn/pristine/f5/f5c9a2870a4cc980254843bea9d50c69d7c18a95.svn-base
+#	new file:   Renew/.svn/pristine/f7/f74120106b634a837825d0e570f671e596db60e5.svn-base
+#	new file:   Renew/.svn/pristine/fd/fdcc8d9207280e3077781027e3b160567053f2ec.svn-base
+#	new file:   Renew/.svn/wc.db
+#	new file:   Renew/.vs/AuthCharge/v15/sqlite3/storage.ide
+#	new file:   Renew/AuthCharge.sln
+#	new file:   Renew/AuthCharge/.vs/AuthCharge/v15/.suo
+#	new file:   Renew/AuthCharge/.vs/ProjectSettings.json
+#	new file:   Renew/AuthCharge/.vs/VSWorkspaceState.json
+#	new file:   Renew/AuthCharge/.vs/slnx.sqlite
+#	new file:   Renew/AuthCharge/AgentCharge.vb
+#	new file:   Renew/AuthCharge/AuthCharge.vb
+#	new file:   Renew/AuthCharge/AuthCharge.vbproj
+#	new file:   Renew/AuthCharge/Charge.vb
+#	new file:   Renew/AuthCharge/CreditCardCharge.vb
+#	new file:   Renew/AuthCharge/Customer.vb
+#	new file:   Renew/AuthCharge/My Project/Application.Designer.vb
+#	new file:   Renew/AuthCharge/My Project/Application.myapp
+#	new file:   Renew/AuthCharge/My Project/AssemblyInfo.vb
+#	new file:   Renew/AuthCharge/My Project/Resources.Designer.vb
+#	new file:   Renew/AuthCharge/My Project/Resources.resx
+#	new file:   Renew/AuthCharge/My Project/Settings.Designer.vb
+#	new file:   Renew/AuthCharge/My Project/Settings.settings
+#	new file:   Renew/AuthCharge/My Project/app.manifest
+#	new file:   Renew/AuthCharge/Renew.080314.vb
+#	new file:   Renew/AuthCharge/Renew.100114.vb
+#	new file:   Renew/AuthCharge/Renew.vb
+#	new file:   Renew/AuthCharge/Renew112614.vb
+#	new file:   Renew/AuthCharge/Renewals.vbproj
+#	new file:   Renew/AuthCharge/Web References/svc/ANetApiResponseType.datasource
+#	new file:   Renew/AuthCharge/Web References/svc/ARBCancelSubscriptionResponseType.datasource
+#	new file:   Renew/AuthCharge/Web References/svc/ARBCreateSubscriptionResponseType.datasource
+#	new file:   Renew/AuthCharge/Web References/svc/ARBGetSubscriptionStatusResponseType.datasource
+#	new file:   Renew/AuthCharge/Web References/svc/ARBUpdateSubscriptionResponseType.datasource
+#	new file:   Renew/AuthCharge/Web References/svc/CreateCustomerPaymentProfileResponseType.datasource
+#	new file:   Renew/AuthCharge/Web References/svc/CreateCustomerProfileResponseType.datasource
+#	new file:   Renew/AuthCharge/Web References/svc/CreateCustomerProfileTransactionResponseType.datasource
+#	new file:   Renew/AuthCharge/Web References/svc/CreateCustomerShippingAddressResponseType.datasource
+#	new file:   Renew/AuthCharge/Web References/svc/DeleteCustomerPaymentProfileResponseType.datasource
+#	new file:   Renew/AuthCharge/Web References/svc/DeleteCustomerProfileResponseType.datasource
+#	new file:   Renew/AuthCharge/Web References/svc/DeleteCustomerShippingAddressResponseType.datasource
+#	new file:   Renew/AuthCharge/Web References/svc/GetBatchStatisticsResponseType.datasource
+#	new file:   Renew/AuthCharge/Web References/svc/GetCustomerPaymentProfileResponseType.datasource
+#	new file:   Renew/AuthCharge/Web References/svc/GetCustomerProfileIdsResponseType.datasource
+#	new file:   Renew/AuthCharge/Web References/svc/GetCustomerProfileResponseType.datasource
+#	new file:   Renew/AuthCharge/Web References/svc/GetCustomerShippingAddressResponseType.datasource
+#	new file:   Renew/AuthCharge/Web References/svc/GetHostedProfilePageResponseType.datasource
+#	new file:   Renew/AuthCharge/Web References/svc/GetSettledBatchListResponseType.datasource
+#	new file:   Renew/AuthCharge/Web References/svc/GetTransactionDetailsResponseType.datasource
+#	new file:   Renew/AuthCharge/Web References/svc/GetTransactionListResponseType.datasource
+#	new file:   Renew/AuthCharge/Web References/svc/GetUnsettledTransactionListResponseType.datasource
+#	new file:   Renew/AuthCharge/Web References/svc/Reference.map
+#	new file:   Renew/AuthCharge/Web References/svc/Reference.vb
+#	new file:   Renew/AuthCharge/Web References/svc/Service.disco
+#	new file:   Renew/AuthCharge/Web References/svc/Service.wsdl
+#	new file:   Renew/AuthCharge/Web References/svc/UpdateCustomerPaymentProfileResponseType.datasource
+#	new file:   Renew/AuthCharge/Web References/svc/UpdateCustomerProfileResponseType.datasource
+#	new file:   Renew/AuthCharge/Web References/svc/UpdateCustomerShippingAddressResponseType.datasource
+#	new file:   Renew/AuthCharge/Web References/svc/UpdateSplitTenderGroupResponseType.datasource
+#	new file:   Renew/AuthCharge/Web References/svc/ValidateCustomerPaymentProfileResponseType.datasource
+#	new file:   Renew/AuthCharge/Web References/svctest/ANetApiResponseType.datasource
+#	new file:   Renew/AuthCharge/Web References/svctest/ARBCancelSubscriptionResponseType.datasource
+#	new file:   Renew/AuthCharge/Web References/svctest/ARBCreateSubscriptionResponseType.datasource
+#	new file:   Renew/AuthCharge/Web References/svctest/ARBGetSubscriptionStatusResponseType.datasource
+#	new file:   Renew/AuthCharge/Web References/svctest/ARBUpdateSubscriptionResponseType.datasource
+#	new file:   Renew/AuthCharge/Web References/svctest/CreateCustomerPaymentProfileResponseType.datasource
+#	new file:   Renew/AuthCharge/Web References/svctest/CreateCustomerProfileResponseType.datasource
+#	new file:   Renew/AuthCharge/Web References/svctest/CreateCustomerProfileTransactionResponseType.datasource
+#	new file:   Renew/AuthCharge/Web References/svctest/CreateCustomerShippingAddressResponseType.datasource
+#	new file:   Renew/AuthCharge/Web References/svctest/DeleteCustomerPaymentProfileResponseType.datasource
+#	new file:   Renew/AuthCharge/Web References/svctest/DeleteCustomerProfileResponseType.datasource
+#	new file:   Renew/AuthCharge/Web References/svctest/DeleteCustomerShippingAddressResponseType.datasource
+#	new file:   Renew/AuthCharge/Web References/svctest/GetBatchStatisticsResponseType.datasource
+#	new file:   Renew/AuthCharge/Web References/svctest/GetCustomerPaymentProfileResponseType.datasource
+#	new file:   Renew/AuthCharge/Web References/svctest/GetCustomerProfileIdsResponseType.datasource
+#	new file:   Renew/AuthCharge/Web References/svctest/GetCustomerProfileResponseType.datasource
+#	new file:   Renew/AuthCharge/Web References/svctest/GetCustomerShippingAddressResponseType.datasource
+#	new file:   Renew/AuthCharge/Web References/svctest/GetHostedProfilePageResponseType.datasource
+#	new file:   Renew/AuthCharge/Web References/svctest/GetSettledBatchListResponseType.datasource
+#	new file:   Renew/AuthCharge/Web References/svctest/GetTransactionDetailsResponseType.datasource
+#	new file:   Renew/AuthCharge/Web References/svctest/GetTransactionListResponseType.datasource
+#	new file:   Renew/AuthCharge/Web References/svctest/GetUnsettledTransactionListResponseType.datasource
+#	new file:   Renew/AuthCharge/Web References/svctest/Reference.map
+#	new file:   Renew/AuthCharge/Web References/svctest/Reference.vb
+#	new file:   Renew/AuthCharge/Web References/svctest/Service.disco
+#	new file:   Renew/AuthCharge/Web References/svctest/Service.wsdl
+#	new file:   Renew/AuthCharge/Web References/svctest/UpdateCustomerPaymentProfileResponseType.datasource
+#	new file:   Renew/AuthCharge/Web References/svctest/UpdateCustomerProfileResponseType.datasource
+#	new file:   Renew/AuthCharge/Web References/svctest/UpdateCustomerShippingAddressResponseType.datasource
+#	new file:   Renew/AuthCharge/Web References/svctest/UpdateSplitTenderGroupResponseType.datasource
+#	new file:   Renew/AuthCharge/Web References/svctest/ValidateCustomerPaymentProfileResponseType.datasource
+#	new file:   Renew/AuthCharge/app.config
+#	new file:   Renew/AuthCharge/bin/Debug/AuthCharge.application
+#	new file:   Renew/AuthCharge/bin/Debug/AuthCharge.exe
+#	new file:   Renew/AuthCharge/bin/Debug/AuthCharge.exe.config
+#	new file:   Renew/AuthCharge/bin/Debug/AuthCharge.exe.manifest
+#	new file:   Renew/AuthCharge/bin/Debug/AuthCharge.pdb
+#	new file:   Renew/AuthCharge/bin/Debug/AuthCharge.xml
+#	new file:   Renew/AuthCharge/bin/Debug/app.publish/AuthCharge.exe
+#	new file:   Renew/AuthCharge/obj/x86/Debug/AuthCharge.Resources.resources
+#	new file:   Renew/AuthCharge/obj/x86/Debug/AuthCharge.application
+#	new file:   Renew/AuthCharge/obj/x86/Debug/AuthCharge.exe
+#	new file:   Renew/AuthCharge/obj/x86/Debug/AuthCharge.exe.manifest
+#	new file:   Renew/AuthCharge/obj/x86/Debug/AuthCharge.pdb
+#	new file:   Renew/AuthCharge/obj/x86/Debug/AuthCharge.vbproj.CoreCompileInputs.cache
+#	new file:   Renew/AuthCharge/obj/x86/Debug/AuthCharge.xml
+#	new file:   Renew/AuthCharge/obj/x86/Debug/Renewals.vbproj.CoreCompileInputs.cache
+#	new file:   Renew/AuthCharge/obj/x86/Debug/Renewals.vbproj.FileListAbsolute.txt
+#	new file:   Renew/AuthCharge/obj/x86/Debug/Renewals.vbproj.GenerateResource.Cache
+#	new file:   Renew/AuthCharge/obj/x86/Debug/Renewals.vbprojResolveAssemblyReference.cache
+#	new file:   Renew/AuthCharge/obj/x86/Release/AuthCharge.vbproj.CoreCompileInputs.cache
+#	new file:   Renew/AuthCharge/obj/x86/Release/Renewals.vbproj.CoreCompileInputs.cache
+#	new file:   Renew/Renew/.svn/entries
+#	new file:   Renew/Renew/.svn/format
+#	new file:   Renew/Renew/.svn/pristine/01/01fb10539bb5c0c12e2e3c9f5e81a531105171b1.svn-base
+#	new file:   Renew/Renew/.svn/pristine/03/036dc127bbd56c885b7014f5801c978e5e21a456.svn-base
+#	new file:   Renew/Renew/.svn/pristine/05/0561f5b8a01df1cd23f08a408e9c7477c296cd72.svn-base
+#	new file:   Renew/Renew/.svn/pristine/08/089cedd21ea438664780bfc35b87f05396f75ee7.svn-base
+#	new file:   Renew/Renew/.svn/pristine/13/137f3b92eeb92decad5ca363efd212a862303179.svn-base
+#	new file:   Renew/Renew/.svn/pristine/14/147fc0de30b728158a027585daabafe9e9862544.svn-base
+#	new file:   Renew/Renew/.svn/pristine/1c/1cb52cb5cd39f24b41ab5d94c77920eb9fd5c5bf.svn-base
+#	new file:   Renew/Renew/.svn/pristine/1d/1d459314ae53331c2b663ba2239979c96a50aa94.svn-base
+#	new file:   Renew/Renew/.svn/pristine/1f/1f02b6b68dfe8c62829437256825b939b35cd3a7.svn-base
+#	new file:   Renew/Renew/.svn/pristine/1f/1f79126e2b0551c765573847b5c6e929ce3401a1.svn-base
+#	new file:   Renew/Renew/.svn/pristine/21/21896932e39f20dc2186e49e56f26f2ace5267c5.svn-base
+#	new file:   Renew/Renew/.svn/pristine/22/22d81aaeab5e3c919f006e4e07c01f816874c96f.svn-base
+#	new file:   Renew/Renew/.svn/pristine/23/230ca7f465b630f0b115c9170bf10c1656883e56.svn-base
+#	new file:   Renew/Renew/.svn/pristine/23/237bb57e1fcc10f7e1ee1874b012b7c35678eaab.svn-base
+#	new file:   Renew/Renew/.svn/pristine/29/29f6df4152b52b0585a7f6a3ca2bc69bcf393b26.svn-base
+#	new file:   Renew/Renew/.svn/pristine/2c/2c5d5111699c3d63989da7c75c7b9260615aca76.svn-base
+#	new file:   Renew/Renew/.svn/pristine/30/30b6c8241b34866714e3f191079d9d3871ddd379.svn-base
+#	new file:   Renew/Renew/.svn/pristine/33/331062d0b7bd5a1e847b939b47d426581c6b57be.svn-base
+#	new file:   Renew/Renew/.svn/pristine/34/3404830c9f85cb16371be63beda31b8bc9c35d74.svn-base
+#	new file:   Renew/Renew/.svn/pristine/38/38953d09e3ea8fb94e4c36386f997834833b5108.svn-base
+#	new file:   Renew/Renew/.svn/pristine/3b/3b8a846f9db2094a7b349f70fcc30e280c3ce899.svn-base
+#	new file:   Renew/Renew/.svn/pristine/3c/3c99882f80ff19fb78fab6c4f9d2abbf039bad8f.svn-base
+#	new file:   Renew/Renew/.svn/pristine/3d/3d519ccd9210959a86b215dee4434bc1145327f0.svn-base
+#	new file:   Renew/Renew/.svn/pristine/3e/3e4c2609af01b927100860397eca8ed8aeec54cf.svn-base
+#	new file:   Renew/Renew/.svn/pristine/40/403fb4c051978d2609958126d504a64b5672bebf.svn-base
+#	new file:   Renew/Renew/.svn/pristine/43/4388b3073e418abf56961c6f23fcc29c94ddb721.svn-base
+#	new file:   Renew/Renew/.svn/pristine/44/440b69821e05e4d94a835662e21575c0f02cc4d8.svn-base
+#	new file:   Renew/Renew/.svn/pristine/47/47b15748ecc8e952c5935170090db7c269ce4b4f.svn-base
+#	new file:   Renew/Renew/.svn/pristine/48/48cc7eda8d81dd9069cbfcaa8c90fd7b139e1c50.svn-base
+#	new file:   Renew/Renew/.svn/pristine/4b/4b728ba83db43e89596d4a832c143d3d8f08dc92.svn-base
+#	new file:   Renew/Renew/.svn/pristine/50/50be0212f1ab1637a8374f48721558abc6bd08bf.svn-base
+#	new file:   Renew/Renew/.svn/pristine/52/526358ef03d908749eb0680f9cd2e9158b048f74.svn-base
+#	new file:   Renew/Renew/.svn/pristine/52/5289806f82a93d109b426b23ab662b86a450afb0.svn-base
+#	new file:   Renew/Renew/.svn/pristine/55/5579f5cc4cd12191ce45734af211ab69d3cd4a54.svn-base
+#	new file:   Renew/Renew/.svn/pristine/56/5669ea26d9df5c8d9fb96bfede4822cb5609b5e1.svn-base
+#	new file:   Renew/Renew/.svn/pristine/56/5678e790bf1eddcf68b984ba1048d3aeb5111415.svn-base
+#	new file:   Renew/Renew/.svn/pristine/57/573e3ded237dca35546b192222311555f3491b54.svn-base
+#	new file:   Renew/Renew/.svn/pristine/57/5756ce32fbd4073cae45f2a29784ea5607564b98.svn-base
+#	new file:   Renew/Renew/.svn/pristine/58/5875f8d998eb9fad53b1f3e7a21f570236a6e477.svn-base
+#	new file:   Renew/Renew/.svn/pristine/59/59d4581a4c74af1ab8bf8dab83c8468b9b65095b.svn-base
+#	new file:   Renew/Renew/.svn/pristine/5e/5eef45ccb2aa4d0451e37d71a2c0dcfaf7de776a.svn-base
+#	new file:   Renew/Renew/.svn/pristine/61/61d6b875786f08488d6faf9c6a4ab4bdca106699.svn-base
+#	new file:   Renew/Renew/.svn/pristine/62/622a966609b73f3f0de7cc19460f8035fe09fb88.svn-base
+#	new file:   Renew/Renew/.svn/pristine/62/6258c0c4ec7a239f7f93de3d77ad97c339df2b5c.svn-base
+#	new file:   Renew/Renew/.svn/pristine/62/62bfb27900c9b16ef926938e92e0a72a8730aa40.svn-base
+#	new file:   Renew/Renew/.svn/pristine/63/63ab94d52f72d5f334bf5643e35ebf0289d7d990.svn-base
+#	new file:   Renew/Renew/.svn/pristine/64/6492d667a774722ab9493178a41e767ee63a063c.svn-base
+#	new file:   Renew/Renew/.svn/pristine/68/683bcde73b81ccf888a68ac5885086f7cc35b63a.svn-base
+#	new file:   Renew/Renew/.svn/pristine/6e/6eea4f1bd89364d92c581355f06666a9a65a04b8.svn-base
+#	new file:   Renew/Renew/.svn/pristine/71/71e0d2a34f8846b8a2cbfe79383f7383ad5922d8.svn-base
+#	new file:   Renew/Renew/.svn/pristine/74/74b91de6c95b1898bf2d091374e44d5ad8d7e686.svn-base
+#	new file:   Renew/Renew/.svn/pristine/76/76801cd9d3d022895e3b6b75ba42e288a64bc643.svn-base
+#	new file:   Renew/Renew/.svn/pristine/77/77511836f046344c57a7a3b9d64b6984d9e803ea.svn-base
+#	new file:   Renew/Renew/.svn/pristine/7c/7cf2326b6eeab416100087bac630432288e086bd.svn-base
+#	new file:   Renew/Renew/.svn/pristine/7d/7d978e27c0ae817674dd1d9b010b0612419ea8ef.svn-base
+#	new file:   Renew/Renew/.svn/pristine/80/80e7801c1f5482e7be2eccb52fb1f84de338f33d.svn-base
+#	new file:   Renew/Renew/.svn/pristine/81/8167cba0901deaff9b6d62e6250094d77a386bba.svn-base
+#	new file:   Renew/Renew/.svn/pristine/87/8761006489ab01c5b28ef5cce86ad6267cb6108d.svn-base
+#	new file:   Renew/Renew/.svn/pristine/8d/8d0afa78893ae5f04e505db0d76d0d50cf34e7da.svn-base
+#	new file:   Renew/Renew/.svn/pristine/8d/8d4a1585470ff4c9a7c6dbcf9c09afb16e581d4e.svn-base
+#	new file:   Renew/Renew/.svn/pristine/8d/8dc221c432f9e45e81d3cb5a43016b3743dcec27.svn-base
+#	new file:   Renew/Renew/.svn/pristine/8e/8e6ce2148b2fae3b471f595e2caca0b989afe059.svn-base
+#	new file:   Renew/Renew/.svn/pristine/93/93a627c953618106a2f7cd43bfd19621cb811c86.svn-base
+#	new file:   Renew/Renew/.svn/pristine/96/96a666aa1362b21023a4464d91deed3dc353c68e.svn-base
+#	new file:   Renew/Renew/.svn/pristine/99/99ea672c276fc6556b6ef349a3aec30405f77bd5.svn-base
+#	new file:   Renew/Renew/.svn/pristine/9b/9b9c146f3a9bb1d0c198848c2570326a2ab4d4d5.svn-base
+#	new file:   Renew/Renew/.svn/pristine/a3/a34cfc04c6cb88087776c7602c03a2711dc82f3d.svn-base
+#	new file:   Renew/Renew/.svn/pristine/a7/a76bbd143b523376d0be75e7e8d91662bf7adec9.svn-base
+#	new file:   Renew/Renew/.svn/pristine/aa/aad0144430abbc7de454555adcc37bb5954d0905.svn-base
+#	new file:   Renew/Renew/.svn/pristine/ae/ae7d7763a49b6d5056d256fd172b2534b1d9db96.svn-base
+#	new file:   Renew/Renew/.svn/pristine/b1/b19ec1c373be2cfc87e82298906a2d4a93085ce8.svn-base
+#	new file:   Renew/Renew/.svn/pristine/b4/b48a509d4eee3cd37059482bc258a275931aa3a7.svn-base
+#	new file:   Renew/Renew/.svn/pristine/b4/b4f9b2838d3d9066cb539671e1ee5a49ffaa41ba.svn-base
+#	new file:   Renew/Renew/.svn/pristine/b6/b6f38d827f9023cded0144c68e40a24621b469a1.svn-base
+#	new file:   Renew/Renew/.svn/pristine/b7/b738de7d16b500d22a3b9ad524c10fb77187e390.svn-base
+#	new file:   Renew/Renew/.svn/pristine/b9/b994dfd81d6b9d8322aa1f26a3654d0c7d7bb70e.svn-base
+#	new file:   Renew/Renew/.svn/pristine/bd/bd1a15b4268db81d4ca2fe6d21ccb7c2e286ecc5.svn-base
+#	new file:   Renew/Renew/.svn/pristine/bd/bdb689273ae7d1c777cf61d53a82aeb4dab4c970.svn-base
+#	new file:   Renew/Renew/.svn/pristine/bf/bf943fb137ef1101d19d4685a39f6ecaca40d6dc.svn-base
+#	new file:   Renew/Renew/.svn/pristine/c1/c18b01a4867a9291cb31c5ed8542ce599b5961d5.svn-base
+#	new file:   Renew/Renew/.svn/pristine/c5/c5c4b278397b92be8cb8e47728baa34b460a00b1.svn-base
+#	new file:   Renew/Renew/.svn/pristine/cc/cc9d023b6241103079644d85169429e54fdf6f9a.svn-base
+#	new file:   Renew/Renew/.svn/pristine/cc/ccce483d7a552f65b060e494ab6080b5fd5ca90f.svn-base
+#	new file:   Renew/Renew/.svn/pristine/cd/cda3741628351e657926f37a6a5109e81dac62ae.svn-base
+#	new file:   Renew/Renew/.svn/pristine/cf/cf22f1bcfd50b05ce316d4863c1b3a4993132cf2.svn-base
+#	new file:   Renew/Renew/.svn/pristine/d1/d168744ba455fe111f87c260f2483dea861ceb38.svn-base
+#	new file:   Renew/Renew/.svn/pristine/d1/d1a5f532eee9535c1f082a7efaba4a604a6983ba.svn-base
+#	new file:   Renew/Renew/.svn/pristine/d4/d4ef0b6d3b49ef7aa4992817048819d52fc3356c.svn-base
+#	new file:   Renew/Renew/.svn/pristine/da/da0730556a96f1673088364280f4c6bed2bed839.svn-base
+#	new file:   Renew/Renew/.svn/pristine/db/db1fcd8cefb712e7fd6843d4160222cc8954ef2d.svn-base
+#	new file:   Renew/Renew/.svn/pristine/db/dbbbbe2694d4b9b990881f279b4313574dbeac9b.svn-base
+#	new file:   Renew/Renew/.svn/pristine/db/dbf2b28b3628edb0fcf807445812d70be937ad7e.svn-base
+#	new file:   Renew/Renew/.svn/pristine/dc/dca27503ec2e0ad0e4dbc951e0e791c3b2fff0f7.svn-base
+#	new file:   Renew/Renew/.svn/pristine/dd/dd2a30edd9c1d36367cc5fc530e165678051342c.svn-base
+#	new file:   Renew/Renew/.svn/pristine/de/de900843e284dc22a59a218ba212fb451180a2a1.svn-base
+#	new file:   Renew/Renew/.svn/pristine/e0/e029b0fa3ed34d9109854902e4485a82f91d1920.svn-base
+#	new file:   Renew/Renew/.svn/pristine/e0/e02b0aca862d63284f5384538ebddd9956c1f22c.svn-base
+#	new file:   Renew/Renew/.svn/pristine/e0/e0b1b9ebaeaca19082b7cb636419dd5ae2bd1dd6.svn-base
+#	new file:   Renew/Renew/.svn/pristine/e5/e5a5e877a141577a78ac09819c1035996074e54b.svn-base
+#	new file:   Renew/Renew/.svn/pristine/e7/e7cec9ee0f54aca6709e333d9c605bdef2de6bd3.svn-base
+#	new file:   Renew/Renew/.svn/pristine/e9/e99bea90e21515bec65ad2cae92974a434035fec.svn-base
+#	new file:   Renew/Renew/.svn/pristine/ea/eab9f1a9734b1ce5d1dd0798dc60ca3af0aa8f1d.svn-base
+#	new file:   Renew/Renew/.svn/pristine/f2/f2aff5e1bc09c6d9abee2771a5c55e430bd821e1.svn-base
+#	new file:   Renew/Renew/.svn/pristine/f5/f5c9a2870a4cc980254843bea9d50c69d7c18a95.svn-base
+#	new file:   Renew/Renew/.svn/pristine/f7/f74120106b634a837825d0e570f671e596db60e5.svn-base
+#	new file:   Renew/Renew/.svn/pristine/fd/fdcc8d9207280e3077781027e3b160567053f2ec.svn-base
+#	new file:   Renew/Renew/.svn/wc.db
+#	new file:   Renew/Renew/AuthCharge.sln
+#	new file:   Renew/Renew/AuthCharge/AgentCharge.vb
+#	new file:   Renew/Renew/AuthCharge/AuthCharge.v12.suo
+#	new file:   Renew/Renew/AuthCharge/AuthCharge.vb
+#	new file:   Renew/Renew/AuthCharge/AuthCharge.vbproj
+#	new file:   Renew/Renew/AuthCharge/AuthCharge.vbproj.user
+#	new file:   Renew/Renew/AuthCharge/AuthCharge_TemporaryKey.pfx
+#	new file:   Renew/Renew/AuthCharge/Charge.vb
+#	new file:   Renew/Renew/AuthCharge/CreditCardCharge.vb
+#	new file:   Renew/Renew/AuthCharge/Customer.vb
+#	new file:   Renew/Renew/AuthCharge/My Project/Application.Designer.vb
+#	new file:   Renew/Renew/AuthCharge/My Project/Application.myapp
+#	new file:   Renew/Renew/AuthCharge/My Project/AssemblyInfo.vb
+#	new file:   Renew/Renew/AuthCharge/My Project/Resources.Designer.vb
+#	new file:   Renew/Renew/AuthCharge/My Project/Resources.resx
+#	new file:   Renew/Renew/AuthCharge/My Project/Settings.Designer.vb
+#	new file:   Renew/Renew/AuthCharge/My Project/Settings.settings
+#	new file:   Renew/Renew/AuthCharge/My Project/app.manifest
+#	new file:   Renew/Renew/AuthCharge/Renew.080314.vb
+#	new file:   Renew/Renew/AuthCharge/Renew.100114.vb
+#	new file:   Renew/Renew/AuthCharge/Renew.vb
+#	new file:   Renew/Renew/AuthCharge/Renew112614.vb
+#	new file:   Renew/Renew/AuthCharge/Renewals.vbproj
+#	new file:   Renew/Renew/AuthCharge/Renewals.vbproj.user
+#	new file:   Renew/Renew/AuthCharge/Web References/svc/ANetApiResponseType.datasource
+#	new file:   Renew/Renew/AuthCharge/Web References/svc/ARBCancelSubscriptionResponseType.datasource
+#	new file:   Renew/Renew/AuthCharge/Web References/svc/ARBCreateSubscriptionResponseType.datasource
+#	new file:   Renew/Renew/AuthCharge/Web References/svc/ARBGetSubscriptionStatusResponseType.datasource
+#	new file:   Renew/Renew/AuthCharge/Web References/svc/ARBUpdateSubscriptionResponseType.datasource
+#	new file:   Renew/Renew/AuthCharge/Web References/svc/CreateCustomerPaymentProfileResponseType.datasource
+#	new file:   Renew/Renew/AuthCharge/Web References/svc/CreateCustomerProfileResponseType.datasource
+#	new file:   Renew/Renew/AuthCharge/Web References/svc/CreateCustomerProfileTransactionResponseType.datasource
+#	new file:   Renew/Renew/AuthCharge/Web References/svc/CreateCustomerShippingAddressResponseType.datasource
+#	new file:   Renew/Renew/AuthCharge/Web References/svc/DeleteCustomerPaymentProfileResponseType.datasource
+#	new file:   Renew/Renew/AuthCharge/Web References/svc/DeleteCustomerProfileResponseType.datasource
+#	new file:   Renew/Renew/AuthCharge/Web References/svc/DeleteCustomerShippingAddressResponseType.datasource
+#	new file:   Renew/Renew/AuthCharge/Web References/svc/GetBatchStatisticsResponseType.datasource
+#	new file:   Renew/Renew/AuthCharge/Web References/svc/GetCustomerPaymentProfileResponseType.datasource
+#	new file:   Renew/Renew/AuthCharge/Web References/svc/GetCustomerProfileIdsResponseType.datasource
+#	new file:   Renew/Renew/AuthCharge/Web References/svc/GetCustomerProfileResponseType.datasource
+#	new file:   Renew/Renew/AuthCharge/Web References/svc/GetCustomerShippingAddressResponseType.datasource
+#	new file:   Renew/Renew/AuthCharge/Web References/svc/GetHostedProfilePageResponseType.datasource
+#	new file:   Renew/Renew/AuthCharge/Web References/svc/GetSettledBatchListResponseType.datasource
+#	new file:   Renew/Renew/AuthCharge/Web References/svc/GetTransactionDetailsResponseType.datasource
+#	new file:   Renew/Renew/AuthCharge/Web References/svc/GetTransactionListResponseType.datasource
+#	new file:   Renew/Renew/AuthCharge/Web References/svc/GetUnsettledTransactionListResponseType.datasource
+#	new file:   Renew/Renew/AuthCharge/Web References/svc/Reference.map
+#	new file:   Renew/Renew/AuthCharge/Web References/svc/Reference.vb
+#	new file:   Renew/Renew/AuthCharge/Web References/svc/Service.disco
+#	new file:   Renew/Renew/AuthCharge/Web References/svc/Service.wsdl
+#	new file:   Renew/Renew/AuthCharge/Web References/svc/UpdateCustomerPaymentProfileResponseType.datasource
+#	new file:   Renew/Renew/AuthCharge/Web References/svc/UpdateCustomerProfileResponseType.datasource
+#	new file:   Renew/Renew/AuthCharge/Web References/svc/UpdateCustomerShippingAddressResponseType.datasource
+#	new file:   Renew/Renew/AuthCharge/Web References/svc/UpdateSplitTenderGroupResponseType.datasource
+#	new file:   Renew/Renew/AuthCharge/Web References/svc/ValidateCustomerPaymentProfileResponseType.datasource
+#	new file:   Renew/Renew/AuthCharge/Web References/svctest/ANetApiResponseType.datasource
+#	new file:   Renew/Renew/AuthCharge/Web References/svctest/ARBCancelSubscriptionResponseType.datasource
+#	new file:   Renew/Renew/AuthCharge/Web References/svctest/ARBCreateSubscriptionResponseType.datasource
+#	new file:   Renew/Renew/AuthCharge/Web References/svctest/ARBGetSubscriptionStatusResponseType.datasource
+#	new file:   Renew/Renew/AuthCharge/Web References/svctest/ARBUpdateSubscriptionResponseType.datasource
+#	new file:   Renew/Renew/AuthCharge/Web References/svctest/CreateCustomerPaymentProfileResponseType.datasource
+#	new file:   Renew/Renew/AuthCharge/Web References/svctest/CreateCustomerProfileResponseType.datasource
+#	new file:   Renew/Renew/AuthCharge/Web References/svctest/CreateCustomerProfileTransactionResponseType.datasource
+#	new file:   Renew/Renew/AuthCharge/Web References/svctest/CreateCustomerShippingAddressResponseType.datasource
+#	new file:   Renew/Renew/AuthCharge/Web References/svctest/DeleteCustomerPaymentProfileResponseType.datasource
+#	new file:   Renew/Renew/AuthCharge/Web References/svctest/DeleteCustomerProfileResponseType.datasource
+#	new file:   Renew/Renew/AuthCharge/Web References/svctest/DeleteCustomerShippingAddressResponseType.datasource
+#	new file:   Renew/Renew/AuthCharge/Web References/svctest/GetBatchStatisticsResponseType.datasource
+#	new file:   Renew/Renew/AuthCharge/Web References/svctest/GetCustomerPaymentProfileResponseType.datasource
+#	new file:   Renew/Renew/AuthCharge/Web References/svctest/GetCustomerProfileIdsResponseType.datasource
+#	new file:   Renew/Renew/AuthCharge/Web References/svctest/GetCustomerProfileResponseType.datasource
+#	new file:   Renew/Renew/AuthCharge/Web References/svctest/GetCustomerShippingAddressResponseType.datasource
+#	new file:   Renew/Renew/AuthCharge/Web References/svctest/GetHostedProfilePageResponseType.datasource
+#	new file:   Renew/Renew/AuthCharge/Web References/svctest/GetSettledBatchListResponseType.datasource
+#	new file:   Renew/Renew/AuthCharge/Web References/svctest/GetTransactionDetailsResponseType.datasource
+#	new file:   Renew/Renew/AuthCharge/Web References/svctest/GetTransactionListResponseType.datasource
+#	new file:   Renew/Renew/AuthCharge/Web References/svctest/GetUnsettledTransactionListResponseType.datasource
+#	new file:   Renew/Renew/AuthCharge/Web References/svctest/Reference.map
+#	new file:   Renew/Renew/AuthCharge/Web References/svctest/Reference.vb
+#	new file:   Renew/Renew/AuthCharge/Web References/svctest/Service.disco
+#	new file:   Renew/Renew/AuthCharge/Web References/svctest/Service.wsdl
+#	new file:   Renew/Renew/AuthCharge/Web References/svctest/UpdateCustomerPaymentProfileResponseType.datasource
+#	new file:   Renew/Renew/AuthCharge/Web References/svctest/UpdateCustomerProfileResponseType.datasource
+#	new file:   Renew/Renew/AuthCharge/Web References/svctest/UpdateCustomerShippingAddressResponseType.datasource
+#	new file:   Renew/Renew/AuthCharge/Web References/svctest/UpdateSplitTenderGroupResponseType.datasource
+#	new file:   Renew/Renew/AuthCharge/Web References/svctest/ValidateCustomerPaymentProfileResponseType.datasource
+#	new file:   Renew/Renew/AuthCharge/app.config
+#	new file:   Renew/Renew/AuthCharge/bin/Debug/AuthCharge.012513.exe
+#	new file:   Renew/Renew/AuthCharge/bin/Debug/AuthCharge.031913.exe
+#	new file:   Renew/Renew/AuthCharge/bin/Debug/AuthCharge.080314.exe
+#	new file:   Renew/Renew/AuthCharge/bin/Debug/AuthCharge.090312.exe
+#	new file:   Renew/Renew/AuthCharge/bin/Debug/AuthCharge.application
+#	new file:   Renew/Renew/AuthCharge/bin/Debug/AuthCharge.exe
+#	new file:   Renew/Renew/AuthCharge/bin/Debug/AuthCharge.exe.config
+#	new file:   Renew/Renew/AuthCharge/bin/Debug/AuthCharge.exe.manifest
+#	new file:   Renew/Renew/AuthCharge/bin/Debug/AuthCharge.pdb
+#	new file:   Renew/Renew/AuthCharge/bin/Debug/AuthCharge.vshost.application
+#	new file:   Renew/Renew/AuthCharge/bin/Debug/AuthCharge.vshost.exe
+#	new file:   Renew/Renew/AuthCharge/bin/Debug/AuthCharge.vshost.exe.config
+#	new file:   Renew/Renew/AuthCharge/bin/Debug/AuthCharge.vshost.exe.manifest
+#	new file:   Renew/Renew/AuthCharge/bin/Debug/AuthCharge.xml
+#	new file:   Renew/Renew/AuthCharge/bin/Debug/AuthCharge112614.exe
+#	new file:   Renew/Renew/AuthCharge/bin/Debug/AuthCharge120114.exe
+#	new file:   Renew/Renew/AuthCharge/bin/Debug/AuthChargeNew.exe
+#	new file:   Renew/Renew/AuthCharge/bin/Debug/AuthChargeOK.exe
+#	new file:   Renew/Renew/AuthCharge/bin/Debug/AuthChargeOK1.exe
+#	new file:   Renew/Renew/AuthCharge/bin/Debug/AuthChargeo21713.exe
+#	new file:   Renew/Renew/AuthCharge/bin/Debug/app.publish/Application Files/AuthCharge_1_0_0_0/AuthCharge.exe.config.deploy
+#	new file:   Renew/Renew/AuthCharge/bin/Debug/app.publish/Application Files/AuthCharge_1_0_0_0/AuthCharge.exe.deploy
+#	new file:   Renew/Renew/AuthCharge/bin/Debug/app.publish/Application Files/AuthCharge_1_0_0_0/AuthCharge.exe.manifest
+#	new file:   Renew/Renew/AuthCharge/bin/Debug/app.publish/AuthCharge.application
+#	new file:   Renew/Renew/AuthCharge/bin/Debug/app.publish/AuthCharge.exe
+#	new file:   Renew/Renew/AuthCharge/bin/Debug/app.publish/autorun.inf
+#	new file:   Renew/Renew/AuthCharge/bin/Debug/app.publish/setup.exe
+#	new file:   Renew/Renew/AuthCharge/obj/x86/Debug/AuthCharge.Resources.resources
+#	new file:   Renew/Renew/AuthCharge/obj/x86/Debug/AuthCharge.application
+#	new file:   Renew/Renew/AuthCharge/obj/x86/Debug/AuthCharge.exe
+#	new file:   Renew/Renew/AuthCharge/obj/x86/Debug/AuthCharge.exe.manifest
+#	new file:   Renew/Renew/AuthCharge/obj/x86/Debug/AuthCharge.pdb
+#	new file:   Renew/Renew/AuthCharge/obj/x86/Debug/AuthCharge.vbproj.CoreCompileInputs.cache
+#	new file:   Renew/Renew/AuthCharge/obj/x86/Debug/AuthCharge.vbproj.FileListAbsolute.txt
+#	new file:   Renew/Renew/AuthCharge/obj/x86/Debug/AuthCharge.xml
+#	new file:   Renew/Renew/AuthCharge/obj/x86/Debug/DesignTimeResolveAssemblyReferences.cache
+#	new file:   Renew/Renew/AuthCharge/obj/x86/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+#	new file:   Renew/Renew/AuthCharge/obj/x86/Debug/GenerateResource.read.1.tlog
+#	new file:   Renew/Renew/AuthCharge/obj/x86/Debug/GenerateResource.write.1.tlog
+#	new file:   Renew/Renew/AuthCharge/obj/x86/Debug/Renewals.vbproj.CoreCompileInputs.cache
+#	new file:   Renew/Renew/AuthCharge/obj/x86/Debug/Renewals.vbproj.FileListAbsolute.txt
+#	new file:   Renew/Renew/AuthCharge/obj/x86/Debug/Renewals.vbproj.GenerateResource.Cache
+#	new file:   Renew/Renew/AuthCharge/obj/x86/Debug/TempPE/My Project.Resources.Designer.vb.dll
+#	new file:   Renew/Renew/AuthCharge/obj/x86/Debug/TempPE/Service References.ServiceReference1.Reference.vb.dll
+#	new file:   Renew/Renew/AuthCharge/obj/x86/Debug/TempPE/Service References.Servicex.Reference.vb.dll
+#	new file:   Renew/Renew/AuthCharge/obj/x86/Debug/TempPE/Service References.svc.Reference.vb.dll
+#	new file:   Renew/Renew/AuthCharge/obj/x86/Debug/TempPE/Web References.svc.Reference.vb.dll
+#	new file:   Renew/Renew/AuthCharge/obj/x86/Debug/TempPE/Web References.svctest.Reference.vb.dll
+#	new file:   Renew/Renew/AuthCharge/obj/x86/Release/AuthCharge.vbproj.CoreCompileInputs.cache
+#	new file:   Renew/Renew/AuthCharge/obj/x86/Release/Renewals.vbproj.CoreCompileInputs.cache
+#	new file:   Renew/Renew/Renew11118.vb
+#	new file:   Renew/Renew/publish/Application Files/AuthCharge_1_0_0_0/AuthCharge.application
+#	new file:   Renew/Renew/publish/Application Files/AuthCharge_1_0_0_0/AuthCharge.exe.config.deploy
+#	new file:   Renew/Renew/publish/Application Files/AuthCharge_1_0_0_0/AuthCharge.exe.deploy
+#	new file:   Renew/Renew/publish/Application Files/AuthCharge_1_0_0_0/AuthCharge.exe.manifest
+#	new file:   Renew/Renew/publish/AuthCharge.application
+#	new file:   Renew/Renew/publish/autorun.inf
+#	new file:   Renew/Renew/publish/setup.exe
+#	new file:   SprintPPC/New folder/Order.aspx
+#	new file:   SprintPPC/New folder/Order.aspx.vb
+#	new file:   SprintPPC/Order.aspx
+#	new file:   SprintPPC/Order.aspx.vb
+#	new file:   SprintPPC/ppc/ASPNETDB.BAK
+#	new file:   SprintPPC/ppc/ATClass/ATCPinAssign.vb
+#	new file:   SprintPPC/ppc/ATClass/ATCPinAssign.vb.bk
+#	new file:   SprintPPC/ppc/ATClass/ATClass.vbproj
+#	new file:   SprintPPC/ppc/ATClass/My Project/Application.Designer.vb
+#	new file:   SprintPPC/ppc/ATClass/My Project/Application.myapp
+#	new file:   SprintPPC/ppc/ATClass/My Project/AssemblyInfo.vb
+#	new file:   SprintPPC/ppc/ATClass/My Project/Resources.Designer.vb
+#	new file:   SprintPPC/ppc/ATClass/My Project/Resources.resx
+#	new file:   SprintPPC/ppc/ATClass/My Project/Settings.Designer.vb
+#	new file:   SprintPPC/ppc/ATClass/My Project/Settings.settings
+#	new file:   SprintPPC/ppc/ATClass/Web.config
+#	new file:   SprintPPC/ppc/ATClass/bin/Debug/ATClass.dll
+#	new file:   SprintPPC/ppc/ATClass/bin/Debug/ATClass.pdb
+#	new file:   SprintPPC/ppc/ATClass/bin/Debug/ATClass.xml
+#	new file:   SprintPPC/ppc/ATClass/obj/Debug/ATClass.Resources.resources
+#	new file:   SprintPPC/ppc/ATClass/obj/Debug/ATClass.dll
+#	new file:   SprintPPC/ppc/ATClass/obj/Debug/ATClass.pdb
+#	new file:   SprintPPC/ppc/ATClass/obj/Debug/ATClass.vbproj.FileListAbsolute.txt
+#	new file:   SprintPPC/ppc/ATClass/obj/Debug/ATClass.vbproj.GenerateResource.Cache
+#	new file:   SprintPPC/ppc/ATClass/obj/Debug/ATClass.xml
+#	new file:   SprintPPC/ppc/ATClass/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+#	new file:   SprintPPC/ppc/About.aspx
+#	new file:   SprintPPC/ppc/About.aspx.vb
+#	new file:   SprintPPC/ppc/Account/ChangePassword.aspx
+#	new file:   SprintPPC/ppc/Account/ChangePassword.aspx.vb
+#	new file:   SprintPPC/ppc/Account/ChangePasswordSuccess.aspx
+#	new file:   SprintPPC/ppc/Account/ChangePasswordSuccess.aspx.vb
+#	new file:   SprintPPC/ppc/Account/Login.aspx
+#	new file:   SprintPPC/ppc/Account/Login.aspx.vb
+#	new file:   SprintPPC/ppc/Account/Register.aspx
+#	new file:   SprintPPC/ppc/Account/Register.aspx.vb
+#	new file:   SprintPPC/ppc/Account/Web.config
+#	new file:   SprintPPC/ppc/Add renew_charge_type to orders.sql
+#	new file:   SprintPPC/ppc/Admin.aspx
+#	new file:   SprintPPC/ppc/Admin.aspx.vb
+#	new file:   SprintPPC/ppc/Agents.aspx
+#	new file:   SprintPPC/ppc/Agents.aspx.vb
+#	new file:   SprintPPC/ppc/Alter Table Pins add status action columns.sql
+#	new file:   SprintPPC/ppc/App_Code/ATCPin.vb
+#	new file:   SprintPPC/ppc/App_Code/ATCQuery.vb
+#	new file:   SprintPPC/ppc/App_Code/AgentCharge.vb
+#	new file:   SprintPPC/ppc/App_Code/Charge.vb
+#	new file:   SprintPPC/ppc/App_Code/Charge01052016.vb.exclude
+#	new file:   SprintPPC/ppc/App_Code/CreditAgentAccountCharge.vb
+#	new file:   SprintPPC/ppc/App_Code/CreditCardCharge.vb
+#	new file:   SprintPPC/ppc/App_Code/CreditCardCharge.vb.exclude
+#	new file:   SprintPPC/ppc/App_Code/CreditCardCharge01052016.vb.exclude
+#	new file:   SprintPPC/ppc/App_Code/CreditCardCharge051016.vb.exclude
+#	new file:   SprintPPC/ppc/App_Code/CreditCardCharge120718.vb.exclude
+#	new file:   SprintPPC/ppc/App_Code/CreditCardChargeBK.vb.exclude
+#	new file:   SprintPPC/ppc/App_Code/Customer.vb
+#	new file:   SprintPPC/ppc/App_Code/DataTableToExcel.vb
+#	new file:   SprintPPC/ppc/App_Code/GlobalCellSearch.vb
+#	new file:   SprintPPC/ppc/App_Data/ASPNETDB.MDF
+#	new file:   SprintPPC/ppc/App_Data/Esn.aspx
+#	new file:   SprintPPC/ppc/App_Data/Esn.aspx.vb
+#	new file:   SprintPPC/ppc/App_Data/Order.aspx
+#	new file:   SprintPPC/ppc/App_Data/Order.aspx.vb
+#	new file:   SprintPPC/ppc/App_Data/aspnetdb_log.ldf
+#	new file:   SprintPPC/ppc/App_Themes/Aqua/theme.css
+#	new file:   SprintPPC/ppc/App_WebReferences/Esn.aspx
+#	new file:   SprintPPC/ppc/App_WebReferences/Esn.aspx.vb
+#	new file:   SprintPPC/ppc/App_WebReferences/Order.aspx
+#	new file:   SprintPPC/ppc/App_WebReferences/Order.aspx.vb
+#	new file:   SprintPPC/ppc/App_WebReferences/svc/Service.disco
+#	new file:   SprintPPC/ppc/App_WebReferences/svc/Service.discomap
+#	new file:   SprintPPC/ppc/App_WebReferences/svc/Service.wsdl
+#	new file:   SprintPPC/ppc/Authnet.aspx
+#	new file:   SprintPPC/ppc/Authnet.aspx.vb
+#	new file:   SprintPPC/ppc/Bin/AjaxControlToolkit.dll
+#	new file:   SprintPPC/ppc/Bin/AjaxControlToolkit.dll.refresh
+#	new file:   SprintPPC/ppc/Bin/AjaxControlToolkit.pdb
+#	new file:   SprintPPC/ppc/Bin/ar/AjaxControlToolkit.resources.dll
+#	new file:   SprintPPC/ppc/Bin/cs/AjaxControlToolkit.resources.dll
+#	new file:   SprintPPC/ppc/Bin/de/AjaxControlToolkit.resources.dll
+#	new file:   SprintPPC/ppc/Bin/es/AjaxControlToolkit.resources.dll
+#	new file:   SprintPPC/ppc/Bin/fr/AjaxControlToolkit.resources.dll
+#	new file:   SprintPPC/ppc/Bin/he/AjaxControlToolkit.resources.dll
+#	new file:   SprintPPC/ppc/Bin/hi/AjaxControlToolkit.resources.dll
+#	new file:   SprintPPC/ppc/Bin/it/AjaxControlToolkit.resources.dll
+#	new file:   SprintPPC/ppc/Bin/ja/AjaxControlToolkit.resources.dll
+#	new file:   SprintPPC/ppc/Bin/ko/AjaxControlToolkit.resources.dll
+#	new file:   SprintPPC/ppc/Bin/nl/AjaxControlToolkit.resources.dll
+#	new file:   SprintPPC/ppc/Bin/pt/AjaxControlToolkit.resources.dll
+#	new file:   SprintPPC/ppc/Bin/ru/AjaxControlToolkit.resources.dll
+#	new file:   SprintPPC/ppc/Bin/tr-TR/AjaxControlToolkit.resources.dll
+#	new file:   SprintPPC/ppc/Bin/zh-CHS/AjaxControlToolkit.resources.dll
+#	new file:   SprintPPC/ppc/Bin/zh-CHT/AjaxControlToolkit.resources.dll
+#	new file:   SprintPPC/ppc/CDRSummary.aspx
+#	new file:   SprintPPC/ppc/CDRSummary.aspx.vb
+#	new file:   SprintPPC/ppc/Charge.vb
+#	new file:   SprintPPC/ppc/ChargeCardOnFile.ashx
+#	new file:   SprintPPC/ppc/ChargeNewCard.ashx
+#	new file:   SprintPPC/ppc/ConResp.aspx
+#	new file:   SprintPPC/ppc/ConResp.aspx.vb
+#	new file:   SprintPPC/ppc/Create PinsUpload.sql
+#	new file:   SprintPPC/ppc/Credit.aspx
+#	new file:   SprintPPC/ppc/Credit.aspx.vb
+#	new file:   SprintPPC/ppc/CreditCardCharge.vb
+#	new file:   SprintPPC/ppc/Default.aspx
+#	new file:   SprintPPC/ppc/Default.aspx.vb
+#	new file:   SprintPPC/ppc/Default2.aspx
+#	new file:   SprintPPC/ppc/Default2.aspx.vb
+#	new file:   SprintPPC/ppc/Default3.aspx
+#	new file:   SprintPPC/ppc/Default3.aspx.vb
+#	new file:   SprintPPC/ppc/Esn.aspx
+#	new file:   SprintPPC/ppc/Esn.aspx.vb
+#	new file:   SprintPPC/ppc/Global.asax
+#	new file:   SprintPPC/ppc/ManageAccounts.aspx
+#	new file:   SprintPPC/ppc/ManageAccounts.aspx.vb
+#	new file:   SprintPPC/ppc/ManageESN.aspx
+#	new file:   SprintPPC/ppc/ManageESN.aspx.vb
+#	new file:   SprintPPC/ppc/Order.aspx
+#	new file:   SprintPPC/ppc/Order.aspx (2).vb
+#	new file:   SprintPPC/ppc/Order.aspx.kp - Copy.vb
+#	new file:   SprintPPC/ppc/Order.aspx.kp.vb
+#	new file:   SprintPPC/ppc/Order.aspx.vb
+#	new file:   SprintPPC/ppc/Order.aspx01052016.vb
+#	new file:   SprintPPC/ppc/Order.aspx111014.vb
+#	new file:   SprintPPC/ppc/Order.aspxko..vb
+#	new file:   SprintPPC/ppc/Order01052016.aspx
+#	new file:   SprintPPC/ppc/Order0703.aspx
+#	new file:   SprintPPC/ppc/Order121416.aspx.vb
+#	new file:   SprintPPC/ppc/OrderSummary.aspx
+#	new file:   SprintPPC/ppc/OrderSummary.aspx.vb
+#	new file:   SprintPPC/ppc/OrderSummary.aspx.vb.bak
+#	new file:   SprintPPC/ppc/PPCData.sql
+#	new file:   SprintPPC/ppc/Pins - Copy.aspx
+#	new file:   SprintPPC/ppc/Pins.aspx
+#	new file:   SprintPPC/ppc/Pins.aspx - Copy.vb
+#	new file:   SprintPPC/ppc/Pins.aspx.vb
+#	new file:   SprintPPC/ppc/Proc CallDetailDates.sql
+#	new file:   SprintPPC/ppc/Proc CallDetailGridviewData.sql
+#	new file:   SprintPPC/ppc/Proc CallSummary.sql
+#	new file:   SprintPPC/ppc/Reports - 122315_SG.aspx
+#	new file:   SprintPPC/ppc/Reports - 122315_SG.vb
+#	new file:   SprintPPC/ppc/Reports.aspx
+#	new file:   SprintPPC/ppc/Reports.aspx.vb
+#	new file:   SprintPPC/ppc/Revised Procedure ImportESN.sql
+#	new file:   SprintPPC/ppc/ScrapePP.aspx
+#	new file:   SprintPPC/ppc/ScrapePP.aspx.vb
+#	new file:   SprintPPC/ppc/ScrapePPDealer.aspx
+#	new file:   SprintPPC/ppc/ScrapePPDealer.aspx.vb
+#	new file:   SprintPPC/ppc/Scripts/GlobalCellSearch.js
+#	new file:   SprintPPC/ppc/Scripts/Site.js
+#	new file:   SprintPPC/ppc/SearchCDR.aspx
+#	new file:   SprintPPC/ppc/SearchCDR.aspx.vb
+#	new file:   SprintPPC/ppc/SearchOrder.aspx
+#	new file:   SprintPPC/ppc/SearchOrder.aspx.vb
+#	new file:   SprintPPC/ppc/Site.master
+#	new file:   SprintPPC/ppc/Site.master.vb
+#	new file:   SprintPPC/ppc/SprintResp.aspx
+#	new file:   SprintPPC/ppc/SprintResp.aspx.vb
+#	new file:   SprintPPC/ppc/Styles/Site.css
+#	new file:   SprintPPC/ppc/Styles/Site.css.bak
+#	new file:   SprintPPC/ppc/TelcoCDR.aspx
+#	new file:   SprintPPC/ppc/TelcoCDR.aspx.vb
+#	new file:   SprintPPC/ppc/TelcoResp.aspx
+#	new file:   SprintPPC/ppc/TelcoResp.aspx.vb
+#	new file:   SprintPPC/ppc/TestAuth.aspx
+#	new file:   SprintPPC/ppc/TestAuth.aspx.vb
+#	new file:   SprintPPC/ppc/Updates/ConResp (2).aspx
+#	new file:   SprintPPC/ppc/Updates/ConResp.aspx
+#	new file:   SprintPPC/ppc/Updates/ConResp.aspx (2).vb
+#	new file:   SprintPPC/ppc/Updates/ConResp.aspx.vb
+#	new file:   SprintPPC/ppc/Updates/Order.aspx
+#	new file:   SprintPPC/ppc/Updates/Order.aspx.vb
+#	new file:   SprintPPC/ppc/Updates/TelcoResp.aspx
+#	new file:   SprintPPC/ppc/Updates/TelcoResp.aspx.vb
+#	new file:   SprintPPC/ppc/Users.aspx
+#	new file:   SprintPPC/ppc/Users.aspx.vb
+#	new file:   SprintPPC/ppc/VZPP.aspx
+#	new file:   SprintPPC/ppc/VZPP.aspx.vb
+#	new file:   SprintPPC/ppc/VerIVR.aspx
+#	new file:   SprintPPC/ppc/VerIVR.aspx.vb
+#	new file:   SprintPPC/ppc/VerResp.aspx
+#	new file:   SprintPPC/ppc/VerResp.aspx.vb
+#	new file:   SprintPPC/ppc/VerizonCDR.aspx
+#	new file:   SprintPPC/ppc/VerizonCDR.aspx.vb
+#	new file:   SprintPPC/ppc/ViewRenewals.aspx
+#	new file:   SprintPPC/ppc/ViewRenewals.aspx.vb
+#	new file:   SprintPPC/ppc/ViewTransactions.aspx
+#	new file:   SprintPPC/ppc/ViewTransactions.aspx.vb
+#	new file:   SprintPPC/ppc/Web.config
+#	new file:   SprintPPC/ppc/alert.cs
+#	new file:   SprintPPC/ppc/aspnetdb
+#	new file:   SprintPPC/ppc/calendar-en.js
+#	new file:   SprintPPC/ppc/calendar-setup.js
+#	new file:   SprintPPC/ppc/calendar.js
+#	new file:   SprintPPC/ppc/calendar_stripped.js
+#	new file:   SprintPPC/ppc/chaimppc
+#	new file:   SprintPPC/ppc/images/Order.aspx.vb
+#	new file:   SprintPPC/ppc/images/Thumbs.db
+#	new file:   SprintPPC/ppc/images/ajax-loader.gif
+#	new file:   SprintPPC/ppc/images/delete.png
+#	new file:   SprintPPC/ppc/images/loading-bars.gif
+#	new file:   SprintPPC/ppc/images/smallcalendar.gif
+#	new file:   SprintPPC/ppc/ppc.bak
+#	new file:   SprintPPC/ppc/sql/alter authtrans.sql
+#	new file:   SprintPPC/ppc/sql/create authtransitems.sql
+#	new file:   SprintPPC/ppc/uploads/UploadedESN.xls
+#	new file:   SprintPPC/ppc/uploads/UploadedESN.xlsx
+#	new file:   SprintPPC/ppc/uploads/UploadedPins.csv
+#	new file:   SprintPPC/ppc/uploads/UploadedPins.xlsx
+#	new file:   SprintPPC/ppc/uploads/UploadedPins1.csv
+#	new file:   SprintPPC/ppc_prev/ASPNETDB.BAK
+#	new file:   SprintPPC/ppc_prev/ATClass/ATCPinAssign.vb
+#	new file:   SprintPPC/ppc_prev/ATClass/ATCPinAssign.vb.bk
+#	new file:   SprintPPC/ppc_prev/ATClass/ATClass.vbproj
+#	new file:   SprintPPC/ppc_prev/ATClass/My Project/Application.Designer.vb
+#	new file:   SprintPPC/ppc_prev/ATClass/My Project/Application.myapp
+#	new file:   SprintPPC/ppc_prev/ATClass/My Project/AssemblyInfo.vb
+#	new file:   SprintPPC/ppc_prev/ATClass/My Project/Resources.Designer.vb
+#	new file:   SprintPPC/ppc_prev/ATClass/My Project/Resources.resx
+#	new file:   SprintPPC/ppc_prev/ATClass/My Project/Settings.Designer.vb
+#	new file:   SprintPPC/ppc_prev/ATClass/My Project/Settings.settings
+#	new file:   SprintPPC/ppc_prev/ATClass/Web.config
+#	new file:   SprintPPC/ppc_prev/ATClass/bin/Debug/ATClass.dll
+#	new file:   SprintPPC/ppc_prev/ATClass/bin/Debug/ATClass.pdb
+#	new file:   SprintPPC/ppc_prev/ATClass/bin/Debug/ATClass.xml
+#	new file:   SprintPPC/ppc_prev/ATClass/obj/Debug/ATClass.Resources.resources
+#	new file:   SprintPPC/ppc_prev/ATClass/obj/Debug/ATClass.dll
+#	new file:   SprintPPC/ppc_prev/ATClass/obj/Debug/ATClass.pdb
+#	new file:   SprintPPC/ppc_prev/ATClass/obj/Debug/ATClass.vbproj.FileListAbsolute.txt
+#	new file:   SprintPPC/ppc_prev/ATClass/obj/Debug/ATClass.vbproj.GenerateResource.Cache
+#	new file:   SprintPPC/ppc_prev/ATClass/obj/Debug/ATClass.xml
+#	new file:   SprintPPC/ppc_prev/ATClass/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+#	new file:   SprintPPC/ppc_prev/About.aspx
+#	new file:   SprintPPC/ppc_prev/About.aspx.vb
+#	new file:   SprintPPC/ppc_prev/Account/ChangePassword.aspx
+#	new file:   SprintPPC/ppc_prev/Account/ChangePassword.aspx.vb
+#	new file:   SprintPPC/ppc_prev/Account/ChangePasswordSuccess.aspx
+#	new file:   SprintPPC/ppc_prev/Account/ChangePasswordSuccess.aspx.vb
+#	new file:   SprintPPC/ppc_prev/Account/Login.aspx
+#	new file:   SprintPPC/ppc_prev/Account/Login.aspx.vb
+#	new file:   SprintPPC/ppc_prev/Account/Register.aspx
+#	new file:   SprintPPC/ppc_prev/Account/Register.aspx.vb
+#	new file:   SprintPPC/ppc_prev/Account/Web.config
+#	new file:   SprintPPC/ppc_prev/Add renew_charge_type to orders.sql
+#	new file:   SprintPPC/ppc_prev/Admin.aspx
+#	new file:   SprintPPC/ppc_prev/Admin.aspx.vb
+#	new file:   SprintPPC/ppc_prev/Agents.aspx
+#	new file:   SprintPPC/ppc_prev/Agents.aspx.vb
+#	new file:   SprintPPC/ppc_prev/Alter Table Pins add status action columns.sql
+#	new file:   SprintPPC/ppc_prev/App_Code/ATCPin.vb
+#	new file:   SprintPPC/ppc_prev/App_Code/ATCQuery.vb
+#	new file:   SprintPPC/ppc_prev/App_Code/AgentCharge.vb
+#	new file:   SprintPPC/ppc_prev/App_Code/Charge.vb
+#	new file:   SprintPPC/ppc_prev/App_Code/Charge01052016.vb.exclude
+#	new file:   SprintPPC/ppc_prev/App_Code/CreditAgentAccountCharge.vb
+#	new file:   SprintPPC/ppc_prev/App_Code/CreditCardCharge.vb
+#	new file:   SprintPPC/ppc_prev/App_Code/CreditCardCharge.vb.exclude
+#	new file:   SprintPPC/ppc_prev/App_Code/CreditCardCharge01052016.vb.exclude
+#	new file:   SprintPPC/ppc_prev/App_Code/CreditCardCharge051016.vb.exclude
+#	new file:   SprintPPC/ppc_prev/App_Code/CreditCardCharge120718.vb.exclude
+#	new file:   SprintPPC/ppc_prev/App_Code/CreditCardChargeBK.vb.exclude
+#	new file:   SprintPPC/ppc_prev/App_Code/Customer.vb
+#	new file:   SprintPPC/ppc_prev/App_Code/DataTableToExcel.vb
+#	new file:   SprintPPC/ppc_prev/App_Code/GlobalCellSearch.vb
+#	new file:   SprintPPC/ppc_prev/App_Data/ASPNETDB.MDF
+#	new file:   SprintPPC/ppc_prev/App_Data/Esn.aspx
+#	new file:   SprintPPC/ppc_prev/App_Data/Esn.aspx.vb
+#	new file:   SprintPPC/ppc_prev/App_Data/Order.aspx
+#	new file:   SprintPPC/ppc_prev/App_Data/Order.aspx.vb
+#	new file:   SprintPPC/ppc_prev/App_Data/aspnetdb_log.ldf
+#	new file:   SprintPPC/ppc_prev/App_Themes/Aqua/theme.css
+#	new file:   SprintPPC/ppc_prev/App_WebReferences/Esn.aspx
+#	new file:   SprintPPC/ppc_prev/App_WebReferences/Esn.aspx.vb
+#	new file:   SprintPPC/ppc_prev/App_WebReferences/Order.aspx
+#	new file:   SprintPPC/ppc_prev/App_WebReferences/Order.aspx.vb
+#	new file:   SprintPPC/ppc_prev/App_WebReferences/svc/Service.disco
+#	new file:   SprintPPC/ppc_prev/App_WebReferences/svc/Service.discomap
+#	new file:   SprintPPC/ppc_prev/App_WebReferences/svc/Service.wsdl
+#	new file:   SprintPPC/ppc_prev/Authnet.aspx
+#	new file:   SprintPPC/ppc_prev/Authnet.aspx.vb
+#	new file:   SprintPPC/ppc_prev/Bin/AjaxControlToolkit.dll
+#	new file:   SprintPPC/ppc_prev/Bin/AjaxControlToolkit.dll.refresh
+#	new file:   SprintPPC/ppc_prev/Bin/AjaxControlToolkit.pdb
+#	new file:   SprintPPC/ppc_prev/Bin/ar/AjaxControlToolkit.resources.dll
+#	new file:   SprintPPC/ppc_prev/Bin/cs/AjaxControlToolkit.resources.dll
+#	new file:   SprintPPC/ppc_prev/Bin/de/AjaxControlToolkit.resources.dll
+#	new file:   SprintPPC/ppc_prev/Bin/es/AjaxControlToolkit.resources.dll
+#	new file:   SprintPPC/ppc_prev/Bin/fr/AjaxControlToolkit.resources.dll
+#	new file:   SprintPPC/ppc_prev/Bin/he/AjaxControlToolkit.resources.dll
+#	new file:   SprintPPC/ppc_prev/Bin/hi/AjaxControlToolkit.resources.dll
+#	new file:   SprintPPC/ppc_prev/Bin/it/AjaxControlToolkit.resources.dll
+#	new file:   SprintPPC/ppc_prev/Bin/ja/AjaxControlToolkit.resources.dll
+#	new file:   SprintPPC/ppc_prev/Bin/ko/AjaxControlToolkit.resources.dll
+#	new file:   SprintPPC/ppc_prev/Bin/nl/AjaxControlToolkit.resources.dll
+#	new file:   SprintPPC/ppc_prev/Bin/pt/AjaxControlToolkit.resources.dll
+#	new file:   SprintPPC/ppc_prev/Bin/ru/AjaxControlToolkit.resources.dll
+#	new file:   SprintPPC/ppc_prev/Bin/tr-TR/AjaxControlToolkit.resources.dll
+#	new file:   SprintPPC/ppc_prev/Bin/zh-CHS/AjaxControlToolkit.resources.dll
+#	new file:   SprintPPC/ppc_prev/Bin/zh-CHT/AjaxControlToolkit.resources.dll
+#	new file:   SprintPPC/ppc_prev/CDRSummary.aspx
+#	new file:   SprintPPC/ppc_prev/CDRSummary.aspx.vb
+#	new file:   SprintPPC/ppc_prev/Charge.vb
+#	new file:   SprintPPC/ppc_prev/ChargeCardOnFile.ashx
+#	new file:   SprintPPC/ppc_prev/ChargeNewCard.ashx
+#	new file:   SprintPPC/ppc_prev/ConResp.aspx
+#	new file:   SprintPPC/ppc_prev/ConResp.aspx.vb
+#	new file:   SprintPPC/ppc_prev/Create PinsUpload.sql
+#	new file:   SprintPPC/ppc_prev/Credit.aspx
+#	new file:   SprintPPC/ppc_prev/Credit.aspx.vb
+#	new file:   SprintPPC/ppc_prev/CreditCardCharge.vb
+#	new file:   SprintPPC/ppc_prev/Default.aspx
+#	new file:   SprintPPC/ppc_prev/Default.aspx.vb
+#	new file:   SprintPPC/ppc_prev/Default2.aspx
+#	new file:   SprintPPC/ppc_prev/Default2.aspx.vb
+#	new file:   SprintPPC/ppc_prev/Default3.aspx
+#	new file:   SprintPPC/ppc_prev/Default3.aspx.vb
+#	new file:   SprintPPC/ppc_prev/Esn.aspx
+#	new file:   SprintPPC/ppc_prev/Esn.aspx.vb
+#	new file:   SprintPPC/ppc_prev/Global.asax
+#	new file:   SprintPPC/ppc_prev/ManageAccounts.aspx
+#	new file:   SprintPPC/ppc_prev/ManageAccounts.aspx.vb
+#	new file:   SprintPPC/ppc_prev/ManageESN.aspx
+#	new file:   SprintPPC/ppc_prev/ManageESN.aspx.vb
+#	new file:   SprintPPC/ppc_prev/Order.aspx
+#	new file:   SprintPPC/ppc_prev/Order.aspx (2).vb
+#	new file:   SprintPPC/ppc_prev/Order.aspx.vb
+#	new file:   SprintPPC/ppc_prev/Order.aspx01052016.vb
+#	new file:   SprintPPC/ppc_prev/Order.aspx111014.vb
+#	new file:   SprintPPC/ppc_prev/Order01052016.aspx
+#	new file:   SprintPPC/ppc_prev/Order0703.aspx
+#	new file:   SprintPPC/ppc_prev/Order121416.aspx.vb
+#	new file:   SprintPPC/ppc_prev/OrderSummary.aspx
+#	new file:   SprintPPC/ppc_prev/OrderSummary.aspx.vb
+#	new file:   SprintPPC/ppc_prev/OrderSummary.aspx.vb.bak
+#	new file:   SprintPPC/ppc_prev/Pins - Copy.aspx
+#	new file:   SprintPPC/ppc_prev/Pins.aspx
+#	new file:   SprintPPC/ppc_prev/Pins.aspx - Copy.vb
+#	new file:   SprintPPC/ppc_prev/Pins.aspx.vb
+#	new file:   SprintPPC/ppc_prev/alert.cs
+#	new file:   SprintPPC/ppc_prev/aspnetdb
+#	new file:   SprintPPC/ppc_prev/calendar-en.js
+#	new file:   SprintPPC/ppc_prev/calendar-setup.js
+#	new file:   SprintPPC/ppc_prev/calendar.js
+#	new file:   SprintPPC/ppc_prev/calendar_stripped.js
+#	new file:   SprintPPC/ppc_prev/chaimppc
+#	new file:   SprintPPC/ppc_prev/images/Order.aspx.vb
+#	new file:   SprintPPC/ppc_prev/images/Thumbs.db
+#	new file:   SprintPPC/ppc_prev/images/ajax-loader.gif
+#	new file:   SprintPPC/ppc_prev/images/delete.png
+#	new file:   SprintPPC/ppc_prev/images/loading-bars.gif
+#	new file:   SprintPPC/ppc_prev/images/smallcalendar.gif
+#	new file:   SprintPPC/ppc_prev/ppc
+#	new file:   SprintService/.vs/ProjectSettings.json
+#	new file:   SprintService/.vs/SprintService/v15/.suo
+#	new file:   SprintService/.vs/SprintService/v15/sqlite3/storage.ide
+#	new file:   SprintService/.vs/VSWorkspaceState.json
+#	new file:   SprintService/.vs/config/applicationhost.config
+#	new file:   SprintService/.vs/launch.vs.json
+#	new file:   SprintService/.vs/slnx.sqlite
+#	new file:   SprintService/.vs/tasks.vs.json
+#	new file:   SprintService/SprintService.sln
+#	new file:   SprintService/SprintService/App.config
+#	new file:   SprintService/SprintService/App.config.kp.config
+#	new file:   SprintService/SprintService/DB.cs
+#	new file:   SprintService/SprintService/Program.cs
+#	new file:   SprintService/SprintService/Program.orig.cs
+#	new file:   SprintService/SprintService/Properties/AssemblyInfo.cs
+#	new file:   SprintService/SprintService/SprintService.csproj
+#	new file:   SprintService/SprintService/SprintService.csproj.user
+#	new file:   SprintService/SprintService/Svc.cs
+#	new file:   SprintService/SprintService/bin/Debug/.vs/SprintService/v15/.suo
+#	new file:   SprintService/SprintService/bin/Debug/SprintService.exe
+#	new file:   SprintService/SprintService/bin/Debug/SprintService.exe.config
+#	new file:   SprintService/SprintService/bin/Debug/SprintService.exe.config.kp
+#	new file:   SprintService/SprintService/bin/Debug/SprintService.exe1.config
+#	new file:   SprintService/SprintService/bin/Debug/SprintService.pdb
+#	new file:   SprintService/SprintService/obj/Debug/DesignTimeResolveAssemblyReferences.cache
+#	new file:   SprintService/SprintService/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+#	new file:   SprintService/SprintService/obj/Debug/SprintService.csproj.CopyComplete
+#	new file:   SprintService/SprintService/obj/Debug/SprintService.csproj.CoreCompileInputs.cache
+#	new file:   SprintService/SprintService/obj/Debug/SprintService.csproj.FileListAbsolute.txt
+#	new file:   SprintService/SprintService/obj/Debug/SprintService.csprojResolveAssemblyReference.cache
+#	new file:   SprintService/SprintService/obj/Debug/SprintService.exe
+#	new file:   SprintService/SprintService/obj/Debug/SprintService.pdb
+#	new file:   SprintService/SprintService/obj/Debug/TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs
+#	new file:   SprintService/SprintService/obj/Debug/TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs
+#	new file:   SprintService/SprintService/obj/Debug/TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs
+#	new file:   SprintService/SprintService/obj/Release/SprintService.csproj.CoreCompileInputs.cache
+#	new file:   TelcoService/TelcoService.sln
+#	new file:   TelcoService/TelcoService.v12.suo
+#	new file:   TelcoService/TelcoService/App.config
+#	new file:   TelcoService/TelcoService/DB.cs
+#	new file:   TelcoService/TelcoService/Program.cs
+#	new file:   TelcoService/TelcoService/Properties/AssemblyInfo.cs
+#	new file:   TelcoService/TelcoService/Service References/Telco/Reference.cs
+#	new file:   TelcoService/TelcoService/Service References/Telco/Reference.svcmap
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.ActiveWirelessPackage.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.AddCustomerNoteResponse.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.AutopayPlan.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.Autopay_SwapAndReplenishResponse.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.Balance.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.Billing_GetBalanceResponse.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.CallingCircleNumbers.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.Coverage_TMobile.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.CreateCustomerResponse.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.DisconnectMDN2Response.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.GetBalanceAndActivationDateResponse.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.GetBalance_2Response.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.GetBalance_3Response.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.GetWirelessByMDN_DataStatusResponse.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.GetWirelessByMDN_IsDataBlockedResponse.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.IVRLineInformation.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.Info.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.MdnId.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.MdnItem.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.MyGroup_InquireResponse.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.OutputValidateDevice3Info.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.PayEarlyResponse.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.PayEarly_GetAmountResponse.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.PayEarly_WithCashResponse.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.PinPlanWrapper.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.Port.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.Port_IsReadyToSubmitResponse.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.Port_SubmitResponse.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.ReplenishWithStackedPinResponse.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.Replenish_NoPin2Response.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.RestoreMDN2Response.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.RestoreServiceResponse.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.RestoreService_GetAmountResponse.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.RestoreService_WithCashResponse.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.RimStatusInfo.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.Rim_ActivateResponse.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.Rim_ChangePlanResponse.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.Rim_DisconnectResponse.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.Rim_MDNSwapResponse.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.Rim_RestoreResponse.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.Rim_SuspendResponse.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.SprintCoverage_CheckResponse.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.SprintPort_ActivatePostpaid2Response.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.SprintPort_ActivatePostpaid2_ICCResponse.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.SprintPort_ActivatePostpaidResponse.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.SprintPort_ActivatePostpaid_ICCResponse.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.SprintPort_ActivatePrepaid2Response.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.SprintPort_ActivatePrepaidResponse.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.SprintPort_ActivatePrepaid_ICCResponse.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.SprintPrepaid_ActivateResponse.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.Sprint_ChangeOwnershipResponse.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.Sprint_ValidateDevice3Response.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.Sprint_ValidateDevice_BYOSDResponse.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.Sprint_ValidatePortResponse.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.StackedPin_GetByCashResponse.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.StackedPin_GetByCash_WithIdsResponse.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.StackedPin_GetByDataResponse.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.StackedPin_GetByData_WithIdsResponse.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.StackedPin_GetByEndDateResponse.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.StackedPin_GetByEndDate_WithIdsResponse.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.StackedPin_GetByEndDate_WithIds_FastResponse.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.StackedPin_GetByMinutesResponse.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.StackedPins_DeleteResponse.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.StackedPins_GetByMDNResponse.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.SuspendMDN2Response.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.TMO_ActivatePrepaidResponse.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.TMO_Port_ActivatePrepaidResponse.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.TMO_ResetVMPasswordResponse.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.TMO_ValidateICCResponse.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.TMobilePort_ActivatePrepaid_Async2Response.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.TMobilePort_ActivatePrepaid_AsyncResponse.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.TMobilePrepaid_Activate_Async2Response.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.TMobilePrepaid_Activate_AsyncResponse.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.TMobile_CoverageCheckResponse.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.TMobile_ResetVMPasswordResponse.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.TMobile_ValidatePort2Response.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.TMobile_ValidatePortResponse.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.TerminationInfo.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.UsageSummary.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.VerizonAck.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.VerizonCoverage_CheckResponse.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.VerizonPortIn.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.VerizonPortInInquiry.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.VerizonPortOut.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.VerizonPortOutDetail.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.VerizonPort_ActivatePrepaidResponse.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.VerizonPort_ActivatePrepaid_Async2Response.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.VerizonPort_ActivatePrepaid_Async3Response.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.VerizonPort_ActivatePrepaid_AsyncResponse.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.VerizonPostpaid_ChangeModeResponse.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.VerizonPrepaid_Activate_Async2Response.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.VerizonPrepaid_Activate_AsyncResponse.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.VerizonPrepaid_ChangeModeResponse.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.Verizon_ActivatePort2AndAddFeaturesResponse.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.Verizon_ActivatePort2Response.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.Verizon_CheckPortValidationResultsResponse.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.Verizon_GetMDNAndPackagesResponse.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.Verizon_HBOQualificationResponse.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.Verizon_HBOQualificationResult.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.Verizon_LineInquiryResponse.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.Verizon_OrderInquiryResponse.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.Verizon_PRLInquiryResponse.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.Verizon_PRLInquiryResult.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.Verizon_PortInInquiryResponse.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.Verizon_ResetVMPasswordResponse.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.Verizon_ResetVMPassword_AsyncResponse.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.Verizon_SubmitPortValidationResponse.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.Verizon_ValidateDeviceResponse.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.Verizon_ValidateDeviceResult.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.Verizon_ValidateICCResponse.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.Verizon_ValidateICCResult.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.Wireless.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.WirelessCustomer.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.Wireless_BlockDataResponse.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.Wireless_SetBalanceResponse.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/TelcoService.Telco.Wireless_UnblockDataResponse.datasource
+#	new file:   TelcoService/TelcoService/Service References/Telco/configuration.svcinfo
+#	new file:   TelcoService/TelcoService/Service References/Telco/configuration91.svcinfo
+#	new file:   TelcoService/TelcoService/Service References/Telco/mdnservices.disco
+#	new file:   TelcoService/TelcoService/Service References/Telco/mdnservices.wsdl
+#	new file:   TelcoService/TelcoService/Svc.cs
+#	new file:   TelcoService/TelcoService/TelcoService.csproj
+#	new file:   TelcoService/TelcoService/bin/Debug/TelcoService.exe
+#	new file:   TelcoService/TelcoService/bin/Debug/TelcoService.exe - Shortcut.lnk
+#	new file:   TelcoService/TelcoService/bin/Debug/TelcoService.exe.config
+#	new file:   TelcoService/TelcoService/bin/Debug/TelcoService.pdb
+#	new file:   TelcoService/TelcoService/bin/Debug/TelcoService.vshost.exe
+#	new file:   TelcoService/TelcoService/bin/Debug/TelcoService.vshost.exe.config
+#	new file:   TelcoService/TelcoService/bin/Debug/TelcoService.vshost.exe.manifest
+#	new file:   TelcoService/TelcoService/obj/Debug/DesignTimeResolveAssemblyReferences.cache
+#	new file:   TelcoService/TelcoService/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+#	new file:   TelcoService/TelcoService/obj/Debug/TelcoService.csproj.FileListAbsolute.txt
+#	new file:   TelcoService/TelcoService/obj/Debug/TelcoService.csprojResolveAssemblyReference.cache
+#	new file:   TelcoService/TelcoService/obj/Debug/TelcoService.exe
+#	new file:   TelcoService/TelcoService/obj/Debug/TelcoService.pdb
+#	new file:   TelcoService/TelcoService/obj/Debug/TempPE/Service References.Telco.Reference.cs.dll
+#	new file:   TelcoService/TelcoService/obj/Debug/TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs
+#	new file:   TelcoService/TelcoService/obj/Debug/TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs
+#	new file:   TelcoService/TelcoService/obj/Debug/TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs
+#	new file:   VZPP1/.vs/VZPP1/v14/.suo
+#	new file:   VZPP1/App.config
+#	new file:   VZPP1/DB.cs
+#	new file:   VZPP1/Program.cs
+#	new file:   VZPP1/Properties/AssemblyInfo.cs
+#	new file:   VZPP1/Properties/DataSources/System.Data.DataSet.datasource
+#	new file:   VZPP1/Properties/Settings.Designer.cs
+#	new file:   VZPP1/Properties/Settings.settings
+#	new file:   VZPP1/Svc.cs
+#	new file:   VZPP1/VZPP1.csproj
+#	new file:   VZPP1/VZPP1.sln
+#	new file:   VZPP1/VZPPLog.txt
+#	new file:   VZPP1/Web References/DollarPhone/AccessNumber.datasource
+#	new file:   VZPP1/Web References/DollarPhone/AccountInfo.datasource
+#	new file:   VZPP1/Web References/DollarPhone/AgentCreditLimit.datasource
+#	new file:   VZPP1/Web References/DollarPhone/AppAccessNumber.datasource
+#	new file:   VZPP1/Web References/DollarPhone/AutoDialerSignupResp.datasource
+#	new file:   VZPP1/Web References/DollarPhone/BalanceResp.datasource
+#	new file:   VZPP1/Web References/DollarPhone/CreditCardList.datasource
+#	new file:   VZPP1/Web References/DollarPhone/CreditCardTransResp.datasource
+#	new file:   VZPP1/Web References/DollarPhone/DelCcOnFileResp.datasource
+#	new file:   VZPP1/Web References/DollarPhone/DidDestNum.datasource
+#	new file:   VZPP1/Web References/DollarPhone/DidItem.datasource
+#	new file:   VZPP1/Web References/DollarPhone/DidResp.datasource
+#	new file:   VZPP1/Web References/DollarPhone/GetAutoRechargeByAniResp.datasource
+#	new file:   VZPP1/Web References/DollarPhone/InvoiceActivationResp.datasource
+#	new file:   VZPP1/Web References/DollarPhone/PinLessActivateResp.datasource
+#	new file:   VZPP1/Web References/DollarPhone/PinManager.disco
+#	new file:   VZPP1/Web References/DollarPhone/PinManager.wsdl
+#	new file:   VZPP1/Web References/DollarPhone/ProductOfferings.datasource
+#	new file:   VZPP1/Web References/DollarPhone/Rate.datasource
+#	new file:   VZPP1/Web References/DollarPhone/RateDestination.datasource
+#	new file:   VZPP1/Web References/DollarPhone/Reference.cs
+#	new file:   VZPP1/Web References/DollarPhone/Reference.map
+#	new file:   VZPP1/Web References/DollarPhone/SaveCcOnFileResp.datasource
+#	new file:   VZPP1/Web References/DollarPhone/SetAutoRechargeByAniResp.datasource
+#	new file:   VZPP1/Web References/DollarPhone/TopUpResp.datasource
+#	new file:   VZPP1/Web References/DollarPhone/TopupProducts.datasource
+#	new file:   VZPP1/Web References/DollarPhone/TransResp.datasource
+#	new file:   VZPP1/Web References/DollarPhone/TransResponseType.datasource
+#	new file:   VZPP1/Web References/DollarPhone/ValidateAgentRechargeResp.datasource
+#	new file:   VZPP1/Web References/DollarPhone/ValidatePurchaseByAniResp.datasource
+#	new file:   VZPP1/Web References/DollarPhone/WantToBeAgentResp.datasource
+#	new file:   VZPP1/Web References/DollarPhone/speedDialType.datasource
+#	new file:   VZPP1/bin/Debug/VZPP1.exe
+#	new file:   VZPP1/bin/Debug/VZPP1.exe - Shortcut (2).lnk
+#	new file:   VZPP1/bin/Debug/VZPP1.exe - Shortcut.lnk
+#	new file:   VZPP1/bin/Debug/VZPP1.exe.config
+#	new file:   VZPP1/bin/Debug/VZPP1.pdb
+#	new file:   VZPP1/bin/Debug/VZPP1.vshost.exe
+#	new file:   VZPP1/bin/Debug/VZPP1.vshost.exe.config
+#	new file:   VZPP1/bin/Debug/VZPP1.vshost.exe.manifest
+#	new file:   VZPP1/obj/Debug/DesignTimeResolveAssemblyReferences.cache
+#	new file:   VZPP1/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+#	new file:   VZPP1/obj/Debug/TempPE/Service References.DollarPhone.Reference.cs.dll
+#	new file:   VZPP1/obj/Debug/TempPE/Web References.DollarPhone.Reference.cs.dll
+#	new file:   VZPP1/obj/Debug/TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs
+#	new file:   VZPP1/obj/Debug/TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs
+#	new file:   VZPP1/obj/Debug/TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs
+#	new file:   VZPP1/obj/Debug/VZPP1.csproj.FileListAbsolute.txt
+#	new file:   VZPP1/obj/Debug/VZPP1.csprojResolveAssemblyReference.cache
+#	new file:   VZPP1/obj/Debug/VZPP1.exe
+#	new file:   VZPP1/obj/Debug/VZPP1.pdb
+#

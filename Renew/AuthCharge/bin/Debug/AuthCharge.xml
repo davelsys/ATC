@@ -1,0 +1,3626 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+AuthCharge
+</name>
+</assembly>
+<members>
+<member name="T:AuthCharge.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:AuthCharge.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:AuthCharge.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="T:AuthCharge.svctest.Service">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.#ctor">
+<remarks/>
+</member>
+<member name="E:AuthCharge.svctest.Service.IsAliveCompleted">
+<remarks/>
+</member>
+<member name="E:AuthCharge.svctest.Service.AuthenticateTestCompleted">
+<remarks/>
+</member>
+<member name="E:AuthCharge.svctest.Service.ARBCreateSubscriptionCompleted">
+<remarks/>
+</member>
+<member name="E:AuthCharge.svctest.Service.ARBUpdateSubscriptionCompleted">
+<remarks/>
+</member>
+<member name="E:AuthCharge.svctest.Service.ARBCancelSubscriptionCompleted">
+<remarks/>
+</member>
+<member name="E:AuthCharge.svctest.Service.ARBGetSubscriptionStatusCompleted">
+<remarks/>
+</member>
+<member name="E:AuthCharge.svctest.Service.CreateCustomerProfileCompleted">
+<remarks/>
+</member>
+<member name="E:AuthCharge.svctest.Service.CreateCustomerPaymentProfileCompleted">
+<remarks/>
+</member>
+<member name="E:AuthCharge.svctest.Service.CreateCustomerShippingAddressCompleted">
+<remarks/>
+</member>
+<member name="E:AuthCharge.svctest.Service.GetCustomerProfileCompleted">
+<remarks/>
+</member>
+<member name="E:AuthCharge.svctest.Service.GetCustomerPaymentProfileCompleted">
+<remarks/>
+</member>
+<member name="E:AuthCharge.svctest.Service.GetCustomerShippingAddressCompleted">
+<remarks/>
+</member>
+<member name="E:AuthCharge.svctest.Service.UpdateCustomerProfileCompleted">
+<remarks/>
+</member>
+<member name="E:AuthCharge.svctest.Service.UpdateCustomerPaymentProfileCompleted">
+<remarks/>
+</member>
+<member name="E:AuthCharge.svctest.Service.UpdateCustomerShippingAddressCompleted">
+<remarks/>
+</member>
+<member name="E:AuthCharge.svctest.Service.DeleteCustomerProfileCompleted">
+<remarks/>
+</member>
+<member name="E:AuthCharge.svctest.Service.DeleteCustomerPaymentProfileCompleted">
+<remarks/>
+</member>
+<member name="E:AuthCharge.svctest.Service.DeleteCustomerShippingAddressCompleted">
+<remarks/>
+</member>
+<member name="E:AuthCharge.svctest.Service.CreateCustomerProfileTransactionCompleted">
+<remarks/>
+</member>
+<member name="E:AuthCharge.svctest.Service.ValidateCustomerPaymentProfileCompleted">
+<remarks/>
+</member>
+<member name="E:AuthCharge.svctest.Service.GetCustomerProfileIdsCompleted">
+<remarks/>
+</member>
+<member name="E:AuthCharge.svctest.Service.GetHostedProfilePageCompleted">
+<remarks/>
+</member>
+<member name="E:AuthCharge.svctest.Service.UpdateSplitTenderGroupCompleted">
+<remarks/>
+</member>
+<member name="E:AuthCharge.svctest.Service.GetTransactionDetailsCompleted">
+<remarks/>
+</member>
+<member name="E:AuthCharge.svctest.Service.GetSettledBatchListCompleted">
+<remarks/>
+</member>
+<member name="E:AuthCharge.svctest.Service.GetBatchStatisticsCompleted">
+<remarks/>
+</member>
+<member name="E:AuthCharge.svctest.Service.GetTransactionListCompleted">
+<remarks/>
+</member>
+<member name="E:AuthCharge.svctest.Service.GetUnsettledTransactionListCompleted">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.IsAlive">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.IsAliveAsync">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.IsAliveAsync(System.Object)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.AuthenticateTest(AuthCharge.svctest.MerchantAuthenticationType)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.AuthenticateTestAsync(AuthCharge.svctest.MerchantAuthenticationType)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.AuthenticateTestAsync(AuthCharge.svctest.MerchantAuthenticationType,System.Object)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.ARBCreateSubscription(AuthCharge.svctest.MerchantAuthenticationType,AuthCharge.svctest.ARBSubscriptionType)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.ARBCreateSubscriptionAsync(AuthCharge.svctest.MerchantAuthenticationType,AuthCharge.svctest.ARBSubscriptionType)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.ARBCreateSubscriptionAsync(AuthCharge.svctest.MerchantAuthenticationType,AuthCharge.svctest.ARBSubscriptionType,System.Object)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.ARBUpdateSubscription(AuthCharge.svctest.MerchantAuthenticationType,System.Int64,AuthCharge.svctest.ARBSubscriptionType)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.ARBUpdateSubscriptionAsync(AuthCharge.svctest.MerchantAuthenticationType,System.Int64,AuthCharge.svctest.ARBSubscriptionType)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.ARBUpdateSubscriptionAsync(AuthCharge.svctest.MerchantAuthenticationType,System.Int64,AuthCharge.svctest.ARBSubscriptionType,System.Object)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.ARBCancelSubscription(AuthCharge.svctest.MerchantAuthenticationType,System.Int64)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.ARBCancelSubscriptionAsync(AuthCharge.svctest.MerchantAuthenticationType,System.Int64)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.ARBCancelSubscriptionAsync(AuthCharge.svctest.MerchantAuthenticationType,System.Int64,System.Object)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.ARBGetSubscriptionStatus(AuthCharge.svctest.MerchantAuthenticationType,System.Int64)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.ARBGetSubscriptionStatusAsync(AuthCharge.svctest.MerchantAuthenticationType,System.Int64)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.ARBGetSubscriptionStatusAsync(AuthCharge.svctest.MerchantAuthenticationType,System.Int64,System.Object)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.CreateCustomerProfile(AuthCharge.svctest.MerchantAuthenticationType,AuthCharge.svctest.CustomerProfileType,AuthCharge.svctest.ValidationModeEnum)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.CreateCustomerProfileAsync(AuthCharge.svctest.MerchantAuthenticationType,AuthCharge.svctest.CustomerProfileType,AuthCharge.svctest.ValidationModeEnum)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.CreateCustomerProfileAsync(AuthCharge.svctest.MerchantAuthenticationType,AuthCharge.svctest.CustomerProfileType,AuthCharge.svctest.ValidationModeEnum,System.Object)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.CreateCustomerPaymentProfile(AuthCharge.svctest.MerchantAuthenticationType,System.Int64,AuthCharge.svctest.CustomerPaymentProfileType,AuthCharge.svctest.ValidationModeEnum)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.CreateCustomerPaymentProfileAsync(AuthCharge.svctest.MerchantAuthenticationType,System.Int64,AuthCharge.svctest.CustomerPaymentProfileType,AuthCharge.svctest.ValidationModeEnum)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.CreateCustomerPaymentProfileAsync(AuthCharge.svctest.MerchantAuthenticationType,System.Int64,AuthCharge.svctest.CustomerPaymentProfileType,AuthCharge.svctest.ValidationModeEnum,System.Object)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.CreateCustomerShippingAddress(AuthCharge.svctest.MerchantAuthenticationType,System.Int64,AuthCharge.svctest.CustomerAddressType)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.CreateCustomerShippingAddressAsync(AuthCharge.svctest.MerchantAuthenticationType,System.Int64,AuthCharge.svctest.CustomerAddressType)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.CreateCustomerShippingAddressAsync(AuthCharge.svctest.MerchantAuthenticationType,System.Int64,AuthCharge.svctest.CustomerAddressType,System.Object)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.GetCustomerProfile(AuthCharge.svctest.MerchantAuthenticationType,System.Int64)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.GetCustomerProfileAsync(AuthCharge.svctest.MerchantAuthenticationType,System.Int64)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.GetCustomerProfileAsync(AuthCharge.svctest.MerchantAuthenticationType,System.Int64,System.Object)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.GetCustomerPaymentProfile(AuthCharge.svctest.MerchantAuthenticationType,System.Int64,System.Int64)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.GetCustomerPaymentProfileAsync(AuthCharge.svctest.MerchantAuthenticationType,System.Int64,System.Int64)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.GetCustomerPaymentProfileAsync(AuthCharge.svctest.MerchantAuthenticationType,System.Int64,System.Int64,System.Object)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.GetCustomerShippingAddress(AuthCharge.svctest.MerchantAuthenticationType,System.Int64,System.Int64)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.GetCustomerShippingAddressAsync(AuthCharge.svctest.MerchantAuthenticationType,System.Int64,System.Int64)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.GetCustomerShippingAddressAsync(AuthCharge.svctest.MerchantAuthenticationType,System.Int64,System.Int64,System.Object)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.UpdateCustomerProfile(AuthCharge.svctest.MerchantAuthenticationType,AuthCharge.svctest.CustomerProfileExType)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.UpdateCustomerProfileAsync(AuthCharge.svctest.MerchantAuthenticationType,AuthCharge.svctest.CustomerProfileExType)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.UpdateCustomerProfileAsync(AuthCharge.svctest.MerchantAuthenticationType,AuthCharge.svctest.CustomerProfileExType,System.Object)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.UpdateCustomerPaymentProfile(AuthCharge.svctest.MerchantAuthenticationType,System.Int64,AuthCharge.svctest.CustomerPaymentProfileExType,AuthCharge.svctest.ValidationModeEnum)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.UpdateCustomerPaymentProfileAsync(AuthCharge.svctest.MerchantAuthenticationType,System.Int64,AuthCharge.svctest.CustomerPaymentProfileExType,AuthCharge.svctest.ValidationModeEnum)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.UpdateCustomerPaymentProfileAsync(AuthCharge.svctest.MerchantAuthenticationType,System.Int64,AuthCharge.svctest.CustomerPaymentProfileExType,AuthCharge.svctest.ValidationModeEnum,System.Object)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.UpdateCustomerShippingAddress(AuthCharge.svctest.MerchantAuthenticationType,System.Int64,AuthCharge.svctest.CustomerAddressExType)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.UpdateCustomerShippingAddressAsync(AuthCharge.svctest.MerchantAuthenticationType,System.Int64,AuthCharge.svctest.CustomerAddressExType)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.UpdateCustomerShippingAddressAsync(AuthCharge.svctest.MerchantAuthenticationType,System.Int64,AuthCharge.svctest.CustomerAddressExType,System.Object)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.DeleteCustomerProfile(AuthCharge.svctest.MerchantAuthenticationType,System.Int64)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.DeleteCustomerProfileAsync(AuthCharge.svctest.MerchantAuthenticationType,System.Int64)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.DeleteCustomerProfileAsync(AuthCharge.svctest.MerchantAuthenticationType,System.Int64,System.Object)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.DeleteCustomerPaymentProfile(AuthCharge.svctest.MerchantAuthenticationType,System.Int64,System.Int64)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.DeleteCustomerPaymentProfileAsync(AuthCharge.svctest.MerchantAuthenticationType,System.Int64,System.Int64)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.DeleteCustomerPaymentProfileAsync(AuthCharge.svctest.MerchantAuthenticationType,System.Int64,System.Int64,System.Object)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.DeleteCustomerShippingAddress(AuthCharge.svctest.MerchantAuthenticationType,System.Int64,System.Int64)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.DeleteCustomerShippingAddressAsync(AuthCharge.svctest.MerchantAuthenticationType,System.Int64,System.Int64)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.DeleteCustomerShippingAddressAsync(AuthCharge.svctest.MerchantAuthenticationType,System.Int64,System.Int64,System.Object)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.CreateCustomerProfileTransaction(AuthCharge.svctest.MerchantAuthenticationType,AuthCharge.svctest.ProfileTransactionType,System.String)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.CreateCustomerProfileTransactionAsync(AuthCharge.svctest.MerchantAuthenticationType,AuthCharge.svctest.ProfileTransactionType,System.String)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.CreateCustomerProfileTransactionAsync(AuthCharge.svctest.MerchantAuthenticationType,AuthCharge.svctest.ProfileTransactionType,System.String,System.Object)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.ValidateCustomerPaymentProfile(AuthCharge.svctest.MerchantAuthenticationType,System.Int64,System.Int64,System.Int64,System.String,AuthCharge.svctest.ValidationModeEnum)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.ValidateCustomerPaymentProfileAsync(AuthCharge.svctest.MerchantAuthenticationType,System.Int64,System.Int64,System.Int64,System.String,AuthCharge.svctest.ValidationModeEnum)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.ValidateCustomerPaymentProfileAsync(AuthCharge.svctest.MerchantAuthenticationType,System.Int64,System.Int64,System.Int64,System.String,AuthCharge.svctest.ValidationModeEnum,System.Object)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.GetCustomerProfileIds(AuthCharge.svctest.MerchantAuthenticationType)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.GetCustomerProfileIdsAsync(AuthCharge.svctest.MerchantAuthenticationType)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.GetCustomerProfileIdsAsync(AuthCharge.svctest.MerchantAuthenticationType,System.Object)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.GetHostedProfilePage(AuthCharge.svctest.MerchantAuthenticationType,System.Int64,AuthCharge.svctest.SettingType[])">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.GetHostedProfilePageAsync(AuthCharge.svctest.MerchantAuthenticationType,System.Int64,AuthCharge.svctest.SettingType[])">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.GetHostedProfilePageAsync(AuthCharge.svctest.MerchantAuthenticationType,System.Int64,AuthCharge.svctest.SettingType[],System.Object)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.UpdateSplitTenderGroup(AuthCharge.svctest.MerchantAuthenticationType,System.Int64,AuthCharge.svctest.SplitTenderStatusEnum)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.UpdateSplitTenderGroupAsync(AuthCharge.svctest.MerchantAuthenticationType,System.Int64,AuthCharge.svctest.SplitTenderStatusEnum)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.UpdateSplitTenderGroupAsync(AuthCharge.svctest.MerchantAuthenticationType,System.Int64,AuthCharge.svctest.SplitTenderStatusEnum,System.Object)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.GetTransactionDetails(AuthCharge.svctest.MerchantAuthenticationType,System.String)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.GetTransactionDetailsAsync(AuthCharge.svctest.MerchantAuthenticationType,System.String)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.GetTransactionDetailsAsync(AuthCharge.svctest.MerchantAuthenticationType,System.String,System.Object)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.GetSettledBatchList(AuthCharge.svctest.MerchantAuthenticationType,AuthCharge.svctest.GetSettledBatchListRequestType)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.GetSettledBatchListAsync(AuthCharge.svctest.MerchantAuthenticationType,AuthCharge.svctest.GetSettledBatchListRequestType)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.GetSettledBatchListAsync(AuthCharge.svctest.MerchantAuthenticationType,AuthCharge.svctest.GetSettledBatchListRequestType,System.Object)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.GetBatchStatistics(AuthCharge.svctest.MerchantAuthenticationType,AuthCharge.svctest.GetBatchStatisticsRequestType)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.GetBatchStatisticsAsync(AuthCharge.svctest.MerchantAuthenticationType,AuthCharge.svctest.GetBatchStatisticsRequestType)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.GetBatchStatisticsAsync(AuthCharge.svctest.MerchantAuthenticationType,AuthCharge.svctest.GetBatchStatisticsRequestType,System.Object)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.GetTransactionList(AuthCharge.svctest.MerchantAuthenticationType,AuthCharge.svctest.GetTransactionListRequestType)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.GetTransactionListAsync(AuthCharge.svctest.MerchantAuthenticationType,AuthCharge.svctest.GetTransactionListRequestType)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.GetTransactionListAsync(AuthCharge.svctest.MerchantAuthenticationType,AuthCharge.svctest.GetTransactionListRequestType,System.Object)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.GetUnsettledTransactionList(AuthCharge.svctest.MerchantAuthenticationType,AuthCharge.svctest.GetUnsettledTransactionListRequestType)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.GetUnsettledTransactionListAsync(AuthCharge.svctest.MerchantAuthenticationType,AuthCharge.svctest.GetUnsettledTransactionListRequestType)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.GetUnsettledTransactionListAsync(AuthCharge.svctest.MerchantAuthenticationType,AuthCharge.svctest.GetUnsettledTransactionListRequestType,System.Object)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svctest.Service.CancelAsync(System.Object)">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.ANetApiResponseType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.ANetApiResponseType.resultCode">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.ANetApiResponseType.messages">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.MessageTypeEnum">
+<remarks/>
+</member>
+<member name="F:AuthCharge.svctest.MessageTypeEnum.Ok">
+<remarks/>
+</member>
+<member name="F:AuthCharge.svctest.MessageTypeEnum.Error">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.MessagesTypeMessage">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.MessagesTypeMessage.code">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.MessagesTypeMessage.text">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.GetUnsettledTransactionListRequestType">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.GetTransactionListRequestType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.GetTransactionListRequestType.batchId">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.GetBatchStatisticsRequestType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.GetBatchStatisticsRequestType.batchId">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.GetSettledBatchListRequestType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.GetSettledBatchListRequestType.includeStatistics">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.GetSettledBatchListRequestType.includeStatisticsSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.GetSettledBatchListRequestType.firstSettlementDate">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.GetSettledBatchListRequestType.firstSettlementDateSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.GetSettledBatchListRequestType.lastSettlementDate">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.GetSettledBatchListRequestType.lastSettlementDateSpecified">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.SettingType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.SettingType.settingName">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.SettingType.settingValue">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.ProfileTransAmountType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.ProfileTransAmountType.amount">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.ProfileTransAmountType.tax">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.ProfileTransAmountType.shipping">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.ProfileTransAmountType.duty">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.ProfileTransAmountType.lineItems">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.ExtendedAmountType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.ExtendedAmountType.amount">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.ExtendedAmountType.name">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.ExtendedAmountType.description">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.LineItemType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.LineItemType.itemId">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.LineItemType.name">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.LineItemType.description">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.LineItemType.quantity">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.LineItemType.unitPrice">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.LineItemType.taxable">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.LineItemType.taxableSpecified">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.ProfileTransRefundType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.ProfileTransRefundType.customerProfileId">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.ProfileTransRefundType.customerProfileIdSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.ProfileTransRefundType.customerPaymentProfileId">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.ProfileTransRefundType.customerPaymentProfileIdSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.ProfileTransRefundType.customerShippingAddressId">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.ProfileTransRefundType.customerShippingAddressIdSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.ProfileTransRefundType.creditCardNumberMasked">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.ProfileTransRefundType.bankRoutingNumberMasked">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.ProfileTransRefundType.bankAccountNumberMasked">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.ProfileTransRefundType.order">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.ProfileTransRefundType.transId">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.OrderExType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.OrderExType.purchaseOrderNumber">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.OrderType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.OrderType.invoiceNumber">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.OrderType.description">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.ProfileTransOrderType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.ProfileTransOrderType.customerProfileId">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.ProfileTransOrderType.customerPaymentProfileId">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.ProfileTransOrderType.customerShippingAddressId">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.ProfileTransOrderType.customerShippingAddressIdSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.ProfileTransOrderType.order">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.ProfileTransOrderType.taxExempt">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.ProfileTransOrderType.taxExemptSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.ProfileTransOrderType.recurringBilling">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.ProfileTransOrderType.recurringBillingSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.ProfileTransOrderType.cardCode">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.ProfileTransOrderType.splitTenderId">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.ProfileTransOrderType.splitTenderIdSpecified">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.ProfileTransCaptureOnlyType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.ProfileTransCaptureOnlyType.approvalCode">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.ProfileTransAuthCaptureType">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.ProfileTransAuthOnlyType">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.ProfileTransPriorAuthCaptureType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.ProfileTransPriorAuthCaptureType.customerProfileId">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.ProfileTransPriorAuthCaptureType.customerProfileIdSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.ProfileTransPriorAuthCaptureType.customerPaymentProfileId">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.ProfileTransPriorAuthCaptureType.customerPaymentProfileIdSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.ProfileTransPriorAuthCaptureType.customerShippingAddressId">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.ProfileTransPriorAuthCaptureType.customerShippingAddressIdSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.ProfileTransPriorAuthCaptureType.transId">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.ProfileTransVoidType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.ProfileTransVoidType.customerProfileId">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.ProfileTransVoidType.customerProfileIdSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.ProfileTransVoidType.customerPaymentProfileId">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.ProfileTransVoidType.customerPaymentProfileIdSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.ProfileTransVoidType.customerShippingAddressId">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.ProfileTransVoidType.customerShippingAddressIdSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.ProfileTransVoidType.transId">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.ProfileTransactionType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.ProfileTransactionType.Item">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.CustomerType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.CustomerType.type">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.CustomerType.typeSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.CustomerType.id">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.CustomerType.email">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.CustomerType.phoneNumber">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.CustomerType.faxNumber">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.CustomerType.driversLicense">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.CustomerType.taxId">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.CustomerTypeEnum">
+<remarks/>
+</member>
+<member name="F:AuthCharge.svctest.CustomerTypeEnum.individual">
+<remarks/>
+</member>
+<member name="F:AuthCharge.svctest.CustomerTypeEnum.business">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.DriversLicenseType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.DriversLicenseType.number">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.DriversLicenseType.dateOfBirth">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.DriversLicenseBaseType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.DriversLicenseBaseType.state">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.DriversLicenseMaskedType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.DriversLicenseMaskedType.number">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.DriversLicenseMaskedType.dateOfBirth">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.PaymentScheduleTypeInterval">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.PaymentScheduleTypeInterval.length">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.PaymentScheduleTypeInterval.unit">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.ARBSubscriptionUnitEnum">
+<remarks/>
+</member>
+<member name="F:AuthCharge.svctest.ARBSubscriptionUnitEnum.days">
+<remarks/>
+</member>
+<member name="F:AuthCharge.svctest.ARBSubscriptionUnitEnum.months">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.PaymentScheduleType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.PaymentScheduleType.interval">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.PaymentScheduleType.startDate">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.PaymentScheduleType.startDateSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.PaymentScheduleType.totalOccurrences">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.PaymentScheduleType.totalOccurrencesSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.PaymentScheduleType.trialOccurrences">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.PaymentScheduleType.trialOccurrencesSpecified">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.ARBSubscriptionType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.ARBSubscriptionType.name">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.ARBSubscriptionType.paymentSchedule">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.ARBSubscriptionType.amount">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.ARBSubscriptionType.amountSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.ARBSubscriptionType.trialAmount">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.ARBSubscriptionType.trialAmountSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.ARBSubscriptionType.payment">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.ARBSubscriptionType.order">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.ARBSubscriptionType.customer">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.ARBSubscriptionType.billTo">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.ARBSubscriptionType.shipTo">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.PaymentType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.PaymentType.Item">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.BankAccountType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.BankAccountType.routingNumber">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.BankAccountType.accountNumber">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.BankAccountBaseType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.BankAccountBaseType.accountType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.BankAccountBaseType.accountTypeSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.BankAccountBaseType.nameOnAccount">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.BankAccountBaseType.echeckType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.BankAccountBaseType.echeckTypeSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.BankAccountBaseType.bankName">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.BankAccountTypeEnum">
+<remarks/>
+</member>
+<member name="F:AuthCharge.svctest.BankAccountTypeEnum.checking">
+<remarks/>
+</member>
+<member name="F:AuthCharge.svctest.BankAccountTypeEnum.savings">
+<remarks/>
+</member>
+<member name="F:AuthCharge.svctest.BankAccountTypeEnum.businessChecking">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.EcheckTypeEnum">
+<remarks/>
+</member>
+<member name="F:AuthCharge.svctest.EcheckTypeEnum.PPD">
+<remarks/>
+</member>
+<member name="F:AuthCharge.svctest.EcheckTypeEnum.WEB">
+<remarks/>
+</member>
+<member name="F:AuthCharge.svctest.EcheckTypeEnum.CCD">
+<remarks/>
+</member>
+<member name="F:AuthCharge.svctest.EcheckTypeEnum.TEL">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.BankAccountMaskedType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.BankAccountMaskedType.routingNumber">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.BankAccountMaskedType.accountNumber">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.CreditCardType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.CreditCardType.cardCode">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.CreditCardSimpleType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.CreditCardSimpleType.cardNumber">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.CreditCardSimpleType.expirationDate">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.NameAndAddressType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.NameAndAddressType.firstName">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.NameAndAddressType.lastName">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.NameAndAddressType.company">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.NameAndAddressType.address">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.NameAndAddressType.city">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.NameAndAddressType.state">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.NameAndAddressType.zip">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.NameAndAddressType.country">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.CustomerAddressType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.CustomerAddressType.phoneNumber">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.CustomerAddressType.faxNumber">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.CustomerAddressExType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.CustomerAddressExType.customerAddressId">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.MerchantAuthenticationType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.MerchantAuthenticationType.name">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.MerchantAuthenticationType.transactionKey">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.TransactionSummaryType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.TransactionSummaryType.transId">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.TransactionSummaryType.submitTimeUTC">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.TransactionSummaryType.submitTimeLocal">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.TransactionSummaryType.transactionStatus">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.TransactionSummaryType.invoiceNumber">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.TransactionSummaryType.firstName">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.TransactionSummaryType.lastName">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.TransactionSummaryType.accountType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.TransactionSummaryType.accountNumber">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.TransactionSummaryType.settleAmount">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.CustomerDataType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.CustomerDataType.type">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.CustomerDataType.typeSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.CustomerDataType.id">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.CustomerDataType.email">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.CustomerDataType.driversLicense">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.CustomerDataType.taxId">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.BatchStatisticType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.BatchStatisticType.accountType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.BatchStatisticType.currencyCode">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.BatchStatisticType.chargeAmount">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.BatchStatisticType.chargeCount">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.BatchStatisticType.refundAmount">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.BatchStatisticType.refundCount">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.BatchStatisticType.voidCount">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.BatchStatisticType.declineCount">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.BatchStatisticType.errorCount">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.BatchStatisticType.returnedItemAmount">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.BatchStatisticType.returnedItemAmountSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.BatchStatisticType.returnedItemAmountSpecified1">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.BatchStatisticType.returnedItemCount">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.BatchStatisticType.returnedItemCountSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.BatchStatisticType.returnedItemCountSpecified1">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.BatchStatisticType.chargebackAmount">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.BatchStatisticType.chargebackAmountSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.BatchStatisticType.chargebackAmountSpecified1">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.BatchStatisticType.chargebackCount">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.BatchStatisticType.chargebackCountSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.BatchStatisticType.chargebackCountSpecified1">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.BatchStatisticType.correctionNoticeCount">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.BatchStatisticType.correctionNoticeCountSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.BatchStatisticType.correctionNoticeCountSpecified1">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.BatchStatisticType.chargeChargeBackAmount">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.BatchStatisticType.chargeChargeBackAmountSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.BatchStatisticType.chargeChargeBackAmountSpecified1">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.BatchStatisticType.chargeChargeBackCount">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.BatchStatisticType.chargeChargeBackCountSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.BatchStatisticType.chargeChargeBackCountSpecified1">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.BatchStatisticType.refundChargeBackAmount">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.BatchStatisticType.refundChargeBackAmountSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.BatchStatisticType.refundChargeBackAmountSpecified1">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.BatchStatisticType.refundChargeBackCount">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.BatchStatisticType.refundChargeBackCountSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.BatchStatisticType.refundChargeBackCountSpecified1">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.BatchStatisticType.chargeReturnedItemsAmount">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.BatchStatisticType.chargeReturnedItemsAmountSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.BatchStatisticType.chargeReturnedItemsAmountSpecified1">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.BatchStatisticType.chargeReturnedItemsCount">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.BatchStatisticType.chargeReturnedItemsCountSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.BatchStatisticType.chargeReturnedItemsCountSpecified1">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.BatchStatisticType.refundReturnedItemsAmount">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.BatchStatisticType.refundReturnedItemsAmountSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.BatchStatisticType.refundReturnedItemsAmountSpecified1">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.BatchStatisticType.refundReturnedItemsCount">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.BatchStatisticType.refundReturnedItemsCountSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.BatchStatisticType.refundReturnedItemsCountSpecified1">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.BatchDetailsType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.BatchDetailsType.batchId">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.BatchDetailsType.settlementTimeUTC">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.BatchDetailsType.settlementTimeUTCSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.BatchDetailsType.settlementTimeLocal">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.BatchDetailsType.settlementTimeLocalSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.BatchDetailsType.settlementState">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.BatchDetailsType.paymentMethod">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.BatchDetailsType.statistics">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.FDSFilterType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.FDSFilterType.name">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.FDSFilterType.action">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.TransactionDetailsType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.TransactionDetailsType.transId">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.TransactionDetailsType.refTransId">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.TransactionDetailsType.splitTenderId">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.TransactionDetailsType.splitTenderIdSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.TransactionDetailsType.submitTimeUTC">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.TransactionDetailsType.submitTimeLocal">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.TransactionDetailsType.transactionType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.TransactionDetailsType.transactionStatus">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.TransactionDetailsType.responseCode">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.TransactionDetailsType.responseReasonCode">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.TransactionDetailsType.responseReasonDescription">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.TransactionDetailsType.authCode">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.TransactionDetailsType.AVSResponse">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.TransactionDetailsType.cardCodeResponse">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.TransactionDetailsType.CAVVResponse">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.TransactionDetailsType.FDSFilterAction">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.TransactionDetailsType.FDSFilters">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.TransactionDetailsType.batch">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.TransactionDetailsType.order">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.TransactionDetailsType.requestedAmount">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.TransactionDetailsType.requestedAmountSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.TransactionDetailsType.authAmount">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.TransactionDetailsType.settleAmount">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.TransactionDetailsType.tax">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.TransactionDetailsType.shipping">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.TransactionDetailsType.duty">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.TransactionDetailsType.lineItems">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.TransactionDetailsType.prepaidBalanceRemaining">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.TransactionDetailsType.prepaidBalanceRemainingSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.TransactionDetailsType.currencyCode">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.TransactionDetailsType.taxExempt">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.TransactionDetailsType.taxExemptSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.TransactionDetailsType.payment">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.TransactionDetailsType.customer">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.TransactionDetailsType.billTo">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.TransactionDetailsType.shipTo">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.TransactionDetailsType.recurringBilling">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.TransactionDetailsType.recurringBillingSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.TransactionDetailsType.customerIP">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.PaymentMaskedType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.PaymentMaskedType.Item">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.CreditCardMaskedType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.CreditCardMaskedType.cardNumber">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.CreditCardMaskedType.expirationDate">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.CreditCardMaskedType.cardType">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.CustomerPaymentProfileBaseType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.CustomerPaymentProfileBaseType.customerType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.CustomerPaymentProfileBaseType.customerTypeSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.CustomerPaymentProfileBaseType.billTo">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.CustomerPaymentProfileMaskedType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.CustomerPaymentProfileMaskedType.customerPaymentProfileId">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.CustomerPaymentProfileMaskedType.payment">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.CustomerPaymentProfileMaskedType.driversLicense">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.CustomerPaymentProfileMaskedType.taxId">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.CustomerPaymentProfileType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.CustomerPaymentProfileType.payment">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.CustomerPaymentProfileType.driversLicense">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.CustomerPaymentProfileType.taxId">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.CustomerPaymentProfileExType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.CustomerPaymentProfileExType.customerPaymentProfileId">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.CustomerProfileBaseType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.CustomerProfileBaseType.merchantCustomerId">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.CustomerProfileBaseType.description">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.CustomerProfileBaseType.email">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.CustomerProfileExType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.CustomerProfileExType.customerProfileId">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.CustomerProfileMaskedType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.CustomerProfileMaskedType.paymentProfiles">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.CustomerProfileMaskedType.shipToList">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.CustomerProfileType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.CustomerProfileType.paymentProfiles">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.CustomerProfileType.shipToList">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.GetUnsettledTransactionListResponseType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.GetUnsettledTransactionListResponseType.transactions">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.GetTransactionListResponseType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.GetTransactionListResponseType.transactions">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.GetBatchStatisticsResponseType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.GetBatchStatisticsResponseType.batch">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.GetSettledBatchListResponseType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.GetSettledBatchListResponseType.batchList">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.GetTransactionDetailsResponseType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.GetTransactionDetailsResponseType.transaction">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.UpdateSplitTenderGroupResponseType">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.GetHostedProfilePageResponseType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.GetHostedProfilePageResponseType.token">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.GetCustomerProfileIdsResponseType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.GetCustomerProfileIdsResponseType.ids">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.ValidateCustomerPaymentProfileResponseType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.ValidateCustomerPaymentProfileResponseType.directResponse">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.CreateCustomerProfileTransactionResponseType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.CreateCustomerProfileTransactionResponseType.directResponse">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.DeleteCustomerShippingAddressResponseType">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.DeleteCustomerPaymentProfileResponseType">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.DeleteCustomerProfileResponseType">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.UpdateCustomerShippingAddressResponseType">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.UpdateCustomerPaymentProfileResponseType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.UpdateCustomerPaymentProfileResponseType.validationDirectResponse">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.UpdateCustomerProfileResponseType">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.GetCustomerShippingAddressResponseType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.GetCustomerShippingAddressResponseType.address">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.GetCustomerPaymentProfileResponseType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.GetCustomerPaymentProfileResponseType.paymentProfile">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.GetCustomerProfileResponseType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.GetCustomerProfileResponseType.profile">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.CreateCustomerShippingAddressResponseType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.CreateCustomerShippingAddressResponseType.customerAddressId">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.CreateCustomerPaymentProfileResponseType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.CreateCustomerPaymentProfileResponseType.customerPaymentProfileId">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.CreateCustomerPaymentProfileResponseType.validationDirectResponse">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.CreateCustomerProfileResponseType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.CreateCustomerProfileResponseType.customerProfileId">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.CreateCustomerProfileResponseType.customerPaymentProfileIdList">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.CreateCustomerProfileResponseType.customerShippingAddressIdList">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.CreateCustomerProfileResponseType.validationDirectResponseList">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.ARBGetSubscriptionStatusResponseType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.ARBGetSubscriptionStatusResponseType.status">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.ARBSubscriptionStatusEnum">
+<remarks/>
+</member>
+<member name="F:AuthCharge.svctest.ARBSubscriptionStatusEnum.active">
+<remarks/>
+</member>
+<member name="F:AuthCharge.svctest.ARBSubscriptionStatusEnum.expired">
+<remarks/>
+</member>
+<member name="F:AuthCharge.svctest.ARBSubscriptionStatusEnum.suspended">
+<remarks/>
+</member>
+<member name="F:AuthCharge.svctest.ARBSubscriptionStatusEnum.canceled">
+<remarks/>
+</member>
+<member name="F:AuthCharge.svctest.ARBSubscriptionStatusEnum.terminated">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.ARBCancelSubscriptionResponseType">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.ARBUpdateSubscriptionResponseType">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.ARBCreateSubscriptionResponseType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.ARBCreateSubscriptionResponseType.subscriptionId">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.ValidationModeEnum">
+<remarks/>
+</member>
+<member name="F:AuthCharge.svctest.ValidationModeEnum.none">
+<remarks/>
+</member>
+<member name="F:AuthCharge.svctest.ValidationModeEnum.testMode">
+<remarks/>
+</member>
+<member name="F:AuthCharge.svctest.ValidationModeEnum.liveMode">
+<remarks/>
+</member>
+<member name="F:AuthCharge.svctest.ValidationModeEnum.oldLiveMode">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.SplitTenderStatusEnum">
+<remarks/>
+</member>
+<member name="F:AuthCharge.svctest.SplitTenderStatusEnum.completed">
+<remarks/>
+</member>
+<member name="F:AuthCharge.svctest.SplitTenderStatusEnum.held">
+<remarks/>
+</member>
+<member name="F:AuthCharge.svctest.SplitTenderStatusEnum.voided">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.IsAliveCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.IsAliveCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.IsAliveCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.AuthenticateTestCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.AuthenticateTestCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.AuthenticateTestCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.ARBCreateSubscriptionCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.ARBCreateSubscriptionCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.ARBCreateSubscriptionCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.ARBUpdateSubscriptionCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.ARBUpdateSubscriptionCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.ARBUpdateSubscriptionCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.ARBCancelSubscriptionCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.ARBCancelSubscriptionCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.ARBCancelSubscriptionCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.ARBGetSubscriptionStatusCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.ARBGetSubscriptionStatusCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.ARBGetSubscriptionStatusCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.CreateCustomerProfileCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.CreateCustomerProfileCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.CreateCustomerProfileCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.CreateCustomerPaymentProfileCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.CreateCustomerPaymentProfileCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.CreateCustomerPaymentProfileCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.CreateCustomerShippingAddressCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.CreateCustomerShippingAddressCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.CreateCustomerShippingAddressCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.GetCustomerProfileCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.GetCustomerProfileCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.GetCustomerProfileCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.GetCustomerPaymentProfileCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.GetCustomerPaymentProfileCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.GetCustomerPaymentProfileCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.GetCustomerShippingAddressCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.GetCustomerShippingAddressCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.GetCustomerShippingAddressCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.UpdateCustomerProfileCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.UpdateCustomerProfileCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.UpdateCustomerProfileCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.UpdateCustomerPaymentProfileCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.UpdateCustomerPaymentProfileCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.UpdateCustomerPaymentProfileCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.UpdateCustomerShippingAddressCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.UpdateCustomerShippingAddressCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.UpdateCustomerShippingAddressCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.DeleteCustomerProfileCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.DeleteCustomerProfileCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.DeleteCustomerProfileCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.DeleteCustomerPaymentProfileCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.DeleteCustomerPaymentProfileCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.DeleteCustomerPaymentProfileCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.DeleteCustomerShippingAddressCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.DeleteCustomerShippingAddressCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.DeleteCustomerShippingAddressCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.CreateCustomerProfileTransactionCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.CreateCustomerProfileTransactionCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.CreateCustomerProfileTransactionCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.ValidateCustomerPaymentProfileCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.ValidateCustomerPaymentProfileCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.ValidateCustomerPaymentProfileCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.GetCustomerProfileIdsCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.GetCustomerProfileIdsCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.GetCustomerProfileIdsCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.GetHostedProfilePageCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.GetHostedProfilePageCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.GetHostedProfilePageCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.UpdateSplitTenderGroupCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.UpdateSplitTenderGroupCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.UpdateSplitTenderGroupCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.GetTransactionDetailsCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.GetTransactionDetailsCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.GetTransactionDetailsCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.GetSettledBatchListCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.GetSettledBatchListCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.GetSettledBatchListCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.GetBatchStatisticsCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.GetBatchStatisticsCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.GetBatchStatisticsCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.GetTransactionListCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.GetTransactionListCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.GetTransactionListCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.GetUnsettledTransactionListCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svctest.GetUnsettledTransactionListCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svctest.GetUnsettledTransactionListCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.Service">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.#ctor">
+<remarks/>
+</member>
+<member name="E:AuthCharge.svc.Service.IsAliveCompleted">
+<remarks/>
+</member>
+<member name="E:AuthCharge.svc.Service.AuthenticateTestCompleted">
+<remarks/>
+</member>
+<member name="E:AuthCharge.svc.Service.ARBCreateSubscriptionCompleted">
+<remarks/>
+</member>
+<member name="E:AuthCharge.svc.Service.ARBUpdateSubscriptionCompleted">
+<remarks/>
+</member>
+<member name="E:AuthCharge.svc.Service.ARBCancelSubscriptionCompleted">
+<remarks/>
+</member>
+<member name="E:AuthCharge.svc.Service.ARBGetSubscriptionStatusCompleted">
+<remarks/>
+</member>
+<member name="E:AuthCharge.svc.Service.CreateCustomerProfileCompleted">
+<remarks/>
+</member>
+<member name="E:AuthCharge.svc.Service.CreateCustomerPaymentProfileCompleted">
+<remarks/>
+</member>
+<member name="E:AuthCharge.svc.Service.CreateCustomerShippingAddressCompleted">
+<remarks/>
+</member>
+<member name="E:AuthCharge.svc.Service.GetCustomerProfileCompleted">
+<remarks/>
+</member>
+<member name="E:AuthCharge.svc.Service.GetCustomerPaymentProfileCompleted">
+<remarks/>
+</member>
+<member name="E:AuthCharge.svc.Service.GetCustomerShippingAddressCompleted">
+<remarks/>
+</member>
+<member name="E:AuthCharge.svc.Service.UpdateCustomerProfileCompleted">
+<remarks/>
+</member>
+<member name="E:AuthCharge.svc.Service.UpdateCustomerPaymentProfileCompleted">
+<remarks/>
+</member>
+<member name="E:AuthCharge.svc.Service.UpdateCustomerShippingAddressCompleted">
+<remarks/>
+</member>
+<member name="E:AuthCharge.svc.Service.DeleteCustomerProfileCompleted">
+<remarks/>
+</member>
+<member name="E:AuthCharge.svc.Service.DeleteCustomerPaymentProfileCompleted">
+<remarks/>
+</member>
+<member name="E:AuthCharge.svc.Service.DeleteCustomerShippingAddressCompleted">
+<remarks/>
+</member>
+<member name="E:AuthCharge.svc.Service.CreateCustomerProfileTransactionCompleted">
+<remarks/>
+</member>
+<member name="E:AuthCharge.svc.Service.ValidateCustomerPaymentProfileCompleted">
+<remarks/>
+</member>
+<member name="E:AuthCharge.svc.Service.GetCustomerProfileIdsCompleted">
+<remarks/>
+</member>
+<member name="E:AuthCharge.svc.Service.GetHostedProfilePageCompleted">
+<remarks/>
+</member>
+<member name="E:AuthCharge.svc.Service.UpdateSplitTenderGroupCompleted">
+<remarks/>
+</member>
+<member name="E:AuthCharge.svc.Service.GetTransactionDetailsCompleted">
+<remarks/>
+</member>
+<member name="E:AuthCharge.svc.Service.GetSettledBatchListCompleted">
+<remarks/>
+</member>
+<member name="E:AuthCharge.svc.Service.GetBatchStatisticsCompleted">
+<remarks/>
+</member>
+<member name="E:AuthCharge.svc.Service.GetTransactionListCompleted">
+<remarks/>
+</member>
+<member name="E:AuthCharge.svc.Service.GetUnsettledTransactionListCompleted">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.IsAlive">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.IsAliveAsync">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.IsAliveAsync(System.Object)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.AuthenticateTest(AuthCharge.svc.MerchantAuthenticationType)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.AuthenticateTestAsync(AuthCharge.svc.MerchantAuthenticationType)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.AuthenticateTestAsync(AuthCharge.svc.MerchantAuthenticationType,System.Object)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.ARBCreateSubscription(AuthCharge.svc.MerchantAuthenticationType,AuthCharge.svc.ARBSubscriptionType)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.ARBCreateSubscriptionAsync(AuthCharge.svc.MerchantAuthenticationType,AuthCharge.svc.ARBSubscriptionType)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.ARBCreateSubscriptionAsync(AuthCharge.svc.MerchantAuthenticationType,AuthCharge.svc.ARBSubscriptionType,System.Object)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.ARBUpdateSubscription(AuthCharge.svc.MerchantAuthenticationType,System.Int64,AuthCharge.svc.ARBSubscriptionType)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.ARBUpdateSubscriptionAsync(AuthCharge.svc.MerchantAuthenticationType,System.Int64,AuthCharge.svc.ARBSubscriptionType)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.ARBUpdateSubscriptionAsync(AuthCharge.svc.MerchantAuthenticationType,System.Int64,AuthCharge.svc.ARBSubscriptionType,System.Object)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.ARBCancelSubscription(AuthCharge.svc.MerchantAuthenticationType,System.Int64)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.ARBCancelSubscriptionAsync(AuthCharge.svc.MerchantAuthenticationType,System.Int64)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.ARBCancelSubscriptionAsync(AuthCharge.svc.MerchantAuthenticationType,System.Int64,System.Object)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.ARBGetSubscriptionStatus(AuthCharge.svc.MerchantAuthenticationType,System.Int64)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.ARBGetSubscriptionStatusAsync(AuthCharge.svc.MerchantAuthenticationType,System.Int64)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.ARBGetSubscriptionStatusAsync(AuthCharge.svc.MerchantAuthenticationType,System.Int64,System.Object)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.CreateCustomerProfile(AuthCharge.svc.MerchantAuthenticationType,AuthCharge.svc.CustomerProfileType,AuthCharge.svc.ValidationModeEnum)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.CreateCustomerProfileAsync(AuthCharge.svc.MerchantAuthenticationType,AuthCharge.svc.CustomerProfileType,AuthCharge.svc.ValidationModeEnum)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.CreateCustomerProfileAsync(AuthCharge.svc.MerchantAuthenticationType,AuthCharge.svc.CustomerProfileType,AuthCharge.svc.ValidationModeEnum,System.Object)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.CreateCustomerPaymentProfile(AuthCharge.svc.MerchantAuthenticationType,System.Int64,AuthCharge.svc.CustomerPaymentProfileType,AuthCharge.svc.ValidationModeEnum)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.CreateCustomerPaymentProfileAsync(AuthCharge.svc.MerchantAuthenticationType,System.Int64,AuthCharge.svc.CustomerPaymentProfileType,AuthCharge.svc.ValidationModeEnum)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.CreateCustomerPaymentProfileAsync(AuthCharge.svc.MerchantAuthenticationType,System.Int64,AuthCharge.svc.CustomerPaymentProfileType,AuthCharge.svc.ValidationModeEnum,System.Object)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.CreateCustomerShippingAddress(AuthCharge.svc.MerchantAuthenticationType,System.Int64,AuthCharge.svc.CustomerAddressType)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.CreateCustomerShippingAddressAsync(AuthCharge.svc.MerchantAuthenticationType,System.Int64,AuthCharge.svc.CustomerAddressType)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.CreateCustomerShippingAddressAsync(AuthCharge.svc.MerchantAuthenticationType,System.Int64,AuthCharge.svc.CustomerAddressType,System.Object)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.GetCustomerProfile(AuthCharge.svc.MerchantAuthenticationType,System.Int64)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.GetCustomerProfileAsync(AuthCharge.svc.MerchantAuthenticationType,System.Int64)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.GetCustomerProfileAsync(AuthCharge.svc.MerchantAuthenticationType,System.Int64,System.Object)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.GetCustomerPaymentProfile(AuthCharge.svc.MerchantAuthenticationType,System.Int64,System.Int64)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.GetCustomerPaymentProfileAsync(AuthCharge.svc.MerchantAuthenticationType,System.Int64,System.Int64)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.GetCustomerPaymentProfileAsync(AuthCharge.svc.MerchantAuthenticationType,System.Int64,System.Int64,System.Object)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.GetCustomerShippingAddress(AuthCharge.svc.MerchantAuthenticationType,System.Int64,System.Int64)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.GetCustomerShippingAddressAsync(AuthCharge.svc.MerchantAuthenticationType,System.Int64,System.Int64)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.GetCustomerShippingAddressAsync(AuthCharge.svc.MerchantAuthenticationType,System.Int64,System.Int64,System.Object)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.UpdateCustomerProfile(AuthCharge.svc.MerchantAuthenticationType,AuthCharge.svc.CustomerProfileExType)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.UpdateCustomerProfileAsync(AuthCharge.svc.MerchantAuthenticationType,AuthCharge.svc.CustomerProfileExType)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.UpdateCustomerProfileAsync(AuthCharge.svc.MerchantAuthenticationType,AuthCharge.svc.CustomerProfileExType,System.Object)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.UpdateCustomerPaymentProfile(AuthCharge.svc.MerchantAuthenticationType,System.Int64,AuthCharge.svc.CustomerPaymentProfileExType,AuthCharge.svc.ValidationModeEnum)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.UpdateCustomerPaymentProfileAsync(AuthCharge.svc.MerchantAuthenticationType,System.Int64,AuthCharge.svc.CustomerPaymentProfileExType,AuthCharge.svc.ValidationModeEnum)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.UpdateCustomerPaymentProfileAsync(AuthCharge.svc.MerchantAuthenticationType,System.Int64,AuthCharge.svc.CustomerPaymentProfileExType,AuthCharge.svc.ValidationModeEnum,System.Object)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.UpdateCustomerShippingAddress(AuthCharge.svc.MerchantAuthenticationType,System.Int64,AuthCharge.svc.CustomerAddressExType)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.UpdateCustomerShippingAddressAsync(AuthCharge.svc.MerchantAuthenticationType,System.Int64,AuthCharge.svc.CustomerAddressExType)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.UpdateCustomerShippingAddressAsync(AuthCharge.svc.MerchantAuthenticationType,System.Int64,AuthCharge.svc.CustomerAddressExType,System.Object)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.DeleteCustomerProfile(AuthCharge.svc.MerchantAuthenticationType,System.Int64)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.DeleteCustomerProfileAsync(AuthCharge.svc.MerchantAuthenticationType,System.Int64)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.DeleteCustomerProfileAsync(AuthCharge.svc.MerchantAuthenticationType,System.Int64,System.Object)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.DeleteCustomerPaymentProfile(AuthCharge.svc.MerchantAuthenticationType,System.Int64,System.Int64)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.DeleteCustomerPaymentProfileAsync(AuthCharge.svc.MerchantAuthenticationType,System.Int64,System.Int64)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.DeleteCustomerPaymentProfileAsync(AuthCharge.svc.MerchantAuthenticationType,System.Int64,System.Int64,System.Object)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.DeleteCustomerShippingAddress(AuthCharge.svc.MerchantAuthenticationType,System.Int64,System.Int64)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.DeleteCustomerShippingAddressAsync(AuthCharge.svc.MerchantAuthenticationType,System.Int64,System.Int64)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.DeleteCustomerShippingAddressAsync(AuthCharge.svc.MerchantAuthenticationType,System.Int64,System.Int64,System.Object)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.CreateCustomerProfileTransaction(AuthCharge.svc.MerchantAuthenticationType,AuthCharge.svc.ProfileTransactionType,System.String)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.CreateCustomerProfileTransactionAsync(AuthCharge.svc.MerchantAuthenticationType,AuthCharge.svc.ProfileTransactionType,System.String)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.CreateCustomerProfileTransactionAsync(AuthCharge.svc.MerchantAuthenticationType,AuthCharge.svc.ProfileTransactionType,System.String,System.Object)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.ValidateCustomerPaymentProfile(AuthCharge.svc.MerchantAuthenticationType,System.Int64,System.Int64,System.Int64,System.String,AuthCharge.svc.ValidationModeEnum)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.ValidateCustomerPaymentProfileAsync(AuthCharge.svc.MerchantAuthenticationType,System.Int64,System.Int64,System.Int64,System.String,AuthCharge.svc.ValidationModeEnum)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.ValidateCustomerPaymentProfileAsync(AuthCharge.svc.MerchantAuthenticationType,System.Int64,System.Int64,System.Int64,System.String,AuthCharge.svc.ValidationModeEnum,System.Object)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.GetCustomerProfileIds(AuthCharge.svc.MerchantAuthenticationType)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.GetCustomerProfileIdsAsync(AuthCharge.svc.MerchantAuthenticationType)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.GetCustomerProfileIdsAsync(AuthCharge.svc.MerchantAuthenticationType,System.Object)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.GetHostedProfilePage(AuthCharge.svc.MerchantAuthenticationType,System.Int64,AuthCharge.svc.SettingType[])">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.GetHostedProfilePageAsync(AuthCharge.svc.MerchantAuthenticationType,System.Int64,AuthCharge.svc.SettingType[])">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.GetHostedProfilePageAsync(AuthCharge.svc.MerchantAuthenticationType,System.Int64,AuthCharge.svc.SettingType[],System.Object)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.UpdateSplitTenderGroup(AuthCharge.svc.MerchantAuthenticationType,System.Int64,AuthCharge.svc.SplitTenderStatusEnum)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.UpdateSplitTenderGroupAsync(AuthCharge.svc.MerchantAuthenticationType,System.Int64,AuthCharge.svc.SplitTenderStatusEnum)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.UpdateSplitTenderGroupAsync(AuthCharge.svc.MerchantAuthenticationType,System.Int64,AuthCharge.svc.SplitTenderStatusEnum,System.Object)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.GetTransactionDetails(AuthCharge.svc.MerchantAuthenticationType,System.String)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.GetTransactionDetailsAsync(AuthCharge.svc.MerchantAuthenticationType,System.String)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.GetTransactionDetailsAsync(AuthCharge.svc.MerchantAuthenticationType,System.String,System.Object)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.GetSettledBatchList(AuthCharge.svc.MerchantAuthenticationType,AuthCharge.svc.GetSettledBatchListRequestType)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.GetSettledBatchListAsync(AuthCharge.svc.MerchantAuthenticationType,AuthCharge.svc.GetSettledBatchListRequestType)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.GetSettledBatchListAsync(AuthCharge.svc.MerchantAuthenticationType,AuthCharge.svc.GetSettledBatchListRequestType,System.Object)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.GetBatchStatistics(AuthCharge.svc.MerchantAuthenticationType,AuthCharge.svc.GetBatchStatisticsRequestType)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.GetBatchStatisticsAsync(AuthCharge.svc.MerchantAuthenticationType,AuthCharge.svc.GetBatchStatisticsRequestType)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.GetBatchStatisticsAsync(AuthCharge.svc.MerchantAuthenticationType,AuthCharge.svc.GetBatchStatisticsRequestType,System.Object)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.GetTransactionList(AuthCharge.svc.MerchantAuthenticationType,AuthCharge.svc.GetTransactionListRequestType)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.GetTransactionListAsync(AuthCharge.svc.MerchantAuthenticationType,AuthCharge.svc.GetTransactionListRequestType)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.GetTransactionListAsync(AuthCharge.svc.MerchantAuthenticationType,AuthCharge.svc.GetTransactionListRequestType,System.Object)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.GetUnsettledTransactionList(AuthCharge.svc.MerchantAuthenticationType,AuthCharge.svc.GetUnsettledTransactionListRequestType)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.GetUnsettledTransactionListAsync(AuthCharge.svc.MerchantAuthenticationType,AuthCharge.svc.GetUnsettledTransactionListRequestType)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.GetUnsettledTransactionListAsync(AuthCharge.svc.MerchantAuthenticationType,AuthCharge.svc.GetUnsettledTransactionListRequestType,System.Object)">
+<remarks/>
+</member>
+<member name="M:AuthCharge.svc.Service.CancelAsync(System.Object)">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.ANetApiResponseType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.ANetApiResponseType.resultCode">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.ANetApiResponseType.messages">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.MessageTypeEnum">
+<remarks/>
+</member>
+<member name="F:AuthCharge.svc.MessageTypeEnum.Ok">
+<remarks/>
+</member>
+<member name="F:AuthCharge.svc.MessageTypeEnum.Error">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.MessagesTypeMessage">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.MessagesTypeMessage.code">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.MessagesTypeMessage.text">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.GetUnsettledTransactionListRequestType">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.GetTransactionListRequestType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.GetTransactionListRequestType.batchId">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.GetBatchStatisticsRequestType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.GetBatchStatisticsRequestType.batchId">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.GetSettledBatchListRequestType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.GetSettledBatchListRequestType.includeStatistics">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.GetSettledBatchListRequestType.includeStatisticsSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.GetSettledBatchListRequestType.firstSettlementDate">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.GetSettledBatchListRequestType.firstSettlementDateSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.GetSettledBatchListRequestType.lastSettlementDate">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.GetSettledBatchListRequestType.lastSettlementDateSpecified">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.SettingType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.SettingType.settingName">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.SettingType.settingValue">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.ProfileTransAmountType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.ProfileTransAmountType.amount">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.ProfileTransAmountType.tax">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.ProfileTransAmountType.shipping">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.ProfileTransAmountType.duty">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.ProfileTransAmountType.lineItems">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.ExtendedAmountType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.ExtendedAmountType.amount">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.ExtendedAmountType.name">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.ExtendedAmountType.description">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.LineItemType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.LineItemType.itemId">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.LineItemType.name">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.LineItemType.description">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.LineItemType.quantity">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.LineItemType.unitPrice">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.LineItemType.taxable">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.LineItemType.taxableSpecified">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.ProfileTransRefundType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.ProfileTransRefundType.customerProfileId">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.ProfileTransRefundType.customerProfileIdSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.ProfileTransRefundType.customerPaymentProfileId">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.ProfileTransRefundType.customerPaymentProfileIdSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.ProfileTransRefundType.customerShippingAddressId">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.ProfileTransRefundType.customerShippingAddressIdSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.ProfileTransRefundType.creditCardNumberMasked">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.ProfileTransRefundType.bankRoutingNumberMasked">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.ProfileTransRefundType.bankAccountNumberMasked">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.ProfileTransRefundType.order">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.ProfileTransRefundType.transId">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.OrderExType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.OrderExType.purchaseOrderNumber">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.OrderType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.OrderType.invoiceNumber">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.OrderType.description">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.ProfileTransOrderType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.ProfileTransOrderType.customerProfileId">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.ProfileTransOrderType.customerPaymentProfileId">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.ProfileTransOrderType.customerShippingAddressId">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.ProfileTransOrderType.customerShippingAddressIdSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.ProfileTransOrderType.order">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.ProfileTransOrderType.taxExempt">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.ProfileTransOrderType.taxExemptSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.ProfileTransOrderType.recurringBilling">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.ProfileTransOrderType.recurringBillingSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.ProfileTransOrderType.cardCode">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.ProfileTransOrderType.splitTenderId">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.ProfileTransOrderType.splitTenderIdSpecified">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.ProfileTransCaptureOnlyType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.ProfileTransCaptureOnlyType.approvalCode">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.ProfileTransAuthCaptureType">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.ProfileTransAuthOnlyType">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.ProfileTransPriorAuthCaptureType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.ProfileTransPriorAuthCaptureType.customerProfileId">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.ProfileTransPriorAuthCaptureType.customerProfileIdSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.ProfileTransPriorAuthCaptureType.customerPaymentProfileId">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.ProfileTransPriorAuthCaptureType.customerPaymentProfileIdSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.ProfileTransPriorAuthCaptureType.customerShippingAddressId">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.ProfileTransPriorAuthCaptureType.customerShippingAddressIdSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.ProfileTransPriorAuthCaptureType.transId">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.ProfileTransVoidType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.ProfileTransVoidType.customerProfileId">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.ProfileTransVoidType.customerProfileIdSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.ProfileTransVoidType.customerPaymentProfileId">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.ProfileTransVoidType.customerPaymentProfileIdSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.ProfileTransVoidType.customerShippingAddressId">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.ProfileTransVoidType.customerShippingAddressIdSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.ProfileTransVoidType.transId">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.ProfileTransactionType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.ProfileTransactionType.Item">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.CustomerType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.CustomerType.type">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.CustomerType.typeSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.CustomerType.id">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.CustomerType.email">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.CustomerType.phoneNumber">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.CustomerType.faxNumber">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.CustomerType.driversLicense">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.CustomerType.taxId">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.CustomerTypeEnum">
+<remarks/>
+</member>
+<member name="F:AuthCharge.svc.CustomerTypeEnum.individual">
+<remarks/>
+</member>
+<member name="F:AuthCharge.svc.CustomerTypeEnum.business">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.DriversLicenseType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.DriversLicenseType.number">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.DriversLicenseType.dateOfBirth">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.DriversLicenseBaseType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.DriversLicenseBaseType.state">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.DriversLicenseMaskedType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.DriversLicenseMaskedType.number">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.DriversLicenseMaskedType.dateOfBirth">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.PaymentScheduleTypeInterval">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.PaymentScheduleTypeInterval.length">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.PaymentScheduleTypeInterval.unit">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.ARBSubscriptionUnitEnum">
+<remarks/>
+</member>
+<member name="F:AuthCharge.svc.ARBSubscriptionUnitEnum.days">
+<remarks/>
+</member>
+<member name="F:AuthCharge.svc.ARBSubscriptionUnitEnum.months">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.PaymentScheduleType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.PaymentScheduleType.interval">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.PaymentScheduleType.startDate">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.PaymentScheduleType.startDateSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.PaymentScheduleType.totalOccurrences">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.PaymentScheduleType.totalOccurrencesSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.PaymentScheduleType.trialOccurrences">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.PaymentScheduleType.trialOccurrencesSpecified">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.ARBSubscriptionType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.ARBSubscriptionType.name">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.ARBSubscriptionType.paymentSchedule">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.ARBSubscriptionType.amount">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.ARBSubscriptionType.amountSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.ARBSubscriptionType.trialAmount">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.ARBSubscriptionType.trialAmountSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.ARBSubscriptionType.payment">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.ARBSubscriptionType.order">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.ARBSubscriptionType.customer">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.ARBSubscriptionType.billTo">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.ARBSubscriptionType.shipTo">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.PaymentType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.PaymentType.Item">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.BankAccountType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.BankAccountType.routingNumber">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.BankAccountType.accountNumber">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.BankAccountBaseType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.BankAccountBaseType.accountType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.BankAccountBaseType.accountTypeSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.BankAccountBaseType.nameOnAccount">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.BankAccountBaseType.echeckType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.BankAccountBaseType.echeckTypeSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.BankAccountBaseType.bankName">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.BankAccountTypeEnum">
+<remarks/>
+</member>
+<member name="F:AuthCharge.svc.BankAccountTypeEnum.checking">
+<remarks/>
+</member>
+<member name="F:AuthCharge.svc.BankAccountTypeEnum.savings">
+<remarks/>
+</member>
+<member name="F:AuthCharge.svc.BankAccountTypeEnum.businessChecking">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.EcheckTypeEnum">
+<remarks/>
+</member>
+<member name="F:AuthCharge.svc.EcheckTypeEnum.PPD">
+<remarks/>
+</member>
+<member name="F:AuthCharge.svc.EcheckTypeEnum.WEB">
+<remarks/>
+</member>
+<member name="F:AuthCharge.svc.EcheckTypeEnum.CCD">
+<remarks/>
+</member>
+<member name="F:AuthCharge.svc.EcheckTypeEnum.TEL">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.BankAccountMaskedType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.BankAccountMaskedType.routingNumber">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.BankAccountMaskedType.accountNumber">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.CreditCardType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.CreditCardType.cardCode">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.CreditCardSimpleType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.CreditCardSimpleType.cardNumber">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.CreditCardSimpleType.expirationDate">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.NameAndAddressType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.NameAndAddressType.firstName">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.NameAndAddressType.lastName">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.NameAndAddressType.company">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.NameAndAddressType.address">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.NameAndAddressType.city">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.NameAndAddressType.state">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.NameAndAddressType.zip">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.NameAndAddressType.country">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.CustomerAddressType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.CustomerAddressType.phoneNumber">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.CustomerAddressType.faxNumber">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.CustomerAddressExType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.CustomerAddressExType.customerAddressId">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.MerchantAuthenticationType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.MerchantAuthenticationType.name">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.MerchantAuthenticationType.transactionKey">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.TransactionSummaryType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.TransactionSummaryType.transId">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.TransactionSummaryType.submitTimeUTC">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.TransactionSummaryType.submitTimeLocal">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.TransactionSummaryType.transactionStatus">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.TransactionSummaryType.invoiceNumber">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.TransactionSummaryType.firstName">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.TransactionSummaryType.lastName">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.TransactionSummaryType.accountType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.TransactionSummaryType.accountNumber">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.TransactionSummaryType.settleAmount">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.CustomerDataType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.CustomerDataType.type">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.CustomerDataType.typeSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.CustomerDataType.id">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.CustomerDataType.email">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.CustomerDataType.driversLicense">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.CustomerDataType.taxId">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.BatchStatisticType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.BatchStatisticType.accountType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.BatchStatisticType.currencyCode">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.BatchStatisticType.chargeAmount">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.BatchStatisticType.chargeCount">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.BatchStatisticType.refundAmount">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.BatchStatisticType.refundCount">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.BatchStatisticType.voidCount">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.BatchStatisticType.declineCount">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.BatchStatisticType.errorCount">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.BatchStatisticType.returnedItemAmount">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.BatchStatisticType.returnedItemAmountSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.BatchStatisticType.returnedItemAmountSpecified1">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.BatchStatisticType.returnedItemCount">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.BatchStatisticType.returnedItemCountSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.BatchStatisticType.returnedItemCountSpecified1">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.BatchStatisticType.chargebackAmount">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.BatchStatisticType.chargebackAmountSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.BatchStatisticType.chargebackAmountSpecified1">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.BatchStatisticType.chargebackCount">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.BatchStatisticType.chargebackCountSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.BatchStatisticType.chargebackCountSpecified1">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.BatchStatisticType.correctionNoticeCount">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.BatchStatisticType.correctionNoticeCountSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.BatchStatisticType.correctionNoticeCountSpecified1">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.BatchStatisticType.chargeChargeBackAmount">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.BatchStatisticType.chargeChargeBackAmountSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.BatchStatisticType.chargeChargeBackAmountSpecified1">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.BatchStatisticType.chargeChargeBackCount">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.BatchStatisticType.chargeChargeBackCountSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.BatchStatisticType.chargeChargeBackCountSpecified1">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.BatchStatisticType.refundChargeBackAmount">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.BatchStatisticType.refundChargeBackAmountSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.BatchStatisticType.refundChargeBackAmountSpecified1">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.BatchStatisticType.refundChargeBackCount">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.BatchStatisticType.refundChargeBackCountSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.BatchStatisticType.refundChargeBackCountSpecified1">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.BatchStatisticType.chargeReturnedItemsAmount">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.BatchStatisticType.chargeReturnedItemsAmountSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.BatchStatisticType.chargeReturnedItemsAmountSpecified1">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.BatchStatisticType.chargeReturnedItemsCount">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.BatchStatisticType.chargeReturnedItemsCountSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.BatchStatisticType.chargeReturnedItemsCountSpecified1">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.BatchStatisticType.refundReturnedItemsAmount">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.BatchStatisticType.refundReturnedItemsAmountSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.BatchStatisticType.refundReturnedItemsAmountSpecified1">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.BatchStatisticType.refundReturnedItemsCount">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.BatchStatisticType.refundReturnedItemsCountSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.BatchStatisticType.refundReturnedItemsCountSpecified1">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.BatchDetailsType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.BatchDetailsType.batchId">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.BatchDetailsType.settlementTimeUTC">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.BatchDetailsType.settlementTimeUTCSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.BatchDetailsType.settlementTimeLocal">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.BatchDetailsType.settlementTimeLocalSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.BatchDetailsType.settlementState">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.BatchDetailsType.paymentMethod">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.BatchDetailsType.statistics">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.FDSFilterType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.FDSFilterType.name">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.FDSFilterType.action">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.TransactionDetailsType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.TransactionDetailsType.transId">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.TransactionDetailsType.refTransId">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.TransactionDetailsType.splitTenderId">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.TransactionDetailsType.splitTenderIdSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.TransactionDetailsType.submitTimeUTC">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.TransactionDetailsType.submitTimeLocal">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.TransactionDetailsType.transactionType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.TransactionDetailsType.transactionStatus">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.TransactionDetailsType.responseCode">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.TransactionDetailsType.responseReasonCode">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.TransactionDetailsType.responseReasonDescription">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.TransactionDetailsType.authCode">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.TransactionDetailsType.AVSResponse">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.TransactionDetailsType.cardCodeResponse">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.TransactionDetailsType.CAVVResponse">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.TransactionDetailsType.FDSFilterAction">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.TransactionDetailsType.FDSFilters">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.TransactionDetailsType.batch">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.TransactionDetailsType.order">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.TransactionDetailsType.requestedAmount">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.TransactionDetailsType.requestedAmountSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.TransactionDetailsType.authAmount">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.TransactionDetailsType.settleAmount">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.TransactionDetailsType.tax">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.TransactionDetailsType.shipping">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.TransactionDetailsType.duty">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.TransactionDetailsType.lineItems">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.TransactionDetailsType.prepaidBalanceRemaining">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.TransactionDetailsType.prepaidBalanceRemainingSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.TransactionDetailsType.currencyCode">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.TransactionDetailsType.taxExempt">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.TransactionDetailsType.taxExemptSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.TransactionDetailsType.payment">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.TransactionDetailsType.customer">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.TransactionDetailsType.billTo">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.TransactionDetailsType.shipTo">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.TransactionDetailsType.recurringBilling">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.TransactionDetailsType.recurringBillingSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.TransactionDetailsType.customerIP">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.PaymentMaskedType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.PaymentMaskedType.Item">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.CreditCardMaskedType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.CreditCardMaskedType.cardNumber">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.CreditCardMaskedType.expirationDate">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.CreditCardMaskedType.cardType">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.CustomerPaymentProfileBaseType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.CustomerPaymentProfileBaseType.customerType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.CustomerPaymentProfileBaseType.customerTypeSpecified">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.CustomerPaymentProfileBaseType.billTo">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.CustomerPaymentProfileMaskedType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.CustomerPaymentProfileMaskedType.customerPaymentProfileId">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.CustomerPaymentProfileMaskedType.payment">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.CustomerPaymentProfileMaskedType.driversLicense">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.CustomerPaymentProfileMaskedType.taxId">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.CustomerPaymentProfileType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.CustomerPaymentProfileType.payment">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.CustomerPaymentProfileType.driversLicense">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.CustomerPaymentProfileType.taxId">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.CustomerPaymentProfileExType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.CustomerPaymentProfileExType.customerPaymentProfileId">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.CustomerProfileBaseType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.CustomerProfileBaseType.merchantCustomerId">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.CustomerProfileBaseType.description">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.CustomerProfileBaseType.email">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.CustomerProfileExType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.CustomerProfileExType.customerProfileId">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.CustomerProfileMaskedType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.CustomerProfileMaskedType.paymentProfiles">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.CustomerProfileMaskedType.shipToList">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.CustomerProfileType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.CustomerProfileType.paymentProfiles">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.CustomerProfileType.shipToList">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.GetUnsettledTransactionListResponseType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.GetUnsettledTransactionListResponseType.transactions">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.GetTransactionListResponseType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.GetTransactionListResponseType.transactions">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.GetBatchStatisticsResponseType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.GetBatchStatisticsResponseType.batch">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.GetSettledBatchListResponseType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.GetSettledBatchListResponseType.batchList">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.GetTransactionDetailsResponseType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.GetTransactionDetailsResponseType.transaction">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.UpdateSplitTenderGroupResponseType">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.GetHostedProfilePageResponseType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.GetHostedProfilePageResponseType.token">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.GetCustomerProfileIdsResponseType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.GetCustomerProfileIdsResponseType.ids">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.ValidateCustomerPaymentProfileResponseType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.ValidateCustomerPaymentProfileResponseType.directResponse">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.CreateCustomerProfileTransactionResponseType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.CreateCustomerProfileTransactionResponseType.directResponse">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.DeleteCustomerShippingAddressResponseType">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.DeleteCustomerPaymentProfileResponseType">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.DeleteCustomerProfileResponseType">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.UpdateCustomerShippingAddressResponseType">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.UpdateCustomerPaymentProfileResponseType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.UpdateCustomerPaymentProfileResponseType.validationDirectResponse">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.UpdateCustomerProfileResponseType">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.GetCustomerShippingAddressResponseType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.GetCustomerShippingAddressResponseType.address">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.GetCustomerPaymentProfileResponseType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.GetCustomerPaymentProfileResponseType.paymentProfile">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.GetCustomerProfileResponseType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.GetCustomerProfileResponseType.profile">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.CreateCustomerShippingAddressResponseType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.CreateCustomerShippingAddressResponseType.customerAddressId">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.CreateCustomerPaymentProfileResponseType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.CreateCustomerPaymentProfileResponseType.customerPaymentProfileId">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.CreateCustomerPaymentProfileResponseType.validationDirectResponse">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.CreateCustomerProfileResponseType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.CreateCustomerProfileResponseType.customerProfileId">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.CreateCustomerProfileResponseType.customerPaymentProfileIdList">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.CreateCustomerProfileResponseType.customerShippingAddressIdList">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.CreateCustomerProfileResponseType.validationDirectResponseList">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.ARBGetSubscriptionStatusResponseType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.ARBGetSubscriptionStatusResponseType.status">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.ARBSubscriptionStatusEnum">
+<remarks/>
+</member>
+<member name="F:AuthCharge.svc.ARBSubscriptionStatusEnum.active">
+<remarks/>
+</member>
+<member name="F:AuthCharge.svc.ARBSubscriptionStatusEnum.expired">
+<remarks/>
+</member>
+<member name="F:AuthCharge.svc.ARBSubscriptionStatusEnum.suspended">
+<remarks/>
+</member>
+<member name="F:AuthCharge.svc.ARBSubscriptionStatusEnum.canceled">
+<remarks/>
+</member>
+<member name="F:AuthCharge.svc.ARBSubscriptionStatusEnum.terminated">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.ARBCancelSubscriptionResponseType">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.ARBUpdateSubscriptionResponseType">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.ARBCreateSubscriptionResponseType">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.ARBCreateSubscriptionResponseType.subscriptionId">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.ValidationModeEnum">
+<remarks/>
+</member>
+<member name="F:AuthCharge.svc.ValidationModeEnum.none">
+<remarks/>
+</member>
+<member name="F:AuthCharge.svc.ValidationModeEnum.testMode">
+<remarks/>
+</member>
+<member name="F:AuthCharge.svc.ValidationModeEnum.liveMode">
+<remarks/>
+</member>
+<member name="F:AuthCharge.svc.ValidationModeEnum.oldLiveMode">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.SplitTenderStatusEnum">
+<remarks/>
+</member>
+<member name="F:AuthCharge.svc.SplitTenderStatusEnum.completed">
+<remarks/>
+</member>
+<member name="F:AuthCharge.svc.SplitTenderStatusEnum.held">
+<remarks/>
+</member>
+<member name="F:AuthCharge.svc.SplitTenderStatusEnum.voided">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.IsAliveCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.IsAliveCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.IsAliveCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.AuthenticateTestCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.AuthenticateTestCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.AuthenticateTestCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.ARBCreateSubscriptionCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.ARBCreateSubscriptionCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.ARBCreateSubscriptionCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.ARBUpdateSubscriptionCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.ARBUpdateSubscriptionCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.ARBUpdateSubscriptionCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.ARBCancelSubscriptionCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.ARBCancelSubscriptionCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.ARBCancelSubscriptionCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.ARBGetSubscriptionStatusCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.ARBGetSubscriptionStatusCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.ARBGetSubscriptionStatusCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.CreateCustomerProfileCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.CreateCustomerProfileCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.CreateCustomerProfileCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.CreateCustomerPaymentProfileCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.CreateCustomerPaymentProfileCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.CreateCustomerPaymentProfileCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.CreateCustomerShippingAddressCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.CreateCustomerShippingAddressCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.CreateCustomerShippingAddressCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.GetCustomerProfileCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.GetCustomerProfileCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.GetCustomerProfileCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.GetCustomerPaymentProfileCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.GetCustomerPaymentProfileCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.GetCustomerPaymentProfileCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.GetCustomerShippingAddressCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.GetCustomerShippingAddressCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.GetCustomerShippingAddressCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.UpdateCustomerProfileCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.UpdateCustomerProfileCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.UpdateCustomerProfileCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.UpdateCustomerPaymentProfileCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.UpdateCustomerPaymentProfileCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.UpdateCustomerPaymentProfileCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.UpdateCustomerShippingAddressCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.UpdateCustomerShippingAddressCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.UpdateCustomerShippingAddressCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.DeleteCustomerProfileCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.DeleteCustomerProfileCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.DeleteCustomerProfileCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.DeleteCustomerPaymentProfileCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.DeleteCustomerPaymentProfileCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.DeleteCustomerPaymentProfileCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.DeleteCustomerShippingAddressCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.DeleteCustomerShippingAddressCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.DeleteCustomerShippingAddressCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.CreateCustomerProfileTransactionCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.CreateCustomerProfileTransactionCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.CreateCustomerProfileTransactionCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.ValidateCustomerPaymentProfileCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.ValidateCustomerPaymentProfileCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.ValidateCustomerPaymentProfileCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.GetCustomerProfileIdsCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.GetCustomerProfileIdsCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.GetCustomerProfileIdsCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.GetHostedProfilePageCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.GetHostedProfilePageCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.GetHostedProfilePageCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.UpdateSplitTenderGroupCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.UpdateSplitTenderGroupCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.UpdateSplitTenderGroupCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.GetTransactionDetailsCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.GetTransactionDetailsCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.GetTransactionDetailsCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.GetSettledBatchListCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.GetSettledBatchListCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.GetSettledBatchListCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.GetBatchStatisticsCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.GetBatchStatisticsCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.GetBatchStatisticsCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.GetTransactionListCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.GetTransactionListCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.GetTransactionListCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.GetUnsettledTransactionListCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:AuthCharge.svc.GetUnsettledTransactionListCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:AuthCharge.svc.GetUnsettledTransactionListCompletedEventArgs.Result">
+<remarks/>
+</member>
+</members>
+</doc>

@@ -1,0 +1,73 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeFile="Site.Master.vb" Inherits="Site" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title></title>
+    <meta http-equiv="Page-Exit" content="progid:DXImageTransform.Microsoft.GradientWipe(Duration=0,Transition=5)" />
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="Scripts/Site.js"></script>
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form runat="server">
+    <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server">
+    </asp:ToolkitScriptManager>
+    <div class="page">
+        <div class="header">
+            <div class="title">
+                <h1>
+                    All Talk Cellular
+                </h1>
+            </div>
+            <div class="loginDisplay">
+                <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
+                    <%--<AnonymousTemplate>
+                        [ <a href="~/Account/Login.aspx" ID="HeadLoginStatus" runat="server">Log In</a> ]
+                    </AnonymousTemplate>--%>
+                    <LoggedInTemplate>
+                        Welcome <span class="bold"><asp:LoginName ID="HeadLoginName" runat="server" /></span>!
+                        [ <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Log Out" LogoutPageUrl="~/"/> ]
+                    </LoggedInTemplate>
+                </asp:LoginView>
+            </div>
+            <div class="clear hideSkiplink">
+                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/SearchOrder.aspx" Text="Orders"/>
+                        <asp:MenuItem NavigateUrl="~/Agents.aspx" Text="Agents"/>
+                        <%--<asp:MenuItem NavigateUrl="~/SearchCDR.aspx" Text="P CDR"/>--%>
+                        <%--<asp:MenuItem NavigateUrl="~/VerizonCDR.aspx" Text="V CDR"/>--%>
+                        <asp:MenuItem NavigateUrl="~/TelcoCDR.aspx" Text="T CDR"/>
+                        <%--<asp:MenuItem NavigateUrl="~/CDRSummary.aspx" Text="Summary"/>--%>
+                        <asp:MenuItem NavigateUrl="~/OrderSummary.aspx" Text="Cust"/>
+                        <asp:MenuItem NavigateUrl="~/Pins.aspx" Text="Pins"/>
+                        <asp:MenuItem NavigateUrl="~/ViewRenewals.aspx" Text="Renewals"/>
+                        <asp:MenuItem NavigateUrl="~/Reports.aspx" Text="Rpts"/>
+                        <asp:MenuItem NavigateUrl="~/ViewTransactions.aspx" Text="Trans"/>
+                        <asp:MenuItem NavigateUrl="~/Esn.aspx" Text="ESN"/>
+                        <asp:MenuItem NavigateUrl="~/ConResp.aspx" Text="Con"/>
+                        <asp:MenuItem NavigateUrl="~/TelcoResp.aspx" Text="Telco"/>
+                        <asp:MenuItem NavigateUrl="~/VZPP.aspx" Text="VZPP"/>
+                        <asp:MenuItem NavigateUrl="~/SprintResp.aspx" Text="Sprint"/>
+                        <asp:MenuItem NavigateUrl="~/VerIVR.aspx" Text="IVR"/>
+                        <asp:MenuItem NavigateUrl="~/Admin.aspx" Text="Admin"/>
+                    </Items>
+                </asp:Menu>
+            </div>
+        </div>
+        <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="footer">
+        
+    </div>
+    </form>
+</body>
+</html>

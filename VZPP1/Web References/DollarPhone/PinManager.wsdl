@@ -1,0 +1,4342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="https://dollarphone.com/PMAPI/PinManager" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s1="http://tempuri.org/PPS/Misc" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s2="http://dollarphone.com/PPS/PPS" xmlns:s3="http://tempuri.org/PPS/Batch" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="https://dollarphone.com/PMAPI/PinManager" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="https://dollarphone.com/PMAPI/PinManager">
+      <s:import namespace="http://tempuri.org/PPS/Misc" />
+      <s:import namespace="http://dollarphone.com/PPS/PPS" />
+      <s:import namespace="http://tempuri.org/PPS/Batch" />
+      <s:element name="GetRateByPinDestNum">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Pin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DestNum" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRateByPinDestNumResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRateByPinDestNumResult" type="tns:Rate" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Rate">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:RespBase">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="CountryName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SubCountryDestination" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="DestinationName" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="RatePerMinute" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="DestUserStatus" type="s1:DialerUserStatus" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="RespBase" abstract="true">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="responseMessage" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="responseCode" type="s:short" />
+          <s:element minOccurs="1" maxOccurs="1" name="TransId" type="s:long" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetRateByAniDestNum">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Ani" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DestNum" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRateByAniDestNumResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRateByAniDestNumResult" type="tns:Rate" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRateByLotDestinationId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LotId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Destid" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRateByLotDestinationIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRateByLotDestinationIdResult" type="tns:Rate" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAccessNumbersByLot">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Lot" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAccessNumbersByLotResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAccessNumbersByLotResult" type="tns:ArrayOfAccessNumber" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfAccessNumber">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="AccessNumber" nillable="true" type="tns:AccessNumber" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AccessNumber">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:RespBase">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Language" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Location" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Number" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="LanguageId" type="s:int" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="GetAccessNumbersByOffering">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="OfferingId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAccessNumbersByOfferingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAccessNumbersByOfferingResult" type="tns:ArrayOfAccessNumber" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAppAccessNumbersByOffering">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="OfferingId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAppAccessNumbersByOfferingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAppAccessNumbersByOfferingResult" type="tns:ArrayOfAppAccessNumber" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfAppAccessNumber">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="AppAccessNumber" nillable="true" type="tns:AppAccessNumber" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AppAccessNumber">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:RespBase">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="AccessNumber" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Country" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CountryCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CountryBreakout" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="GetAccessNumbersWLanguageStringByOffering">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="OfferingId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAccessNumbersWLanguageStringByOfferingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAccessNumbersWLanguageStringByOfferingResult" type="tns:ArrayOfAccessNumber" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBalanceByAni">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ani" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBalanceByAniResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBalanceByAniResult" type="tns:BalanceResp" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="BalanceResp">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:RespBase">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="Balance" type="s:double" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="GetDidByAni">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ani" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDidByAniResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDidByAniResult" type="tns:DidResp" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="DidResp">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:RespBase">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Did" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="RechargePin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Pin" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Amount" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RechargePinResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RechargePinResult" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RechargePinNew">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RechargePinReq" type="tns:RechargePinReq" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RechargePinReq">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Pin" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Amount" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrderId" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PromoTransaction" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="RechargePinNewResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RechargePinNewResult" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAccountInfoByAniOffering">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Ani" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="OfferingId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAccountInfoByAniOfferingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAccountInfoByAniOfferingResult" type="tns:AccountInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="AccountInfo">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:RespBase">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="OfferingId" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="Status" type="s2:cardStatus" />
+              <s:element minOccurs="1" maxOccurs="1" name="LotId" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="Balance" type="s:decimal" />
+              <s:element minOccurs="0" maxOccurs="1" name="Pin" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Ani" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="TransactionType" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Language" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="InvoiceActivation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Activation" type="tns:InvoiceActivationType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="InvoiceActivationType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Anis" type="tns:ArrayOfString" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="InvoiceActivationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceActivationResult" type="s3:InvoiceActivationResp" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CancelOrder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OrderId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CancelOrderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CancelOrderResult" type="tns:TransResp" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="TransResp">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:RespBase">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="Status" type="s1:TransactionStatus" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="CancelOrderByOrderId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OrderId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CancelOrderByOrderIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CancelOrderByOrderIdResult" type="tns:TransResp" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TopupConfirm">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TransID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TopupConfirmResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TopupConfirmResult" type="s1:TransResponseType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DidListRet_ByAniOffering">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Ani" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ProductOfferingId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DidListRet_ByAniOfferingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DidListRet_ByAniOfferingResult" type="tns:ArrayOfDidItem" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfDidItem">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DidItem" nillable="true" type="s1:DidItem" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="DidDestNumAdd">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DidNum" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DestNum" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Ani" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ProductOfferingID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DidDestNumAddResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DidDestNumAddResult" type="tns:TransResp" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DidDestNumDelete">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DidNum" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Ani" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DidDestNumDeleteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DidDestNumDeleteResult" type="tns:TransResp" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DidDestNumRet_ByAniOffering">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Ani" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ProductOfferingID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DidDestNumRet_ByAniOfferingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DidDestNumRet_ByAniOfferingResult" type="tns:ArrayOfDidDestNum" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfDidDestNum">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DidDestNum" nillable="true" type="s1:DidDestNum" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetAgentDue">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAgentDueResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetAgentDueResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAgentCreditLimit">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAgentCreditLimitResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAgentCreditLimitResult" type="tns:AgentCreditLimit" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="AgentCreditLimit">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="agentId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="CurrentDue" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreditLimit" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="AvailableCredit" type="s:decimal" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CancelTopUp">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TransId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CancelTopUpResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CancelTopUpResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOfferingsByPhone">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PhoneNumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOfferingsByPhoneResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetOfferingsByPhoneResult" type="tns:ProductOfferings" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ProductOfferings">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:RespBase">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Offerings" type="tns:ArrayOfInt" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfInt">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="int" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetTopupProductsByPhone">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PhoneNumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTopupProductsByPhoneResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTopupProductsByPhoneResult" type="tns:TopupProducts" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="TopupProducts">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:RespBase">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Country" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Carrier" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="ProviderId" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="Products" type="tns:ArrayOfTopupProduct" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfTopupProduct">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="TopupProduct" nillable="true" type="tns:TopupProduct" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="TopupProduct">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="OfferingID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProductName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Carrier" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ProviderId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Denominations" type="tns:ArrayOfFloat" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfFloat">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="float" type="s:float" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetDomesticTopupProducts">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetDomesticTopupProductsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDomesticTopupProductsResult" type="tns:TopupProducts" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AutoDialerSignUp">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="reqDialerSignUp" type="tns:AutoDialerSignUpType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="AutoDialerSignUpType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ANI" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="OfferingId" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AutoDialerSignUpResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AutoDialerSignUpResult" type="tns:AutoDialerSignupResp" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="AutoDialerSignupResp">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:RespBase">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Pin" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="BalanceTransferPinToPin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FromPin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ToPin" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="SendSms" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BalanceTransferPinToPinResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BalanceTransferPinToPinResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BalanceTransferPinToAni">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FromPin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ToANI" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ToOffering" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="SendSms" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BalanceTransferPinToAniResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BalanceTransferPinToAniResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AutoDialerBalanceTransfer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FromPin" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ToOffering" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="ToANI" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AutoDialerBalanceTransferResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AutoDialerBalanceTransferResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreditCardTransaction">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Action" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Amount" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="cc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ExpDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Address" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="State" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ZipCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Country" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CVV" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RefNum" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Ani" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SessionID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="SaveCreditCard" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreditCardTransactionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreditCardTransactionResult" type="s2:CreditCardTransResp" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCurrentUserName">
+        <s:complexType />
+      </s:element>
+      <s:element name="getCurrentUserNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getCurrentUserNameResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidatePurchaseByAni">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ANI" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="OfferingId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="PurchaseType" type="tns:PurchaseType" />
+            <s:element minOccurs="1" maxOccurs="1" name="PaymentType" type="tns:PaymentType" />
+            <s:element minOccurs="1" maxOccurs="1" name="Amount" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="PurchaseType">
+        <s:restriction base="s:string">
+          <s:enumeration value="ILD" />
+          <s:enumeration value="MTU" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="PaymentType">
+        <s:restriction base="s:string">
+          <s:enumeration value="CC" />
+          <s:enumeration value="PP" />
+          <s:enumeration value="PIN" />
+          <s:enumeration value="CF" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="ValidatePurchaseByAniResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ValidatePurchaseByAniResult" type="tns:ValidatePurchaseByAniResp" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ValidatePurchaseByAniResp">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:RespBase" />
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="ValidateAgent">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="OfferingId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="AgentId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="PaymentType" type="tns:PaymentType" />
+            <s:element minOccurs="1" maxOccurs="1" name="Amount" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidateAgentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ValidateAgentResult" type="tns:ValidateAgentRechargeResp" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ValidateAgentRechargeResp">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:RespBase" />
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="GetCcOnFileByAni">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ANI" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="OfferingId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCcOnFileByAniResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCcOnFileByAniResult" type="tns:CreditCardList" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CreditCardList">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:RespBase">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="CreditCards" type="tns:ArrayOfCreditCardInfo" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfCreditCardInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CreditCardInfo" nillable="true" type="tns:CreditCardInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CreditCardInfo">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CreditCardID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreditCardType" type="s2:CardType" />
+          <s:element minOccurs="0" maxOccurs="1" name="Last4Digits" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ExpDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Address" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="State" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ZipCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Country" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SaveCcOnFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ANI" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="OfferingId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="CreditCardId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="ExpDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Address" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="State" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ZipCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Country" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveCcOnFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SaveCcOnFileResult" type="tns:SaveCcOnFileResp" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="SaveCcOnFileResp">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:RespBase" />
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="DelCcOnFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ANI" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="OfferingId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="CreditCardId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DelCcOnFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DelCcOnFileResult" type="tns:DelCcOnFileResp" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="DelCcOnFileResp">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:RespBase" />
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="ProcessCcOnFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ANI" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="OfferingId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="CreditCardId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="CVV" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Amount" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="SessionId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProcessCcOnFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ProcessCcOnFileResult" type="s2:CreditCardTransResp" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAutoRechargeByAni">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ANI" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="OfferingId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAutoRechargeByAniResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAutoRechargeByAniResult" type="tns:GetAutoRechargeByAniResp" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GetAutoRechargeByAniResp">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:RespBase">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="CreditCardId" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="TriggerAmount" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="RechargeAmount" type="s:decimal" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="SetAutoRechargeByAni">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ANI" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="OfferingId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="CreditCardId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="TriggerAmount" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="RechargeAmount" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetAutoRechargeByAniResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetAutoRechargeByAniResult" type="tns:SetAutoRechargeByAniResp" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="SetAutoRechargeByAniResp">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:RespBase" />
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="WantToBeAnAgent">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ANI" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Country" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Phone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Website" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Comments" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WantToBeAnAgentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WantToBeAnAgentResult" type="tns:WantToBeAgentResp" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="WantToBeAgentResp">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:RespBase" />
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="Activate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pin" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="lot" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="value" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="firstName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lastName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="anis" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActivateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ActivateResult" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActivateAccount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ActivateReq" type="tns:ActivateAccountType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ActivateAccountType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="OrderId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Company" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Account" type="tns:AccountInfo" />
+          <s:element minOccurs="1" maxOccurs="1" name="SignupType" type="s2:DialerSignupType" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ActivateAccountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ActivateAccountResult" type="tns:AccountInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PinlessActivateNew">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PinlessActivateReq" type="tns:PinlessActivateReq" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="PinlessActivateReq">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="OfferingId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Balance" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="Ani" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrderId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="PinlessActivateNewResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PinlessActivateNewResult" type="tns:PinLessActivateResp" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="PinLessActivateResp">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:RespBase">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Pin" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="Recharge">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pin" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="lot" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="amount" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="firstName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lastName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RechargeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RechargeResult" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWebTransactionInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="WebTransId" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWebTransactionInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetWebTransactionInfoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddAniToAni">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ANI" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Offering" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="NewAnis" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddAniToAniResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddAniToAniResult" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddAni">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="anis" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="firstName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lastName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddAniResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddAniResult" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="removeAni">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ani" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="removeAniResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="removeAniResult" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAniList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pin" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAniListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getAniListResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAniListByAni">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ANI" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Offering" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAniListByAniResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getAniListByAniResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeactivateAccount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ani" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeactivateAccountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeactivateAccountResult" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeactivatePin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pin" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeactivatePinResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeactivatePinResult" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPinInformation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pin" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPinInformationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPinInformationResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCalls">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pin" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCallsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getCallsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCallsByPinDate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fromDt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="toDt" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCallsByPinDateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getCallsByPinDateResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPinByPlanSequence">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="planId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="sequence" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPinByPlanSequenceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPinByPlanSequenceResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActivateBatch">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="plan" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="beginSeq" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="endSeq" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="cardValue" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="orderNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActivateBatchResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ActivateBatchResult" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getBatch">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="plan" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="beginSeq" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="endSeq" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getBatchResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getBatchResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPinByAniAccessNo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ani" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="accessNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPinByAniAccessNoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPinByAniAccessNoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTransactions">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pin" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTransactionsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTransactionsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLotInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="lot" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLotInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLotInfoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RechargeExt">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pin" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="lot" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="amount" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="firstName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lastName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="address" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="zipCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="country" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ext1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ext2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ext3" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RechargeExtResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RechargeExtResult" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCallsByBatchDate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="batchId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fromDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="toDate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCallsByBatchDateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getCallsByBatchDateResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getXMLCallsByBatchDate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="batchId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fromDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="toDate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getXMLCallsByBatchDateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getXMLCallsByBatchDateResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeactivateBatch">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="plan" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="beginSeq" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="endSeq" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="orderNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeactivateBatchResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeactivateBatchResult" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSpeedDialList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pin" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSpeedDialListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSpeedDialListResult" type="tns:ArrayOfSpeedDialType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfSpeedDialType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="speedDialType" nillable="true" type="tns:speedDialType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="speedDialType">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:RespBase">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="DialCode" type="s:short" />
+              <s:element minOccurs="0" maxOccurs="1" name="PhoneNumber" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="ManageSpeedDial">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pin" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dialCode" type="s:short" />
+            <s:element minOccurs="0" maxOccurs="1" name="phoneNumber" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="actionType" type="s:short" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ManageSpeedDialResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ManageSpeedDialResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TopUpRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TopUpReq" type="tns:TopUpReqType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="TopUpReqType">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MobileTopUpType">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="Action" type="tns:TopUpAction" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="MobileTopUpType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PhoneNumber" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="OfferingId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Amount" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrderId" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ProviderId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Ani" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PaymentTypeCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PaymentAuthId" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="TopUpAction">
+        <s:restriction base="s:string">
+          <s:enumeration value="PurchasePin" />
+          <s:enumeration value="AddFunds" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="TopUpRequestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TopUpRequestResult" type="tns:TopUpResp" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="TopUpResp">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:RespBase">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Pin" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="TopUpRequestSync">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TopUpReq" type="tns:TopUpReqType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TopUpRequestSyncResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TopUpRequestSyncResult" type="s1:TransResponseType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MobileTopup">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TopUpReq" type="tns:MobileTopUpType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MobileTopupResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MobileTopupResult" type="tns:TopUpResp" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TopUpPinRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TopUpPinReq" type="tns:TopUpPinReqType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="TopUpPinReqType">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="OfferingId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Amount" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrderId" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="TopUpPinRequestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TopUpPinRequestResult" type="tns:TopUpResp" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChangeLot">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pin" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="lot" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChangeLotResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ChangeLotResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRateDestinationsByLot">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LotId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRateDestinationsByLotResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRateDestinationsByLotResult" type="tns:ArrayOfRateDestination" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfRateDestination">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="RateDestination" nillable="true" type="tns:RateDestination" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="RateDestination">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:RespBase">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="Code" type="s:short" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="GetRatesByOffering">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="OfferingId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="CountryCode" type="s:short" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRatesByOfferingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRatesByOfferingResult" type="tns:ArrayOfRate" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfRate">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Rate" nillable="true" type="tns:Rate" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetRatesByLot">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Lot" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="CountryCode" type="s:short" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRatesByLotResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRatesByLotResult" type="tns:ArrayOfRate" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAccountInfoByAni">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Ani" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAccountInfoByAniResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAccountInfoByAniResult" type="tns:AccountInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RechargeDPPAgent">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="reqAccount" type="tns:RechargeDppAgentType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RechargeDppAgentType">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="AgentId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="OfferingId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Amount" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="PaymentTypeCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PaymentAuthId" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="RechargeDPPAgentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RechargeDPPAgentResult" type="tns:AccountInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RechargeAccount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="reqAccount" type="tns:RechargeAccountType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RechargeAccountType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PhoneNumber" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="OfferingId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrderId" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Amount" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="PaymentTypeCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PaymentAuthId" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="RechargeAccountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RechargeAccountResult" type="tns:AccountInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidateActivateOrRechargeAccount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="reqActAccount" type="tns:ActivateOrRechargeAccountType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ActivateOrRechargeAccountType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="OrderId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Company" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Account" type="tns:AccountInfo" />
+          <s:element minOccurs="1" maxOccurs="1" name="SignupType" type="s2:DialerSignupType" />
+          <s:element minOccurs="0" maxOccurs="1" name="Language" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PromoTransaction" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ValidateActivateOrRechargeAccountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ValidateActivateOrRechargeAccountResult" type="tns:AccountInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActivateOrRechargeAccount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="reqActAccount" type="tns:ActivateOrRechargeAccountType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActivateOrRechargeAccountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ActivateOrRechargeAccountResult" type="tns:AccountInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RechargeAni">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Ani" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Amount" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RechargeAniResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RechargeAniResult" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AniExists">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Ani" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AniExistsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AniExistsResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AniExistsOnOffering">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Ani" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="OfferingId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AniExistsOnOfferingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AniExistsOnOfferingResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCallTimeByAniDestNum">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Ani" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DestNum" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCallTimeByAniDestNumResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetCallTimeByAniDestNumResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/PPS/Misc">
+      <s:simpleType name="DialerUserStatus">
+        <s:restriction base="s:string">
+          <s:enumeration value="None" />
+          <s:enumeration value="Offline" />
+          <s:enumeration value="Online" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="TransactionStatus">
+        <s:restriction base="s:string">
+          <s:enumeration value="Success" />
+          <s:enumeration value="Pending" />
+          <s:enumeration value="Failed" />
+          <s:enumeration value="Verify" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="TransResponseType">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Status" type="s1:TransactionStatus" />
+          <s:element minOccurs="1" maxOccurs="1" name="ErrorCode" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorMsg" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PIN" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CarrierTransId" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DidItem">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="DidListID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="DidNum" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DidDestNum">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="DidDestNumID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="DidNum" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DestNum" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ProductOfferingID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Ani" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://dollarphone.com/PPS/PPS">
+      <s:simpleType name="cardStatus">
+        <s:restriction base="s:string">
+          <s:enumeration value="preActive" />
+          <s:enumeration value="active" />
+          <s:enumeration value="suspended" />
+          <s:enumeration value="disabled" />
+          <s:enumeration value="expired" />
+          <s:enumeration value="ExpiredAndDeleted" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="CreditCardTransResp">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ResponseMsg" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AuthCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AvsResultCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AvsResultMsg" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GatewayTransId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CvvVerifCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CvvVerifResponse" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Approved" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="CardType">
+        <s:restriction base="s:string">
+          <s:enumeration value="MasterCard" />
+          <s:enumeration value="Visa" />
+          <s:enumeration value="Amex" />
+          <s:enumeration value="Discover" />
+          <s:enumeration value="Debit" />
+          <s:enumeration value="Check" />
+          <s:enumeration value="Cash" />
+          <s:enumeration value="Wire" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="DialerSignupType">
+        <s:restriction base="s:string">
+          <s:enumeration value="None" />
+          <s:enumeration value="WebSignUp" />
+          <s:enumeration value="AppSignUp" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/PPS/Batch">
+      <s:complexType name="InvoiceActivationResp">
+        <s:complexContent mixed="false">
+          <s:extension base="s3:RespBase" />
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="RespBase" abstract="true">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="TransId" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="ResponseCode" type="s:short" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResponseText" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetRateByPinDestNumSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRateByPinDestNum" />
+  </wsdl:message>
+  <wsdl:message name="GetRateByPinDestNumSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRateByPinDestNumResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRateByAniDestNumSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRateByAniDestNum" />
+  </wsdl:message>
+  <wsdl:message name="GetRateByAniDestNumSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRateByAniDestNumResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRateByLotDestinationIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRateByLotDestinationId" />
+  </wsdl:message>
+  <wsdl:message name="GetRateByLotDestinationIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRateByLotDestinationIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAccessNumbersByLotSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAccessNumbersByLot" />
+  </wsdl:message>
+  <wsdl:message name="GetAccessNumbersByLotSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAccessNumbersByLotResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAccessNumbersByOfferingSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAccessNumbersByOffering" />
+  </wsdl:message>
+  <wsdl:message name="GetAccessNumbersByOfferingSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAccessNumbersByOfferingResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAppAccessNumbersByOfferingSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAppAccessNumbersByOffering" />
+  </wsdl:message>
+  <wsdl:message name="GetAppAccessNumbersByOfferingSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAppAccessNumbersByOfferingResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAccessNumbersWLanguageStringByOfferingSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAccessNumbersWLanguageStringByOffering" />
+  </wsdl:message>
+  <wsdl:message name="GetAccessNumbersWLanguageStringByOfferingSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAccessNumbersWLanguageStringByOfferingResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBalanceByAniSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBalanceByAni" />
+  </wsdl:message>
+  <wsdl:message name="GetBalanceByAniSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBalanceByAniResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDidByAniSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDidByAni" />
+  </wsdl:message>
+  <wsdl:message name="GetDidByAniSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDidByAniResponse" />
+  </wsdl:message>
+  <wsdl:message name="RechargePinSoapIn">
+    <wsdl:part name="parameters" element="tns:RechargePin" />
+  </wsdl:message>
+  <wsdl:message name="RechargePinSoapOut">
+    <wsdl:part name="parameters" element="tns:RechargePinResponse" />
+  </wsdl:message>
+  <wsdl:message name="RechargePinNewSoapIn">
+    <wsdl:part name="parameters" element="tns:RechargePinNew" />
+  </wsdl:message>
+  <wsdl:message name="RechargePinNewSoapOut">
+    <wsdl:part name="parameters" element="tns:RechargePinNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountInfoByAniOfferingSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAccountInfoByAniOffering" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountInfoByAniOfferingSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAccountInfoByAniOfferingResponse" />
+  </wsdl:message>
+  <wsdl:message name="InvoiceActivationSoapIn">
+    <wsdl:part name="parameters" element="tns:InvoiceActivation" />
+  </wsdl:message>
+  <wsdl:message name="InvoiceActivationSoapOut">
+    <wsdl:part name="parameters" element="tns:InvoiceActivationResponse" />
+  </wsdl:message>
+  <wsdl:message name="CancelOrderSoapIn">
+    <wsdl:part name="parameters" element="tns:CancelOrder" />
+  </wsdl:message>
+  <wsdl:message name="CancelOrderSoapOut">
+    <wsdl:part name="parameters" element="tns:CancelOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="CancelOrderByOrderIdSoapIn">
+    <wsdl:part name="parameters" element="tns:CancelOrderByOrderId" />
+  </wsdl:message>
+  <wsdl:message name="CancelOrderByOrderIdSoapOut">
+    <wsdl:part name="parameters" element="tns:CancelOrderByOrderIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="TopupConfirmSoapIn">
+    <wsdl:part name="parameters" element="tns:TopupConfirm" />
+  </wsdl:message>
+  <wsdl:message name="TopupConfirmSoapOut">
+    <wsdl:part name="parameters" element="tns:TopupConfirmResponse" />
+  </wsdl:message>
+  <wsdl:message name="DidListRet_ByAniOfferingSoapIn">
+    <wsdl:part name="parameters" element="tns:DidListRet_ByAniOffering" />
+  </wsdl:message>
+  <wsdl:message name="DidListRet_ByAniOfferingSoapOut">
+    <wsdl:part name="parameters" element="tns:DidListRet_ByAniOfferingResponse" />
+  </wsdl:message>
+  <wsdl:message name="DidDestNumAddSoapIn">
+    <wsdl:part name="parameters" element="tns:DidDestNumAdd" />
+  </wsdl:message>
+  <wsdl:message name="DidDestNumAddSoapOut">
+    <wsdl:part name="parameters" element="tns:DidDestNumAddResponse" />
+  </wsdl:message>
+  <wsdl:message name="DidDestNumDeleteSoapIn">
+    <wsdl:part name="parameters" element="tns:DidDestNumDelete" />
+  </wsdl:message>
+  <wsdl:message name="DidDestNumDeleteSoapOut">
+    <wsdl:part name="parameters" element="tns:DidDestNumDeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="DidDestNumRet_ByAniOfferingSoapIn">
+    <wsdl:part name="parameters" element="tns:DidDestNumRet_ByAniOffering" />
+  </wsdl:message>
+  <wsdl:message name="DidDestNumRet_ByAniOfferingSoapOut">
+    <wsdl:part name="parameters" element="tns:DidDestNumRet_ByAniOfferingResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAgentDueSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAgentDue" />
+  </wsdl:message>
+  <wsdl:message name="GetAgentDueSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAgentDueResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAgentCreditLimitSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAgentCreditLimit" />
+  </wsdl:message>
+  <wsdl:message name="GetAgentCreditLimitSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAgentCreditLimitResponse" />
+  </wsdl:message>
+  <wsdl:message name="CancelTopUpSoapIn">
+    <wsdl:part name="parameters" element="tns:CancelTopUp" />
+  </wsdl:message>
+  <wsdl:message name="CancelTopUpSoapOut">
+    <wsdl:part name="parameters" element="tns:CancelTopUpResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetOfferingsByPhoneSoapIn">
+    <wsdl:part name="parameters" element="tns:GetOfferingsByPhone" />
+  </wsdl:message>
+  <wsdl:message name="GetOfferingsByPhoneSoapOut">
+    <wsdl:part name="parameters" element="tns:GetOfferingsByPhoneResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTopupProductsByPhoneSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTopupProductsByPhone" />
+  </wsdl:message>
+  <wsdl:message name="GetTopupProductsByPhoneSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTopupProductsByPhoneResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDomesticTopupProductsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDomesticTopupProducts" />
+  </wsdl:message>
+  <wsdl:message name="GetDomesticTopupProductsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDomesticTopupProductsResponse" />
+  </wsdl:message>
+  <wsdl:message name="AutoDialerSignUpSoapIn">
+    <wsdl:part name="parameters" element="tns:AutoDialerSignUp" />
+  </wsdl:message>
+  <wsdl:message name="AutoDialerSignUpSoapOut">
+    <wsdl:part name="parameters" element="tns:AutoDialerSignUpResponse" />
+  </wsdl:message>
+  <wsdl:message name="BalanceTransferPinToPinSoapIn">
+    <wsdl:part name="parameters" element="tns:BalanceTransferPinToPin" />
+  </wsdl:message>
+  <wsdl:message name="BalanceTransferPinToPinSoapOut">
+    <wsdl:part name="parameters" element="tns:BalanceTransferPinToPinResponse" />
+  </wsdl:message>
+  <wsdl:message name="BalanceTransferPinToAniSoapIn">
+    <wsdl:part name="parameters" element="tns:BalanceTransferPinToAni" />
+  </wsdl:message>
+  <wsdl:message name="BalanceTransferPinToAniSoapOut">
+    <wsdl:part name="parameters" element="tns:BalanceTransferPinToAniResponse" />
+  </wsdl:message>
+  <wsdl:message name="AutoDialerBalanceTransferSoapIn">
+    <wsdl:part name="parameters" element="tns:AutoDialerBalanceTransfer" />
+  </wsdl:message>
+  <wsdl:message name="AutoDialerBalanceTransferSoapOut">
+    <wsdl:part name="parameters" element="tns:AutoDialerBalanceTransferResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditCardTransactionSoapIn">
+    <wsdl:part name="parameters" element="tns:CreditCardTransaction" />
+  </wsdl:message>
+  <wsdl:message name="CreditCardTransactionSoapOut">
+    <wsdl:part name="parameters" element="tns:CreditCardTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCurrentUserNameSoapIn">
+    <wsdl:part name="parameters" element="tns:getCurrentUserName" />
+  </wsdl:message>
+  <wsdl:message name="getCurrentUserNameSoapOut">
+    <wsdl:part name="parameters" element="tns:getCurrentUserNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidatePurchaseByAniSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidatePurchaseByAni" />
+  </wsdl:message>
+  <wsdl:message name="ValidatePurchaseByAniSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidatePurchaseByAniResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidateAgentSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidateAgent" />
+  </wsdl:message>
+  <wsdl:message name="ValidateAgentSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidateAgentResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCcOnFileByAniSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCcOnFileByAni" />
+  </wsdl:message>
+  <wsdl:message name="GetCcOnFileByAniSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCcOnFileByAniResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveCcOnFileSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveCcOnFile" />
+  </wsdl:message>
+  <wsdl:message name="SaveCcOnFileSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveCcOnFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="DelCcOnFileSoapIn">
+    <wsdl:part name="parameters" element="tns:DelCcOnFile" />
+  </wsdl:message>
+  <wsdl:message name="DelCcOnFileSoapOut">
+    <wsdl:part name="parameters" element="tns:DelCcOnFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProcessCcOnFileSoapIn">
+    <wsdl:part name="parameters" element="tns:ProcessCcOnFile" />
+  </wsdl:message>
+  <wsdl:message name="ProcessCcOnFileSoapOut">
+    <wsdl:part name="parameters" element="tns:ProcessCcOnFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAutoRechargeByAniSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAutoRechargeByAni" />
+  </wsdl:message>
+  <wsdl:message name="GetAutoRechargeByAniSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAutoRechargeByAniResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetAutoRechargeByAniSoapIn">
+    <wsdl:part name="parameters" element="tns:SetAutoRechargeByAni" />
+  </wsdl:message>
+  <wsdl:message name="SetAutoRechargeByAniSoapOut">
+    <wsdl:part name="parameters" element="tns:SetAutoRechargeByAniResponse" />
+  </wsdl:message>
+  <wsdl:message name="WantToBeAnAgentSoapIn">
+    <wsdl:part name="parameters" element="tns:WantToBeAnAgent" />
+  </wsdl:message>
+  <wsdl:message name="WantToBeAnAgentSoapOut">
+    <wsdl:part name="parameters" element="tns:WantToBeAnAgentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ActivateSoapIn">
+    <wsdl:part name="parameters" element="tns:Activate" />
+  </wsdl:message>
+  <wsdl:message name="ActivateSoapOut">
+    <wsdl:part name="parameters" element="tns:ActivateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ActivateAccountSoapIn">
+    <wsdl:part name="parameters" element="tns:ActivateAccount" />
+  </wsdl:message>
+  <wsdl:message name="ActivateAccountSoapOut">
+    <wsdl:part name="parameters" element="tns:ActivateAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="PinlessActivateNewSoapIn">
+    <wsdl:part name="parameters" element="tns:PinlessActivateNew" />
+  </wsdl:message>
+  <wsdl:message name="PinlessActivateNewSoapOut">
+    <wsdl:part name="parameters" element="tns:PinlessActivateNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="RechargeSoapIn">
+    <wsdl:part name="parameters" element="tns:Recharge" />
+  </wsdl:message>
+  <wsdl:message name="RechargeSoapOut">
+    <wsdl:part name="parameters" element="tns:RechargeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetWebTransactionInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetWebTransactionInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetWebTransactionInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetWebTransactionInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddAniToAniSoapIn">
+    <wsdl:part name="parameters" element="tns:AddAniToAni" />
+  </wsdl:message>
+  <wsdl:message name="AddAniToAniSoapOut">
+    <wsdl:part name="parameters" element="tns:AddAniToAniResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddAniSoapIn">
+    <wsdl:part name="parameters" element="tns:AddAni" />
+  </wsdl:message>
+  <wsdl:message name="AddAniSoapOut">
+    <wsdl:part name="parameters" element="tns:AddAniResponse" />
+  </wsdl:message>
+  <wsdl:message name="removeAniSoapIn">
+    <wsdl:part name="parameters" element="tns:removeAni" />
+  </wsdl:message>
+  <wsdl:message name="removeAniSoapOut">
+    <wsdl:part name="parameters" element="tns:removeAniResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAniListSoapIn">
+    <wsdl:part name="parameters" element="tns:getAniList" />
+  </wsdl:message>
+  <wsdl:message name="getAniListSoapOut">
+    <wsdl:part name="parameters" element="tns:getAniListResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAniListByAniSoapIn">
+    <wsdl:part name="parameters" element="tns:getAniListByAni" />
+  </wsdl:message>
+  <wsdl:message name="getAniListByAniSoapOut">
+    <wsdl:part name="parameters" element="tns:getAniListByAniResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeactivateAccountSoapIn">
+    <wsdl:part name="parameters" element="tns:DeactivateAccount" />
+  </wsdl:message>
+  <wsdl:message name="DeactivateAccountSoapOut">
+    <wsdl:part name="parameters" element="tns:DeactivateAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeactivatePinSoapIn">
+    <wsdl:part name="parameters" element="tns:DeactivatePin" />
+  </wsdl:message>
+  <wsdl:message name="DeactivatePinSoapOut">
+    <wsdl:part name="parameters" element="tns:DeactivatePinResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPinInformationSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPinInformation" />
+  </wsdl:message>
+  <wsdl:message name="GetPinInformationSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPinInformationResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCallsSoapIn">
+    <wsdl:part name="parameters" element="tns:getCalls" />
+  </wsdl:message>
+  <wsdl:message name="getCallsSoapOut">
+    <wsdl:part name="parameters" element="tns:getCallsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCallsByPinDateSoapIn">
+    <wsdl:part name="parameters" element="tns:getCallsByPinDate" />
+  </wsdl:message>
+  <wsdl:message name="getCallsByPinDateSoapOut">
+    <wsdl:part name="parameters" element="tns:getCallsByPinDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPinByPlanSequenceSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPinByPlanSequence" />
+  </wsdl:message>
+  <wsdl:message name="GetPinByPlanSequenceSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPinByPlanSequenceResponse" />
+  </wsdl:message>
+  <wsdl:message name="ActivateBatchSoapIn">
+    <wsdl:part name="parameters" element="tns:ActivateBatch" />
+  </wsdl:message>
+  <wsdl:message name="ActivateBatchSoapOut">
+    <wsdl:part name="parameters" element="tns:ActivateBatchResponse" />
+  </wsdl:message>
+  <wsdl:message name="getBatchSoapIn">
+    <wsdl:part name="parameters" element="tns:getBatch" />
+  </wsdl:message>
+  <wsdl:message name="getBatchSoapOut">
+    <wsdl:part name="parameters" element="tns:getBatchResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPinByAniAccessNoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPinByAniAccessNo" />
+  </wsdl:message>
+  <wsdl:message name="GetPinByAniAccessNoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPinByAniAccessNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTransactionsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTransactions" />
+  </wsdl:message>
+  <wsdl:message name="GetTransactionsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTransactionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLotInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLotInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetLotInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLotInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="RechargeExtSoapIn">
+    <wsdl:part name="parameters" element="tns:RechargeExt" />
+  </wsdl:message>
+  <wsdl:message name="RechargeExtSoapOut">
+    <wsdl:part name="parameters" element="tns:RechargeExtResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCallsByBatchDateSoapIn">
+    <wsdl:part name="parameters" element="tns:getCallsByBatchDate" />
+  </wsdl:message>
+  <wsdl:message name="getCallsByBatchDateSoapOut">
+    <wsdl:part name="parameters" element="tns:getCallsByBatchDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="getXMLCallsByBatchDateSoapIn">
+    <wsdl:part name="parameters" element="tns:getXMLCallsByBatchDate" />
+  </wsdl:message>
+  <wsdl:message name="getXMLCallsByBatchDateSoapOut">
+    <wsdl:part name="parameters" element="tns:getXMLCallsByBatchDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeactivateBatchSoapIn">
+    <wsdl:part name="parameters" element="tns:DeactivateBatch" />
+  </wsdl:message>
+  <wsdl:message name="DeactivateBatchSoapOut">
+    <wsdl:part name="parameters" element="tns:DeactivateBatchResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSpeedDialListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSpeedDialList" />
+  </wsdl:message>
+  <wsdl:message name="GetSpeedDialListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSpeedDialListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ManageSpeedDialSoapIn">
+    <wsdl:part name="parameters" element="tns:ManageSpeedDial" />
+  </wsdl:message>
+  <wsdl:message name="ManageSpeedDialSoapOut">
+    <wsdl:part name="parameters" element="tns:ManageSpeedDialResponse" />
+  </wsdl:message>
+  <wsdl:message name="TopUpRequestSoapIn">
+    <wsdl:part name="parameters" element="tns:TopUpRequest" />
+  </wsdl:message>
+  <wsdl:message name="TopUpRequestSoapOut">
+    <wsdl:part name="parameters" element="tns:TopUpRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="TopUpRequestSyncSoapIn">
+    <wsdl:part name="parameters" element="tns:TopUpRequestSync" />
+  </wsdl:message>
+  <wsdl:message name="TopUpRequestSyncSoapOut">
+    <wsdl:part name="parameters" element="tns:TopUpRequestSyncResponse" />
+  </wsdl:message>
+  <wsdl:message name="MobileTopupSoapIn">
+    <wsdl:part name="parameters" element="tns:MobileTopup" />
+  </wsdl:message>
+  <wsdl:message name="MobileTopupSoapOut">
+    <wsdl:part name="parameters" element="tns:MobileTopupResponse" />
+  </wsdl:message>
+  <wsdl:message name="TopUpPinRequestSoapIn">
+    <wsdl:part name="parameters" element="tns:TopUpPinRequest" />
+  </wsdl:message>
+  <wsdl:message name="TopUpPinRequestSoapOut">
+    <wsdl:part name="parameters" element="tns:TopUpPinRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="ChangeLotSoapIn">
+    <wsdl:part name="parameters" element="tns:ChangeLot" />
+  </wsdl:message>
+  <wsdl:message name="ChangeLotSoapOut">
+    <wsdl:part name="parameters" element="tns:ChangeLotResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRateDestinationsByLotSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRateDestinationsByLot" />
+  </wsdl:message>
+  <wsdl:message name="GetRateDestinationsByLotSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRateDestinationsByLotResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRatesByOfferingSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRatesByOffering" />
+  </wsdl:message>
+  <wsdl:message name="GetRatesByOfferingSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRatesByOfferingResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRatesByLotSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRatesByLot" />
+  </wsdl:message>
+  <wsdl:message name="GetRatesByLotSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRatesByLotResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountInfoByAniSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAccountInfoByAni" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountInfoByAniSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAccountInfoByAniResponse" />
+  </wsdl:message>
+  <wsdl:message name="RechargeDPPAgentSoapIn">
+    <wsdl:part name="parameters" element="tns:RechargeDPPAgent" />
+  </wsdl:message>
+  <wsdl:message name="RechargeDPPAgentSoapOut">
+    <wsdl:part name="parameters" element="tns:RechargeDPPAgentResponse" />
+  </wsdl:message>
+  <wsdl:message name="RechargeAccountSoapIn">
+    <wsdl:part name="parameters" element="tns:RechargeAccount" />
+  </wsdl:message>
+  <wsdl:message name="RechargeAccountSoapOut">
+    <wsdl:part name="parameters" element="tns:RechargeAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidateActivateOrRechargeAccountSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidateActivateOrRechargeAccount" />
+  </wsdl:message>
+  <wsdl:message name="ValidateActivateOrRechargeAccountSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidateActivateOrRechargeAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="ActivateOrRechargeAccountSoapIn">
+    <wsdl:part name="parameters" element="tns:ActivateOrRechargeAccount" />
+  </wsdl:message>
+  <wsdl:message name="ActivateOrRechargeAccountSoapOut">
+    <wsdl:part name="parameters" element="tns:ActivateOrRechargeAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="RechargeAniSoapIn">
+    <wsdl:part name="parameters" element="tns:RechargeAni" />
+  </wsdl:message>
+  <wsdl:message name="RechargeAniSoapOut">
+    <wsdl:part name="parameters" element="tns:RechargeAniResponse" />
+  </wsdl:message>
+  <wsdl:message name="AniExistsSoapIn">
+    <wsdl:part name="parameters" element="tns:AniExists" />
+  </wsdl:message>
+  <wsdl:message name="AniExistsSoapOut">
+    <wsdl:part name="parameters" element="tns:AniExistsResponse" />
+  </wsdl:message>
+  <wsdl:message name="AniExistsOnOfferingSoapIn">
+    <wsdl:part name="parameters" element="tns:AniExistsOnOffering" />
+  </wsdl:message>
+  <wsdl:message name="AniExistsOnOfferingSoapOut">
+    <wsdl:part name="parameters" element="tns:AniExistsOnOfferingResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCallTimeByAniDestNumSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCallTimeByAniDestNum" />
+  </wsdl:message>
+  <wsdl:message name="GetCallTimeByAniDestNumSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCallTimeByAniDestNumResponse" />
+  </wsdl:message>
+  <wsdl:portType name="PinManagerSoap">
+    <wsdl:operation name="GetRateByPinDestNum">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns the rate per minute for the specified Pin and destination number.</wsdl:documentation>
+      <wsdl:input message="tns:GetRateByPinDestNumSoapIn" />
+      <wsdl:output message="tns:GetRateByPinDestNumSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRateByAniDestNum">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns the rate per minute for the specified ANI and destination number.</wsdl:documentation>
+      <wsdl:input message="tns:GetRateByAniDestNumSoapIn" />
+      <wsdl:output message="tns:GetRateByAniDestNumSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRateByLotDestinationId">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns the rate per minute for specified lot and location (destination).</wsdl:documentation>
+      <wsdl:input message="tns:GetRateByLotDestinationIdSoapIn" />
+      <wsdl:output message="tns:GetRateByLotDestinationIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccessNumbersByLot">
+      <wsdl:input message="tns:GetAccessNumbersByLotSoapIn" />
+      <wsdl:output message="tns:GetAccessNumbersByLotSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccessNumbersByOffering">
+      <wsdl:input message="tns:GetAccessNumbersByOfferingSoapIn" />
+      <wsdl:output message="tns:GetAccessNumbersByOfferingSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAppAccessNumbersByOffering">
+      <wsdl:input message="tns:GetAppAccessNumbersByOfferingSoapIn" />
+      <wsdl:output message="tns:GetAppAccessNumbersByOfferingSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccessNumbersWLanguageStringByOffering">
+      <wsdl:input message="tns:GetAccessNumbersWLanguageStringByOfferingSoapIn" />
+      <wsdl:output message="tns:GetAccessNumbersWLanguageStringByOfferingSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBalanceByAni">
+      <wsdl:input message="tns:GetBalanceByAniSoapIn" />
+      <wsdl:output message="tns:GetBalanceByAniSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDidByAni">
+      <wsdl:input message="tns:GetDidByAniSoapIn" />
+      <wsdl:output message="tns:GetDidByAniSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RechargePin">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Add funds to specifed pin.</wsdl:documentation>
+      <wsdl:input message="tns:RechargePinSoapIn" />
+      <wsdl:output message="tns:RechargePinSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RechargePinNew">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Add funds to specifed pin.</wsdl:documentation>
+      <wsdl:input message="tns:RechargePinNewSoapIn" />
+      <wsdl:output message="tns:RechargePinNewSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountInfoByAniOffering">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retrieve information for account associated with specified phone number(Ani)</wsdl:documentation>
+      <wsdl:input message="tns:GetAccountInfoByAniOfferingSoapIn" />
+      <wsdl:output message="tns:GetAccountInfoByAniOfferingSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InvoiceActivation">
+      <wsdl:input message="tns:InvoiceActivationSoapIn" />
+      <wsdl:output message="tns:InvoiceActivationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelOrder">
+      <wsdl:input message="tns:CancelOrderSoapIn" />
+      <wsdl:output message="tns:CancelOrderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelOrderByOrderId">
+      <wsdl:input message="tns:CancelOrderByOrderIdSoapIn" />
+      <wsdl:output message="tns:CancelOrderByOrderIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TopupConfirm">
+      <wsdl:input message="tns:TopupConfirmSoapIn" />
+      <wsdl:output message="tns:TopupConfirmSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DidListRet_ByAniOffering">
+      <wsdl:input message="tns:DidListRet_ByAniOfferingSoapIn" />
+      <wsdl:output message="tns:DidListRet_ByAniOfferingSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DidDestNumAdd">
+      <wsdl:input message="tns:DidDestNumAddSoapIn" />
+      <wsdl:output message="tns:DidDestNumAddSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DidDestNumDelete">
+      <wsdl:input message="tns:DidDestNumDeleteSoapIn" />
+      <wsdl:output message="tns:DidDestNumDeleteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DidDestNumRet_ByAniOffering">
+      <wsdl:input message="tns:DidDestNumRet_ByAniOfferingSoapIn" />
+      <wsdl:output message="tns:DidDestNumRet_ByAniOfferingSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAgentDue">
+      <wsdl:input message="tns:GetAgentDueSoapIn" />
+      <wsdl:output message="tns:GetAgentDueSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAgentCreditLimit">
+      <wsdl:input message="tns:GetAgentCreditLimitSoapIn" />
+      <wsdl:output message="tns:GetAgentCreditLimitSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelTopUp">
+      <wsdl:input message="tns:CancelTopUpSoapIn" />
+      <wsdl:output message="tns:CancelTopUpSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOfferingsByPhone">
+      <wsdl:input message="tns:GetOfferingsByPhoneSoapIn" />
+      <wsdl:output message="tns:GetOfferingsByPhoneSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTopupProductsByPhone">
+      <wsdl:input message="tns:GetTopupProductsByPhoneSoapIn" />
+      <wsdl:output message="tns:GetTopupProductsByPhoneSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDomesticTopupProducts">
+      <wsdl:input message="tns:GetDomesticTopupProductsSoapIn" />
+      <wsdl:output message="tns:GetDomesticTopupProductsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AutoDialerSignUp">
+      <wsdl:input message="tns:AutoDialerSignUpSoapIn" />
+      <wsdl:output message="tns:AutoDialerSignUpSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BalanceTransferPinToPin">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Transfer Balance to existing PIN</wsdl:documentation>
+      <wsdl:input message="tns:BalanceTransferPinToPinSoapIn" />
+      <wsdl:output message="tns:BalanceTransferPinToPinSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BalanceTransferPinToAni">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Transfer Balance to existing ANI</wsdl:documentation>
+      <wsdl:input message="tns:BalanceTransferPinToAniSoapIn" />
+      <wsdl:output message="tns:BalanceTransferPinToAniSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AutoDialerBalanceTransfer">
+      <wsdl:input message="tns:AutoDialerBalanceTransferSoapIn" />
+      <wsdl:output message="tns:AutoDialerBalanceTransferSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreditCardTransaction">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Charges a credit card</wsdl:documentation>
+      <wsdl:input message="tns:CreditCardTransactionSoapIn" />
+      <wsdl:output message="tns:CreditCardTransactionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCurrentUserName">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns the currently logged in user name</wsdl:documentation>
+      <wsdl:input message="tns:getCurrentUserNameSoapIn" />
+      <wsdl:output message="tns:getCurrentUserNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidatePurchaseByAni">
+      <wsdl:input message="tns:ValidatePurchaseByAniSoapIn" />
+      <wsdl:output message="tns:ValidatePurchaseByAniSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateAgent">
+      <wsdl:input message="tns:ValidateAgentSoapIn" />
+      <wsdl:output message="tns:ValidateAgentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCcOnFileByAni">
+      <wsdl:input message="tns:GetCcOnFileByAniSoapIn" />
+      <wsdl:output message="tns:GetCcOnFileByAniSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveCcOnFile">
+      <wsdl:input message="tns:SaveCcOnFileSoapIn" />
+      <wsdl:output message="tns:SaveCcOnFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DelCcOnFile">
+      <wsdl:input message="tns:DelCcOnFileSoapIn" />
+      <wsdl:output message="tns:DelCcOnFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessCcOnFile">
+      <wsdl:input message="tns:ProcessCcOnFileSoapIn" />
+      <wsdl:output message="tns:ProcessCcOnFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAutoRechargeByAni">
+      <wsdl:input message="tns:GetAutoRechargeByAniSoapIn" />
+      <wsdl:output message="tns:GetAutoRechargeByAniSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetAutoRechargeByAni">
+      <wsdl:input message="tns:SetAutoRechargeByAniSoapIn" />
+      <wsdl:output message="tns:SetAutoRechargeByAniSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WantToBeAnAgent">
+      <wsdl:input message="tns:WantToBeAnAgentSoapIn" />
+      <wsdl:output message="tns:WantToBeAnAgentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Activate">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Activate new Pin. To associate multiple phone numbers pass a comma delimited string to 'anis' parameter. Function returns a web transaction id (positive number) on successful execution. A return value of 0 or negative integer indicates that an error occurred.</wsdl:documentation>
+      <wsdl:input message="tns:ActivateSoapIn" />
+      <wsdl:output message="tns:ActivateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ActivateAccount">
+      <wsdl:input message="tns:ActivateAccountSoapIn" />
+      <wsdl:output message="tns:ActivateAccountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PinlessActivateNew">
+      <wsdl:input message="tns:PinlessActivateNewSoapIn" />
+      <wsdl:output message="tns:PinlessActivateNewSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Recharge">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Replenishes PIN balance. Return value &gt; 0 is the web transaction id, &lt;= 0 means that an error occurred while processing request.</wsdl:documentation>
+      <wsdl:input message="tns:RechargeSoapIn" />
+      <wsdl:output message="tns:RechargeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWebTransactionInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns web transaction status and note. Status values: S = Success, F = Failed, P = Pending. Table name - 'webtransinfo'</wsdl:documentation>
+      <wsdl:input message="tns:GetWebTransactionInfoSoapIn" />
+      <wsdl:output message="tns:GetWebTransactionInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddAniToAni">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Add additional ANI(s) to current ANI. For multiple phone numbers pass a comma delimited string to 'anis' parameter. Return values: &gt; 1 - web transaction ID, &lt;= 0 - Error occurred, 1 - Anis were added successfully.</wsdl:documentation>
+      <wsdl:input message="tns:AddAniToAniSoapIn" />
+      <wsdl:output message="tns:AddAniToAniSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddAni">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Add phone number(s) to be associated with PIN for automatic identification. For multiple phone numbers pass a comma delimited string to 'anis' parameter. Return values: &gt; 1 - web transaction ID, &lt;= 0 - Error occurred, 1 - Anis were added successfully.</wsdl:documentation>
+      <wsdl:input message="tns:AddAniSoapIn" />
+      <wsdl:output message="tns:AddAniSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="removeAni">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Remove phone number(s) associated with the PIN. Return values: Positive number is the Trans Id, Negative Number - Failed.</wsdl:documentation>
+      <wsdl:input message="tns:removeAniSoapIn" />
+      <wsdl:output message="tns:removeAniSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAniList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retrieves a list of phone numbers associated to PIN. Table name = 'ani'</wsdl:documentation>
+      <wsdl:input message="tns:getAniListSoapIn" />
+      <wsdl:output message="tns:getAniListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAniListByAni">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retrieves a list of ANIs associated to ANI. Table name = 'ani'</wsdl:documentation>
+      <wsdl:input message="tns:getAniListByAniSoapIn" />
+      <wsdl:output message="tns:getAniListByAniSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeactivateAccount">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Deactivate account by passing Ani. Successful execution will return the web transaction Id. A 0 or negative number indicates an error.</wsdl:documentation>
+      <wsdl:input message="tns:DeactivateAccountSoapIn" />
+      <wsdl:output message="tns:DeactivateAccountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeactivatePin">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Deactivate PIN. Successful execution will return the web transaction Id. A 0 or negative number indicates an error.</wsdl:documentation>
+      <wsdl:input message="tns:DeactivatePinSoapIn" />
+      <wsdl:output message="tns:DeactivatePinSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPinInformation">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns PIN status, balance, plan number (lot) and sequence number. Table name = 'pinInfo'</wsdl:documentation>
+      <wsdl:input message="tns:GetPinInformationSoapIn" />
+      <wsdl:output message="tns:GetPinInformationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCalls">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retrieves call history for pin. Table name is 'calls'</wsdl:documentation>
+      <wsdl:input message="tns:getCallsSoapIn" />
+      <wsdl:output message="tns:getCallsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCallsByPinDate">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retrieves call history for pin. Table name is 'calls'</wsdl:documentation>
+      <wsdl:input message="tns:getCallsByPinDateSoapIn" />
+      <wsdl:output message="tns:getCallsByPinDateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPinByPlanSequence">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retrieve PIN by passing in Plan ID (lot) and sequence number.A response that contains a negative value denotes an error code.</wsdl:documentation>
+      <wsdl:input message="tns:GetPinByPlanSequenceSoapIn" />
+      <wsdl:output message="tns:GetPinByPlanSequenceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ActivateBatch">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Activate a batch of sequence numbers, by providing plan number along with the begin and end sequence numbers. Function returns a web transaction ID on success. On error, function will return a negative number</wsdl:documentation>
+      <wsdl:input message="tns:ActivateBatchSoapIn" />
+      <wsdl:output message="tns:ActivateBatchSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getBatch">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retrieves status and balance of a batch of sequence numbers. Table name = 'batch'</wsdl:documentation>
+      <wsdl:input message="tns:getBatchSoapIn" />
+      <wsdl:output message="tns:getBatchSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPinByAniAccessNo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retrieve PIN by passing in ANI and access number. A response that contains a negative value denotes an error code.</wsdl:documentation>
+      <wsdl:input message="tns:GetPinByAniAccessNoSoapIn" />
+      <wsdl:output message="tns:GetPinByAniAccessNoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactions">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retrieve transactions for applicable pins. Table name is 'trans'</wsdl:documentation>
+      <wsdl:input message="tns:GetTransactionsSoapIn" />
+      <wsdl:output message="tns:GetTransactionsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLotInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retrieve specific information on the specified lot</wsdl:documentation>
+      <wsdl:input message="tns:GetLotInfoSoapIn" />
+      <wsdl:output message="tns:GetLotInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RechargeExt">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Replenishes PIN balance. Return value &gt; 0 is the web transaction id, &lt;= 0 means that an error occurred while processing request.</wsdl:documentation>
+      <wsdl:input message="tns:RechargeExtSoapIn" />
+      <wsdl:output message="tns:RechargeExtSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCallsByBatchDate">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retrieve Calls for a particular batch and date range. Table name is 'calls'</wsdl:documentation>
+      <wsdl:input message="tns:getCallsByBatchDateSoapIn" />
+      <wsdl:output message="tns:getCallsByBatchDateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getXMLCallsByBatchDate">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retrieve Calls for a particular batch and date range. Table name is 'calls'</wsdl:documentation>
+      <wsdl:input message="tns:getXMLCallsByBatchDateSoapIn" />
+      <wsdl:output message="tns:getXMLCallsByBatchDateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeactivateBatch">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Deactivate a batch of sequence numbers, by providing plan number along with the begin and end sequence numbers. Function returns a web transaction ID on success. On error, function will return a negative number</wsdl:documentation>
+      <wsdl:input message="tns:DeactivateBatchSoapIn" />
+      <wsdl:output message="tns:DeactivateBatchSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSpeedDialList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns list of speed dial codes and numbers for specified pin.</wsdl:documentation>
+      <wsdl:input message="tns:GetSpeedDialListSoapIn" />
+      <wsdl:output message="tns:GetSpeedDialListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ManageSpeedDial">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Add or remove a speed dial number. Use the ActionType parameter to specify add or remove.  1 = Add, 2 = Remove. Function returns a web transaction ID on success.</wsdl:documentation>
+      <wsdl:input message="tns:ManageSpeedDialSoapIn" />
+      <wsdl:output message="tns:ManageSpeedDialSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TopUpRequest">
+      <wsdl:input message="tns:TopUpRequestSoapIn" />
+      <wsdl:output message="tns:TopUpRequestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TopUpRequestSync">
+      <wsdl:input message="tns:TopUpRequestSyncSoapIn" />
+      <wsdl:output message="tns:TopUpRequestSyncSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MobileTopup">
+      <wsdl:input message="tns:MobileTopupSoapIn" />
+      <wsdl:output message="tns:MobileTopupSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TopUpPinRequest">
+      <wsdl:input message="tns:TopUpPinRequestSoapIn" />
+      <wsdl:output message="tns:TopUpPinRequestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeLot">
+      <wsdl:input message="tns:ChangeLotSoapIn" />
+      <wsdl:output message="tns:ChangeLotSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRateDestinationsByLot">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retrieves all destinations available for specified Lot Id</wsdl:documentation>
+      <wsdl:input message="tns:GetRateDestinationsByLotSoapIn" />
+      <wsdl:output message="tns:GetRateDestinationsByLotSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRatesByOffering">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns rates for specified country code. A CountryCode of 0 will return rates to all destinations.</wsdl:documentation>
+      <wsdl:input message="tns:GetRatesByOfferingSoapIn" />
+      <wsdl:output message="tns:GetRatesByOfferingSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRatesByLot">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns rates for specified country code. A CountryCode of 0 will return rates to all destinations.</wsdl:documentation>
+      <wsdl:input message="tns:GetRatesByLotSoapIn" />
+      <wsdl:output message="tns:GetRatesByLotSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountInfoByAni">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retrieve information for account associated with specified phone number(Ani)</wsdl:documentation>
+      <wsdl:input message="tns:GetAccountInfoByAniSoapIn" />
+      <wsdl:output message="tns:GetAccountInfoByAniSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RechargeDPPAgent">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Add funds to DPP agent account.</wsdl:documentation>
+      <wsdl:input message="tns:RechargeDPPAgentSoapIn" />
+      <wsdl:output message="tns:RechargeDPPAgentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RechargeAccount">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Add funds to account.</wsdl:documentation>
+      <wsdl:input message="tns:RechargeAccountSoapIn" />
+      <wsdl:output message="tns:RechargeAccountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateActivateOrRechargeAccount">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Validate ability to add or create funds to account.</wsdl:documentation>
+      <wsdl:input message="tns:ValidateActivateOrRechargeAccountSoapIn" />
+      <wsdl:output message="tns:ValidateActivateOrRechargeAccountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ActivateOrRechargeAccount">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Add or Create funds to account.</wsdl:documentation>
+      <wsdl:input message="tns:ActivateOrRechargeAccountSoapIn" />
+      <wsdl:output message="tns:ActivateOrRechargeAccountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RechargeAni">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Add funds to account associated with specified phone number (ani).</wsdl:documentation>
+      <wsdl:input message="tns:RechargeAniSoapIn" />
+      <wsdl:output message="tns:RechargeAniSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AniExists">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns boolean value indicating whether ani already exists in system.</wsdl:documentation>
+      <wsdl:input message="tns:AniExistsSoapIn" />
+      <wsdl:output message="tns:AniExistsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AniExistsOnOffering">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns boolean value indicating whether ani already exists in system.</wsdl:documentation>
+      <wsdl:input message="tns:AniExistsOnOfferingSoapIn" />
+      <wsdl:output message="tns:AniExistsOnOfferingSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCallTimeByAniDestNum">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns amount of seconds that account can call destination number.</wsdl:documentation>
+      <wsdl:input message="tns:GetCallTimeByAniDestNumSoapIn" />
+      <wsdl:output message="tns:GetCallTimeByAniDestNumSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PinManagerSoap" type="tns:PinManagerSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetRateByPinDestNum">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/GetRateByPinDestNum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRateByAniDestNum">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/GetRateByAniDestNum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRateByLotDestinationId">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/GetRateByLotDestinationId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccessNumbersByLot">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/GetAccessNumbersByLot" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccessNumbersByOffering">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/GetAccessNumbersByOffering" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAppAccessNumbersByOffering">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/GetAppAccessNumbersByOffering" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccessNumbersWLanguageStringByOffering">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/GetAccessNumbersWLanguageStringByOffering" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBalanceByAni">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/GetBalanceByAni" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDidByAni">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/GetDidByAni" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RechargePin">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/RechargePin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RechargePinNew">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/RechargePinNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountInfoByAniOffering">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/GetAccountInfoByAniOffering" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InvoiceActivation">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/InvoiceActivation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelOrder">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/CancelOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelOrderByOrderId">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/CancelOrderByOrderId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TopupConfirm">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/TopupConfirm" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DidListRet_ByAniOffering">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/DidListRet_ByAniOffering" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DidDestNumAdd">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/DidDestNumAdd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DidDestNumDelete">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/DidDestNumDelete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DidDestNumRet_ByAniOffering">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/DidDestNumRet_ByAniOffering" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAgentDue">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/GetAgentDue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAgentCreditLimit">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/GetAgentCreditLimit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelTopUp">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/CancelTopUp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOfferingsByPhone">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/GetOfferingsByPhone" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTopupProductsByPhone">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/GetTopupProductsByPhone" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDomesticTopupProducts">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/GetDomesticTopupProducts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AutoDialerSignUp">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/AutoDialerSignUp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BalanceTransferPinToPin">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/BalanceTransferPinToPin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BalanceTransferPinToAni">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/BalanceTransferPinToAni" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AutoDialerBalanceTransfer">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/AutoDialerBalanceTransfer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreditCardTransaction">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/CreditCardTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCurrentUserName">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/getCurrentUserName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidatePurchaseByAni">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/ValidatePurchaseByAni" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateAgent">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/ValidateAgent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCcOnFileByAni">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/GetCcOnFileByAni" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveCcOnFile">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/SaveCcOnFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DelCcOnFile">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/DelCcOnFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessCcOnFile">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/ProcessCcOnFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAutoRechargeByAni">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/GetAutoRechargeByAni" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetAutoRechargeByAni">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/SetAutoRechargeByAni" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WantToBeAnAgent">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/WantToBeAnAgent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Activate">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/Activate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActivateAccount">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/ActivateAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PinlessActivateNew">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/PinlessActivateNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Recharge">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/Recharge" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWebTransactionInfo">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/GetWebTransactionInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddAniToAni">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/AddAniToAni" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddAni">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/AddAni" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removeAni">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/removeAni" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAniList">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/getAniList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAniListByAni">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/getAniListByAni" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeactivateAccount">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/DeactivateAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeactivatePin">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/DeactivatePin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPinInformation">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/GetPinInformation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCalls">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/getCalls" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCallsByPinDate">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/getCallsByPinDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPinByPlanSequence">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/GetPinByPlanSequence" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActivateBatch">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/ActivateBatch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getBatch">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/getBatch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPinByAniAccessNo">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/GetPinByAniAccessNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactions">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/GetTransactions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLotInfo">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/GetLotInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RechargeExt">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/RechargeExt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCallsByBatchDate">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/getCallsByBatchDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getXMLCallsByBatchDate">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/getXMLCallsByBatchDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeactivateBatch">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/DeactivateBatch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSpeedDialList">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/GetSpeedDialList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ManageSpeedDial">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/ManageSpeedDial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TopUpRequest">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/TopUpRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TopUpRequestSync">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/TopUpRequestSync" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MobileTopup">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/MobileTopup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TopUpPinRequest">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/TopUpPinRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeLot">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/ChangeLot" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRateDestinationsByLot">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/GetRateDestinationsByLot" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRatesByOffering">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/GetRatesByOffering" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRatesByLot">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/GetRatesByLot" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountInfoByAni">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/GetAccountInfoByAni" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RechargeDPPAgent">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/RechargeDPPAgent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RechargeAccount">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/RechargeAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateActivateOrRechargeAccount">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/ValidateActivateOrRechargeAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActivateOrRechargeAccount">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/ActivateOrRechargeAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RechargeAni">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/RechargeAni" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AniExists">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/AniExists" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AniExistsOnOffering">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/AniExistsOnOffering" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCallTimeByAniDestNum">
+      <soap:operation soapAction="https://dollarphone.com/PMAPI/PinManager/GetCallTimeByAniDestNum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="PinManagerSoap12" type="tns:PinManagerSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetRateByPinDestNum">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/GetRateByPinDestNum" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRateByAniDestNum">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/GetRateByAniDestNum" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRateByLotDestinationId">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/GetRateByLotDestinationId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccessNumbersByLot">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/GetAccessNumbersByLot" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccessNumbersByOffering">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/GetAccessNumbersByOffering" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAppAccessNumbersByOffering">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/GetAppAccessNumbersByOffering" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccessNumbersWLanguageStringByOffering">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/GetAccessNumbersWLanguageStringByOffering" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBalanceByAni">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/GetBalanceByAni" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDidByAni">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/GetDidByAni" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RechargePin">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/RechargePin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RechargePinNew">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/RechargePinNew" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountInfoByAniOffering">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/GetAccountInfoByAniOffering" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InvoiceActivation">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/InvoiceActivation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelOrder">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/CancelOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelOrderByOrderId">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/CancelOrderByOrderId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TopupConfirm">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/TopupConfirm" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DidListRet_ByAniOffering">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/DidListRet_ByAniOffering" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DidDestNumAdd">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/DidDestNumAdd" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DidDestNumDelete">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/DidDestNumDelete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DidDestNumRet_ByAniOffering">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/DidDestNumRet_ByAniOffering" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAgentDue">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/GetAgentDue" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAgentCreditLimit">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/GetAgentCreditLimit" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelTopUp">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/CancelTopUp" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOfferingsByPhone">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/GetOfferingsByPhone" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTopupProductsByPhone">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/GetTopupProductsByPhone" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDomesticTopupProducts">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/GetDomesticTopupProducts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AutoDialerSignUp">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/AutoDialerSignUp" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BalanceTransferPinToPin">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/BalanceTransferPinToPin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BalanceTransferPinToAni">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/BalanceTransferPinToAni" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AutoDialerBalanceTransfer">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/AutoDialerBalanceTransfer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreditCardTransaction">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/CreditCardTransaction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCurrentUserName">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/getCurrentUserName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidatePurchaseByAni">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/ValidatePurchaseByAni" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateAgent">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/ValidateAgent" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCcOnFileByAni">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/GetCcOnFileByAni" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveCcOnFile">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/SaveCcOnFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DelCcOnFile">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/DelCcOnFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessCcOnFile">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/ProcessCcOnFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAutoRechargeByAni">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/GetAutoRechargeByAni" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetAutoRechargeByAni">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/SetAutoRechargeByAni" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WantToBeAnAgent">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/WantToBeAnAgent" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Activate">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/Activate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActivateAccount">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/ActivateAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PinlessActivateNew">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/PinlessActivateNew" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Recharge">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/Recharge" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWebTransactionInfo">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/GetWebTransactionInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddAniToAni">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/AddAniToAni" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddAni">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/AddAni" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removeAni">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/removeAni" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAniList">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/getAniList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAniListByAni">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/getAniListByAni" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeactivateAccount">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/DeactivateAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeactivatePin">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/DeactivatePin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPinInformation">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/GetPinInformation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCalls">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/getCalls" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCallsByPinDate">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/getCallsByPinDate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPinByPlanSequence">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/GetPinByPlanSequence" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActivateBatch">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/ActivateBatch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getBatch">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/getBatch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPinByAniAccessNo">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/GetPinByAniAccessNo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactions">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/GetTransactions" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLotInfo">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/GetLotInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RechargeExt">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/RechargeExt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCallsByBatchDate">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/getCallsByBatchDate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getXMLCallsByBatchDate">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/getXMLCallsByBatchDate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeactivateBatch">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/DeactivateBatch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSpeedDialList">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/GetSpeedDialList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ManageSpeedDial">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/ManageSpeedDial" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TopUpRequest">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/TopUpRequest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TopUpRequestSync">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/TopUpRequestSync" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MobileTopup">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/MobileTopup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TopUpPinRequest">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/TopUpPinRequest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeLot">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/ChangeLot" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRateDestinationsByLot">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/GetRateDestinationsByLot" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRatesByOffering">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/GetRatesByOffering" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRatesByLot">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/GetRatesByLot" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountInfoByAni">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/GetAccountInfoByAni" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RechargeDPPAgent">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/RechargeDPPAgent" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RechargeAccount">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/RechargeAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateActivateOrRechargeAccount">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/ValidateActivateOrRechargeAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActivateOrRechargeAccount">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/ActivateOrRechargeAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RechargeAni">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/RechargeAni" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AniExists">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/AniExists" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AniExistsOnOffering">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/AniExistsOnOffering" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCallTimeByAniDestNum">
+      <soap12:operation soapAction="https://dollarphone.com/PMAPI/PinManager/GetCallTimeByAniDestNum" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PinManager">
+    <wsdl:port name="PinManagerSoap" binding="tns:PinManagerSoap">
+      <soap:address location="https://www.dollarphone.com/pmapi/PinManager.asmx" />
+    </wsdl:port>
+    <wsdl:port name="PinManagerSoap12" binding="tns:PinManagerSoap12">
+      <soap12:address location="https://www.dollarphone.com/pmapi/PinManager.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

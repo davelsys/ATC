@@ -1,0 +1,15 @@
+C:\ATC\ATC_OtherPrograms\Renew\AuthCharge\bin\Debug\AuthCharge.exe.config
+C:\ATC\ATC_OtherPrograms\Renew\AuthCharge\bin\Debug\AuthCharge.exe.manifest
+C:\ATC\ATC_OtherPrograms\Renew\AuthCharge\bin\Debug\AuthCharge.application
+C:\ATC\ATC_OtherPrograms\Renew\AuthCharge\bin\Debug\AuthCharge.exe
+C:\ATC\ATC_OtherPrograms\Renew\AuthCharge\bin\Debug\AuthCharge.pdb
+C:\ATC\ATC_OtherPrograms\Renew\AuthCharge\bin\Debug\AuthCharge.xml
+C:\ATC\ATC_OtherPrograms\Renew\AuthCharge\obj\x86\Debug\Renewals.vbprojResolveAssemblyReference.cache
+C:\ATC\ATC_OtherPrograms\Renew\AuthCharge\obj\x86\Debug\AuthCharge.Resources.resources
+C:\ATC\ATC_OtherPrograms\Renew\AuthCharge\obj\x86\Debug\Renewals.vbproj.GenerateResource.Cache
+C:\ATC\ATC_OtherPrograms\Renew\AuthCharge\obj\x86\Debug\Renewals.vbproj.CoreCompileInputs.cache
+C:\ATC\ATC_OtherPrograms\Renew\AuthCharge\obj\x86\Debug\AuthCharge.exe.manifest
+C:\ATC\ATC_OtherPrograms\Renew\AuthCharge\obj\x86\Debug\AuthCharge.application
+C:\ATC\ATC_OtherPrograms\Renew\AuthCharge\obj\x86\Debug\AuthCharge.exe
+C:\ATC\ATC_OtherPrograms\Renew\AuthCharge\obj\x86\Debug\AuthCharge.xml
+C:\ATC\ATC_OtherPrograms\Renew\AuthCharge\obj\x86\Debug\AuthCharge.pdb

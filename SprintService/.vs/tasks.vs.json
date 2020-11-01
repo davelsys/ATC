@@ -1,0 +1,20 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskName": "task-SprintService",
+      "appliesTo": "/",
+      "type": "launch"
+    },
+    {
+      "taskName": "task-SprintService",
+      "appliesTo": "/",
+      "type": "launch"
+    },
+    {
+      "taskName": "task-Properties",
+      "appliesTo": "SprintService/Properties/",
+      "type": "launch"
+    }
+  ]
+}

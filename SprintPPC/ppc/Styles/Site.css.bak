@@ -1,0 +1,632 @@
+﻿/* DEFAULTS
+----------------------------------------------------------*/
+
+body   
+{
+	background: #b6b7bc;
+	font-size: .80em;
+	font-family: "Helvetica Neue", "Lucida Grande", "Segoe UI", Arial, Helvetica, Verdana, sans-serif;
+	margin: 0px;
+	padding: 0px;
+	color: #696969;
+}
+
+a:link, a:visited
+{
+	color: #034af3;
+}
+
+a:hover
+{
+	color: #1d60ff;
+	text-decoration: none;
+}
+
+a:active
+{
+	color: #034af3;
+}
+
+p
+{
+	margin-bottom: 10px;
+	line-height: 1.6em;
+	margin-left: 40px;
+}
+
+
+/* HEADINGS   
+----------------------------------------------------------*/
+
+h1, h2, h3, h4, h5, h6
+{
+	font-size: 1.5em;
+	color: #666666;
+	font-variant: small-caps;
+	text-transform: none;
+	font-weight: 200;
+	margin-bottom: 0px;
+}
+
+h1
+{
+	font-size: 1.6em;
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+}
+
+h2
+{
+	font-size: 1.5em;
+	font-weight: 600;
+}
+
+h3
+{
+	font-size: 1.2em;
+}
+
+h4
+{
+	font-size: 1.1em;
+}
+
+h5, h6
+{
+	font-size: 1em;
+}
+
+/* this rule styles <h1> and <h2> tags that are the 
+first child of the left and right table columns */
+.rightColumn > h1, .rightColumn > h2, .leftColumn > h1, .leftColumn > h2
+{
+	margin-top: 0px;
+}
+
+
+/* PRIMARY LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+.page
+{
+	width: 960px;
+	background-color: #fff;
+	margin: 20px auto 0px auto;
+	border: 1px solid #496077;
+}
+
+.header
+{
+	position: relative;
+	margin: 0px;
+	padding: 0px;
+	background: #4b6c9e;
+	width: 100%;
+}
+
+.header h1
+{
+	font-weight: 700;
+	margin: 0px;
+	padding: 0px 0px 0px 20px;
+	color: #f9f9f9;
+	border: none;
+	line-height: 2em;
+	font-size: 2em;
+}
+
+.main
+{
+	padding: 0px 12px;
+	margin: 12px 8px 8px 8px;
+	min-height: 420px;
+}
+
+.leftCol
+{
+	padding: 6px 0px;
+	margin: 12px 8px 8px 8px;
+	width: 200px;
+	min-height: 200px;
+}
+
+.footer
+{
+	color: #4e5766;
+	padding: 8px 0px 0px 0px;
+	margin: 0px auto;
+	text-align: center;
+	line-height: normal;
+}
+
+
+/* TAB MENU   
+----------------------------------------------------------*/
+
+div.hideSkiplink
+{
+	background-color:#3a4f63;
+	width:100%;
+	/* CT added this to keep the menu bar the same height whether the menu tabs are displayed or not */
+	height: 35px;
+}
+
+div.menu
+{
+	padding: 4px 0px 4px 4px;
+}
+
+div.menu ul
+{
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+	width: auto;
+}
+
+div.menu ul li a, div.menu ul li a:visited
+{
+	background-color: #465c71;
+	border: 1px #4e667d solid;
+	color: #dde4ec;
+	display: block;
+	line-height: 1.35em;
+	padding: 4px 20px;
+	text-decoration: none;
+	white-space: nowrap;
+}
+
+div.menu ul li a:hover
+{
+	background-color: #bfcbd6;
+	color: #465c71;
+	text-decoration: none;
+}
+
+div.menu ul li a:active
+{
+	background-color: #465c71;
+	color: #cfdbe6;
+	text-decoration: none;
+}
+
+div.menu ul li a.selected
+{
+   background-color:  #dde4ec; 
+	border: 1px #4e667d solid;
+	color: #465c71;
+	display: block;
+	line-height: 1.35em;
+	padding: 4px 20px;
+	text-decoration: none;
+	white-space: nowrap;
+}
+
+
+/* FORM ELEMENTS   
+----------------------------------------------------------*/
+
+fieldset
+{
+	margin: 1em 0px;
+	padding: 1em;
+	border: 1px solid #ccc;
+}
+
+fieldset p 
+{
+	margin: 2px 12px 10px 10px;
+}
+
+fieldset.login label, fieldset.register label, fieldset.changePassword label
+{
+	display: block;
+}
+
+fieldset label.inline 
+{
+	display: inline;
+}
+
+legend 
+{
+	font-size: 1.1em;
+	font-weight: 600;
+	padding: 2px 4px 8px 4px;
+}
+
+input.textEntry 
+{
+	width: 320px;
+	border: 1px solid #ccc;
+}
+
+input.passwordEntry 
+{
+	width: 320px;
+	border: 1px solid #ccc;
+}
+
+div.accountInfo
+{
+	width: 42%;
+}
+
+/* MISC  
+----------------------------------------------------------*/
+
+.clear
+{
+	clear: both;
+}
+
+.title
+{
+	display: block;
+	float: left;
+	text-align: left;
+	width: auto;
+}
+
+.loginDisplay
+{
+	font-size: 1.1em;
+	display: block;
+	text-align: right;
+	padding: 10px;
+	color: White;
+}
+
+.loginDisplay a:link
+{
+	color: white;
+}
+
+.loginDisplay a:visited
+{
+	color: white;
+}
+
+.loginDisplay a:hover
+{
+	color: white;
+}
+
+.failureNotification
+{
+	font-size: 1.2em;
+	color: Red;
+}
+
+.bold
+{
+	font-weight: bold;
+}
+
+.submitButton
+{
+	text-align: right;
+	padding-right: 10px;
+}
+
+
+/*Custom*/
+
+
+input[type=checkbox], input[type=radio] {
+   outline: 0;
+}
+
+button, input[type=button], input[type=submit] {
+	cursor: pointer;   
+}
+
+.highlightedGvRow:hover {
+    background-color: #fdecc9;
+    cursor: pointer;
+}
+
+.SearchField {
+	float:left;	
+	display:inline;
+}
+
+.CustomRow
+{
+  margin: 3px;
+  height: 30px;
+}
+
+.InvoiceRow
+{
+  margin: 2px;
+  height: 25px;
+}
+
+.transTypeDiv
+{
+	height: 100px;
+}
+
+.orderFields input[type=text]
+{
+  /*width:   100px;*/
+  height:  15px;
+  float:   left;
+  display: inline;
+  margin:  3px;
+}
+
+.orderFields select
+{
+  float:left;
+  display: inline;
+  margin:3px;
+}
+
+.orderFields input[type=checkbox]
+{
+  width:   25px;
+  float:   left;
+  display: inline;
+}
+
+.orderFields label
+{
+  font-size: 10px;
+  font-weight: bold;
+  float: left;
+  display: inline;
+  padding:3px;
+}
+
+#order_info_bar 
+{
+	background-color: #e6effd;
+	border: 1px solid black;
+	margin-bottom: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 3px;
+	border-radius: 4px;
+	height: 48px;
+}
+
+.statusBlock
+{
+	float: left;
+	width: 175px;
+}
+
+#authMsgDiv
+{
+	width: 400px;
+	overflow: auto;
+}
+
+
+.custLabel
+{
+	display: inline-block;
+	width: 50px;   
+}
+
+
+.billingLabel
+{
+	display: inline-block;
+	width: 50px;   
+}
+
+.orderLabel
+{
+	display: inline-block;
+	width: 55px;   
+}
+
+.invoiceLabel
+{
+	display: inline-block;
+	width: 60px;   
+}
+
+.creditRow
+{
+	height: 30px;   
+}
+
+.manageAgentDivs
+{
+	margin: 3px;
+	height: 25px;
+	width: 300px;
+	text-align: right;
+	float: right;
+}
+
+.manageAgentDivs label
+{
+	vertical-align: top;
+}
+
+.manageAgentDescription
+{
+	width: 100px;
+	text-align: left;
+	font-weight: bold;
+	float: left; 
+}
+
+.orderRenewalDivs
+{
+	width: 290px;
+	padding: 3px;
+}
+
+.renewalDropdownLbl
+{
+	display: inline-block;
+	width: 60px;
+}
+
+#itemCheckList
+{
+	width: 100%;
+}
+
+.userSearchFld
+{
+	width: 75px;   
+}
+
+.userDivs
+{
+	margin: 3px;
+}
+
+.userDivs label
+{   
+	display: block;
+	margin: 2px;
+	width: 150px;
+}   
+
+.userDivs input[type=text], 
+.userDivs input[type=password],
+.userDivs select
+{
+	width: 150px;
+}
+
+
+
+.esnFieldset
+{
+	min-height: 190px;   
+} 
+
+.esnFieldset label
+{
+	width: 100px;
+	display: inline-block;
+}
+
+.esnFieldset div
+{
+	height: 25px;
+	margin: 5px;   
+}
+
+.badTransactionDropdown
+{
+	font-size: 11px;
+	width: 100%;
+}
+
+/*   Admin.aspx   */
+#editAccountDiv label
+{
+	display: block;
+	width: 100px;
+	margin: 2px;
+}
+
+.modalBackground
+{
+	background-color: gray;
+	filter: alpha(opacity=60);
+	opacity: 0.6;
+}
+
+.modalPanel
+{
+	background-color: White;
+	min-height: 175px;
+	min-width: 375px;
+	padding: 5px;
+	position: relative;   
+}
+
+.modalPanel div
+{
+	margin: 5px;
+}
+
+.modalPanel label
+{
+	width: 125px;
+	display: inline-block;
+}
+
+#adminTabContainer fieldset
+{
+	margin-top: 5px;
+	padding-top: 0px;
+}
+
+/* Pins.aspx, ViewRenewals.aspx, ViewTransactions.aspx, OrderSummary.aspx */
+.searchDiv
+{
+	height: 80px;
+	margin: 0px 2px 5px 0px;
+}
+
+.searchDiv div
+{
+	float: left;
+	height: 65%;
+}
+
+.searchDiv fieldset
+{
+	height: 100%;
+	margin: 0px 5px 0px 0px;
+}
+
+.downloadBtnDiv
+{   
+	margin: 5px 0px 5px 5px;
+	height: 25px;
+	bottom: 0;
+}
+
+.downloadBtnDiv input[type=button]
+{
+	margin-left: 2px;
+	float: right;
+}
+
+span.globalSearchFld {
+	display: inline-block;
+	min-width: 125px;
+	padding: 0px 1px 0px 1px;
+	margin: 1pt 2px 1pt 1pt;
+	border: 1pt solid #ccc;
+	border-radius: 1px;
+	box-shadow: 1px 1px 1px 1px whitesmoke inset;
+}
+			
+span.globalSearchFld input {
+	width: 100px;
+	border: 0px;
+	outline: none;
+}
+			
+span.globalSearchFld img {
+	width: 14px;
+	height: 14px;
+	display: none;
+	cursor: pointer;
+	vertical-align: middle;
+}
+
+/* Reports.aspx */
+
+.showProgressModalPanel
+{
+	background-color: White;
+	min-height: 75px;
+	min-width: 100px;
+	padding: 10px;
+	text-align: center;
+}

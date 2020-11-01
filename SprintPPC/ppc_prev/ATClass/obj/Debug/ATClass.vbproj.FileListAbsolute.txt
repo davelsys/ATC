@@ -1,0 +1,8 @@
+C:\ppc012714\ATClass\bin\Debug\ATClass.dll
+C:\ppc012714\ATClass\bin\Debug\ATClass.pdb
+C:\ppc012714\ATClass\bin\Debug\ATClass.xml
+C:\ppc012714\ATClass\obj\Debug\ATClass.Resources.resources
+C:\ppc012714\ATClass\obj\Debug\ATClass.vbproj.GenerateResource.Cache
+C:\ppc012714\ATClass\obj\Debug\ATClass.dll
+C:\ppc012714\ATClass\obj\Debug\ATClass.xml
+C:\ppc012714\ATClass\obj\Debug\ATClass.pdb

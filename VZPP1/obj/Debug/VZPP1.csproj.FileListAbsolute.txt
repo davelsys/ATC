@@ -1,0 +1,6 @@
+C:\VZPP1\bin\Debug\VZPP1.exe.config
+C:\VZPP1\obj\Debug\VZPP1.csprojResolveAssemblyReference.cache
+C:\VZPP1\bin\Debug\VZPP1.exe
+C:\VZPP1\bin\Debug\VZPP1.pdb
+C:\VZPP1\obj\Debug\VZPP1.exe
+C:\VZPP1\obj\Debug\VZPP1.pdb
